@@ -13,6 +13,9 @@ import { successStoriesData, platformStats } from '@/data/successStories';
 import { academyCategories, academyCalculators } from '@/data/academy';
 import { ServiceSectionClient } from '@/components/services/ServiceSectionClient';
 import { TransformationsSection } from '@/components/transformations/TransformationsSection';
+import { AboutSection } from '@/components/home/AboutSection';
+import { FaqSection } from '@/components/home/FaqSection';
+import { ContactSection } from '@/components/home/ContactSection';
 
 export const metadata: Metadata = {
   title: 'TK Performance & Health — Spor Bilimleri, Performans & Sağlık Platformu',
@@ -72,13 +75,22 @@ export default function HomePage() {
           <ServiceSectionClient services={coreHomeServices} />
         </section>
 
-        {/* 4. BRAND NEW DANIŞAN DÖNÜŞÜMLERİ (DARK THEME TRANSFORMATIONS SECTION) */}
+        {/* 4. DANIŞAN DÖNÜŞÜMLERİ (DARK THEME TRANSFORMATIONS SECTION) */}
         <TransformationsSection />
+
+        {/* 5. HAKKIMDA (ABOUT SECTION) */}
+        <AboutSection />
+
+        {/* 6. BRAND NEW SIK SORULAN SORULAR (FAQ SECTION - INSERTED DIRECTLY ABOVE CONTACT) */}
+        <FaqSection />
+
+        {/* 7. İLETİŞİM & BAŞVURU (CONTACT SECTION) */}
+        <ContactSection />
 
         {/* SECTION DIVIDER */}
         <div className="max-w-7xl mx-auto px-6"><div className="section-divider" /></div>
 
-        {/* 5. EXERCISE LIBRARY ACCORDION */}
+        {/* 8. EXERCISE LIBRARY ACCORDION */}
         <section className="max-w-7xl mx-auto px-6">
           <ExerciseFilterSection exercises={exercisesData} defaultOpen={false} />
         </section>
@@ -86,7 +98,7 @@ export default function HomePage() {
         {/* SECTION DIVIDER */}
         <div className="max-w-7xl mx-auto px-6"><div className="section-divider" /></div>
 
-        {/* 6. REDESIGNED SPOR BİLİMLERİ & AKADEMİ SHOWCASE */}
+        {/* 9. REDESIGNED SPOR BİLİMLERİ & AKADEMİ SHOWCASE */}
         <section id="academy" className="max-w-7xl mx-auto px-6 space-y-12">
           <div className="premium-card p-10 rounded-3xl bg-slate-900 text-white border border-slate-800 shadow-2xl space-y-4 text-center max-w-4xl mx-auto">
             <span className="font-mono text-xs text-blue-400 font-extrabold tracking-widest uppercase bg-blue-950 px-4 py-1.5 rounded-full border border-blue-800 inline-block">
@@ -137,7 +149,7 @@ export default function HomePage() {
         {/* SECTION DIVIDER */}
         <div className="max-w-7xl mx-auto px-6"><div className="section-divider" /></div>
 
-        {/* 7. SUCCESS STORIES SECTION */}
+        {/* 10. SUCCESS STORIES SECTION */}
         <section id="success-stories" className="max-w-7xl mx-auto px-6 space-y-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div className="space-y-3">
@@ -176,7 +188,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* 8. GLOBAL CTA BANNER */}
+        {/* 11. GLOBAL CTA BANNER */}
         <section className="max-w-7xl mx-auto px-6">
           <div className="premium-card rounded-3xl p-14 text-center space-y-6 bg-slate-900 text-white border border-slate-800 shadow-2xl">
             <span className="font-mono text-sm text-blue-400 font-extrabold tracking-widest uppercase bg-blue-950 px-4 py-1.5 rounded-full border border-blue-800">
