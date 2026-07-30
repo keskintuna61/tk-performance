@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TK Performance &amp; Health — Spor Bilimleri, Beslenme &amp; Atletik Gelişim Platformu</title>
+<meta name="description" content="Spor Bilimci Tunahan Keskin rehberliğinde Performans, Sağlık, Hareket, Beslenme, Pilates, Medikal Egzersiz ve Atletik Gelişim Platformu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-white: #FFFFFF;
+    --bg-subtle: #F8FAFC;
+    --card-bg: #FFFFFF;
+    --card-hover: #F1F5F9;
+    --primary-blue: #2563EB;
+    --primary-hover: #1D4ED8;
+    --navy-dark: #0F172A;
+    --amber-accent: #F59E0B;
+    --green-success: #16A34A;
+    
+    --text-main: #0F172A;
+    --text-sub: #334155;
+    --text-muted: #475569;
+    --border-light: #E2E8F0;
+    --border-hover: #CBD5E1;
+    
+    --display: 'Bebas Neue', 'Inter', sans-serif;
+    --body: 'Inter', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background-color: var(--bg-white);
+    color: var(--text-main);
+    font-family: var(--body);
+    font-size: 18px;
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 24px;}
+
+  /* DUYURU BANDI */
+  .announcement{
+    background: var(--primary-blue); color: #fff; text-align: center;
+    font-family: var(--mono); font-size: 12px; font-weight: 800; letter-spacing: 1.5px;
+    padding: 10px 16px; border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  /* NAVBAR */
+  nav{
+    position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.94);
+    backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+    border-bottom:1px solid var(--border-light);
+    padding:20px 24px;box-shadow: 0 4px 20px -2px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+  }
+  .nav-inner{display:flex;justify-content:space-between;align-items:center;max-width:1240px;margin:0 auto;gap:24px;}
+  .brand{display:flex;align-items:center;gap:16px;flex-shrink:0;}
+  .brand-logo{
+    width:48px;height:48px;border-radius:14px;
+    background:var(--primary-blue);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--display);font-size:26px;font-weight:bold;color:#fff;
+    box-shadow: 0 4px 14px rgba(37,99,235,0.3);
+  }
+  .brand-title{font-family:var(--display);font-size:28px;letter-spacing:0.5px;color:var(--navy-dark);line-height:1;margin-bottom:3px;}
+  .brand-sub{font-family:var(--mono);font-size:11px;color:var(--primary-blue);letter-spacing:0.5px;text-transform:uppercase;font-weight:800;}
+  
+  .nav-links{display:flex;gap:28px;font-family:var(--mono);font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0;}
+  .nav-links a{color:var(--text-sub);transition:color .2s;position:relative;white-space:nowrap;padding:4px 0;}
+  .nav-links a:hover, .nav-links a.active{color:var(--primary-blue);}
+
+  .btn-cta{
+    background:var(--primary-blue);color:#fff;font-family:var(--mono);
+    font-size:16px;font-weight:900;padding:14px 26px;border-radius:12px;
+    box-shadow:0 4px 14px rgba(37,99,235,0.25);transition:all .2s;display:inline-flex;align-items:center;gap:8px;
+    white-space:nowrap;flex-shrink:0;
+  }
+  .btn-cta:hover{background:var(--primary-hover);transform:scale(1.03);}
+
+  /* HERO SECTION */
+  .hero{padding:90px 0 70px;position:relative;background:linear-gradient(180deg, #FFFFFF 0%, var(--bg-subtle) 100%);border-bottom:1px solid var(--border-light);}
+  .hero-eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    background:#EFF6FF;border:1px solid #BFDBFE;
+    color:var(--primary-blue);padding:8px 18px;border-radius:20px;
+    font-family:var(--mono);font-size:13px;font-weight:800;letter-spacing:1.5px;margin-bottom:20px;
+  }
+  .hero h1{
+    font-family:var(--display);font-size:clamp(52px,6vw,64px);
+    line-height:1.05;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:24px;color:var(--navy-dark);
+  }
+  .hero h1 .blue{color:var(--primary-blue);}
+  .hero h1 .amber{color:var(--amber-accent);}
+
+  .hero-sub-list{border-left:4px solid var(--primary-blue);padding-left:18px;margin-bottom:32px;font-size:18px;color:var(--text-sub);}
+  .hero-sub-item{display:flex;align-items:center;gap:10px;margin-bottom:8px;font-weight:600;}
+
+  .hero-btns{display:flex;gap:16px;flex-wrap:wrap;}
+
+  .btn-primary{
+    background:var(--primary-blue);color:#fff;font-family:var(--mono);
+    font-size:17px;font-weight:900;padding:16px 32px;border-radius:12px;
+    box-shadow:0 8px 20px rgba(37,99,235,0.3);transition:all .2s;
+    display:inline-flex;align-items:center;gap:8px;text-transform:uppercase;
+  }
+  .btn-primary:hover{background:var(--primary-hover);transform:translateY(-2px);}
+
+  .glass-btn{
+    background:#FFFFFF;color:var(--navy-dark);border:1px solid var(--border-light);
+    font-family:var(--mono);font-size:17px;font-weight:800;padding:16px 32px;
+    border-radius:12px;transition:all .2s;display:inline-flex;align-items:center;gap:8px;text-transform:uppercase;
+    box-shadow:0 1px 3px rgba(0,0,0,0.05);
+  }
+  .glass-btn:hover{background:#F1F5F9;border-color:var(--border-hover);}
+
+  /* CARDS GRID & COMPONENTS */
+  .grid-3{display:grid;grid-template-columns:repeat(3, 1fr);gap:28px;}
+  .grid-4{display:grid;grid-template-columns:repeat(4, 1fr);gap:24px;}
+  .grid-2{display:grid;grid-template-columns:repeat(2, 1fr);gap:28px;}
+
+  .premium-card{
+    background:var(--card-bg);border:1px solid var(--border-light);
+    border-radius:24px;padding:28px;transition:all .3s ease;position:relative;
+    box-shadow: 0 2px 8px -2px rgba(0,0,0,0.05);
+  }
+  .premium-card:hover{
+    transform:translateY(-3px);border-color:#93C5FD;
+    box-shadow:0 20px 32px rgba(37,99,235,0.08);
+  }
+
+  .service-badge{
+    font-family:var(--mono);font-size:12px;font-weight:800;color:var(--primary-blue);
+    background:#EFF6FF;padding:5px 12px;border-radius:20px;
+    border:1px solid #BFDBFE;text-transform:uppercase;display:inline-block;
+  }
+
+  .tag-pill{
+    font-family:var(--mono);font-size:12px;font-weight:700;color:var(--text-sub);
+    background:#F1F5F9;padding:4px 10px;border-radius:8px;
+    border:1px solid var(--border-light);display:inline-block;
+  }
+
+  .section-tag{
+    font-family:var(--mono);font-size:13px;font-weight:800;color:var(--primary-blue);
+    letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;display:block;
+  }
+  h2{font-family:var(--display);font-size:clamp(36px,4vw,48px);line-height:1.1;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:24px;color:var(--navy-dark);}
+
+  .section-divider{height:1px;background:linear-gradient(90deg, transparent, var(--border-light), transparent);margin:64px 0;}
+
+  /* FOOTER */
+  footer{background:var(--navy-dark);border-top:1px solid #1E293B;padding:64px 0 32px;color:#94A3B8;font-size:16px;}
+  .footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+  .footer-title{font-family:var(--display);font-size:22px;color:#fff;margin-bottom:16px;}
+  .footer-links{list-style:none;}
+  .footer-links li{margin-bottom:12px;}
+  .footer-links a{color:#CBD5E1;transition:color .2s;font-size:16px;}
+  .footer-links a:hover{color:#60A5FA;}
+
+  /* WHATSAPP FLOAT */
+  .wa-float{
+    position:fixed;bottom:24px;right:24px;z-index:999;
+    background:var(--green-success);color:#fff;padding:16px 28px;border-radius:30px;
+    font-family:var(--mono);font-size:15px;font-weight:900;letter-spacing:0.5px;
+    box-shadow:0 10px 25px rgba(22,163,74,0.3);display:flex;align-items:center;gap:10px;
+    transition:transform .2s;
+  }
+  .wa-float:hover{transform:scale(1.05);}
+
+  @media(max-width:860px){
+    .nav-links{display:none;}
+    .grid-3, .grid-4, .grid-2{grid-template-columns:1fr;}
+    .footer-inner{grid-template-columns:1fr 1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- 1. DUYURU BANDI -->
+<div class="announcement">
+  ⚡ TK PERFORMANCE &amp; HEALTH PLATFORM — ULUSLARARASI SAĞLIK VE ATLETİK GELİŞİM MERKEZİ
+</div>
+
+<!-- 2. PREMİUM NAVBAR -->
+<nav>
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="brand-logo">TK</div>
+      <div>
+        <div class="brand-title">TK PERFORMANCE</div>
+        <div class="brand-sub">PERFORMANCE &amp; HEALTH</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#hero">ANA SAYFA</a>
+      <a href="#services">HİZMETLERİMİZ</a>
+      <a href="#egzersizler">EGZERSİZ KÜTÜPHANESİ</a>
+      <a href="#academy">AKADEMİ</a>
+      <a href="#success-stories">BAŞARI HİKAYELERİ</a>
+      <a href="#hakkimda">HAKKIMIZDA</a>
+      <a href="#contact">İLETİŞİM</a>
+    </div>
+    <a href="#contact" class="btn-cta">🚀 Yolculuğunu Başlat</a>
+  </div>
+</nav>
+
+<!-- 3. SİNEMATİK LIGHT HERO -->
+<section id="hero" class="hero wrap">
+  <div style="display:grid;grid-template-columns:1.2fr 0.8fr;gap:40px;align-items:center;">
+    
+    <div>
+      <div class="hero-eyebrow">
+        <span>● ULUSLARARASI SAĞLIK &amp; PERFORMANS PLATFORMU</span>
+      </div>
+      <h1>
+        BİLİMSEL <span class="blue">PERFORMANS.</span><br>
+        ÖLÇÜLEBİLİR <span class="amber">SAĞLIK.</span>
+      </h1>
+      
+      <div class="hero-sub-list">
+        <div class="hero-sub-item"><span style="color:var(--primary-blue);">➔</span> Performans, Beslenme, Pilates, Medikal Egzersiz &amp; Rehabilitasyon.</div>
+        <div class="hero-sub-item"><span style="color:var(--primary-blue);">➔</span> Biyomekanik analiz, postür ölçümleri ve atletik testler.</div>
+        <div class="hero-sub-item"><span style="color:var(--primary-blue);">➔</span> Kişisel ihtiyaca özel profesyonel çözümler.</div>
+      </div>
+
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">🚀 Yolculuğunu Başlat</a>
+        <a href="#services" class="glass-btn">6 Hizmet Alanımızı İncele &rarr;</a>
+      </div>
+    </div>
+
+    <!-- SAĞ GÖRSEL ALANI (ABSTRACT UI SHOWCASE CARD - NO PERSON PHOTO) -->
+    <div style="background:#0F172A;border:1px solid #1E293B;padding:32px;border-radius:32px;box-shadow:0 25px 50px rgba(0,0,0,0.15);color:#fff;">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:20px;border-bottom:1px solid #334155;margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:14px;">
+          <div style="width:48px;height:48px;border-radius:14px;background:var(--primary-blue);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:26px;color:#fff;font-weight:bold;">TK</div>
+          <div>
+            <div style="font-family:var(--display);font-size:22px;letter-spacing:1px;">PERFORMANCE LAB</div>
+            <div style="font-family:var(--mono);font-size:11px;color:#60A5FA;font-weight:bold;text-transform:uppercase;">Spor Bilimi Analytics v3.0</div>
+          </div>
+        </div>
+        <span style="background:rgba(22,163,74,0.2);color:#4ADE80;font-family:var(--mono);font-size:12px;font-weight:bold;padding:6px 14px;border-radius:20px;border:1px solid rgba(74,222,128,0.3);">SİSTEM AKTİF</span>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;">
+        <div style="background:rgba(30,41,59,0.8);padding:18px;border-radius:18px;border:1px solid #334155;">
+          <span style="font-family:var(--mono);font-size:11px;color:#94A3B8;font-weight:bold;display:block;margin-bottom:4px;">BİYOMEKANİK POSTÜR</span>
+          <div style="font-family:var(--display);font-size:36px;color:#60A5FA;">96.8 <span style="font-size:13px;font-family:var(--mono);color:#94A3B8;">/ 100</span></div>
+          <span style="font-family:var(--mono);font-size:11px;color:#4ADE80;font-weight:bold;display:block;margin-top:4px;">✓ Optimal Dizilim</span>
+        </div>
+
+        <div style="background:rgba(30,41,59,0.8);padding:18px;border-radius:18px;border:1px solid #334155;">
+          <span style="font-family:var(--mono);font-size:11px;color:#94A3B8;font-weight:bold;display:block;margin-bottom:4px;">ATLETİK BAŞARI</span>
+          <div style="font-family:var(--display);font-size:36px;color:var(--amber-accent);">%98.4</div>
+          <span style="font-family:var(--mono);font-size:11px;color:#94A3B8;font-weight:bold;display:block;margin-top:4px;">500+ Danışan</span>
+        </div>
+      </div>
+
+      <div style="background:rgba(30,41,59,0.6);padding:20px;border-radius:18px;border:1px solid #334155;">
+        <div style="display:flex;justify-content:space-between;font-family:var(--mono);font-size:13px;font-weight:bold;color:#F8FAFC;margin-bottom:12px;">
+          <span>VBT KUVVET-HIZ PROFİLİ</span>
+          <span style="color:#60A5FA;">1.48 m/s Peak</span>
+        </div>
+        <div style="height:64px;display:flex;align-items:flex-end;gap:6px;">
+          <div style="flex:1;height:40%;background:var(--primary-blue);border-radius:4px 4px 0 0;"></div>
+          <div style="flex:1;height:60%;background:var(--primary-blue);border-radius:4px 4px 0 0;"></div>
+          <div style="flex:1;height:45%;background:var(--primary-blue);border-radius:4px 4px 0 0;"></div>
+          <div style="flex:1;height:75%;background:var(--primary-blue);border-radius:4px 4px 0 0;"></div>
+          <div style="flex:1;height:90%;background:var(--primary-blue);border-radius:4px 4px 0 0;"></div>
+          <div style="flex:1;height:65%;background:var(--primary-blue);border-radius:4px 4px 0 0;"></div>
+          <div style="flex:1;height:100%;background:var(--primary-blue);border-radius:4px 4px 0 0;"></div>
+          <div style="flex:1;height:80%;background:var(--primary-blue);border-radius:4px 4px 0 0;"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- METRIC STAT COUNTERS -->
+<section class="wrap">
+  <div class="grid-4">
+    <div class="premium-card" style="text-align:center;background:var(--bg-subtle);">
+      <span style="font-size:36px;">👥</span>
+      <div style="font-family:var(--display);font-size:46px;color:var(--primary-blue);">500+</div>
+      <div style="font-family:var(--mono);font-size:14px;color:var(--text-sub);font-weight:bold;">MUTLU DANIŞAN</div>
+    </div>
+    <div class="premium-card" style="text-align:center;background:var(--bg-subtle);">
+      <span style="font-size:36px;">📚</span>
+      <div style="font-family:var(--display);font-size:46px;color:var(--primary-blue);">20+</div>
+      <div style="font-family:var(--mono);font-size:14px;color:var(--text-sub);font-weight:bold;">BİLİMSEL EGZERSİZ</div>
+    </div>
+    <div class="premium-card" style="text-align:center;background:var(--bg-subtle);">
+      <span style="font-size:36px;">🏆</span>
+      <div style="font-family:var(--display);font-size:46px;color:var(--green-success);">%98.4</div>
+      <div style="font-family:var(--mono);font-size:14px;color:var(--text-sub);font-weight:bold;">BAŞARI ORANI</div>
+    </div>
+    <div class="premium-card" style="text-align:center;background:var(--bg-subtle);">
+      <span style="font-size:36px;">🎓</span>
+      <div style="font-family:var(--display);font-size:46px;color:var(--amber-accent);">8+ YIL</div>
+      <div style="font-family:var(--mono);font-size:14px;color:var(--text-sub);font-weight:bold;">AKADEMİK DENEYİM</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 4. SERVICES SECTION (EXACTLY 6 CORE SERVICES WITH ONLINE TRAINING TAGS) -->
+<section id="services" class="wrap">
+  <span class="section-tag">UZMANLIK ALANLARIMIZ &amp; HİZMETLER</span>
+  <h2>6 UZMANLIK ALANI &amp; DİJİTAL DESTEK</h2>
+
+  <div class="grid-3">
+    
+    <!-- 1. FITNESS & VÜCUT DÖNÜŞÜMÜ -->
+    <div class="premium-card" style="display:flex;flex-direction:column;justify-content:space-between;">
+      <div>
+        <span class="service-badge">01 • DÖNÜŞÜM</span>
+        <h3 style="font-family:var(--display);font-size:28px;color:var(--navy-dark);margin:14px 0 8px;">FITNESS &amp; VÜCUT DÖNÜŞÜMÜ</h3>
+        <p style="font-size:17px;color:var(--text-sub);margin-bottom:14px;">Kas geliştirme, yağ yakımı ve vücut şekillendirmeye yönelik kişiye özel yüz yüze veya online antrenman programları.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;">
+          <span class="tag-pill">✓ Online Eğitim</span>
+          <span class="tag-pill">✓ Yüz Yüze Eğitim</span>
+          <span class="tag-pill">✓ Kişiye Özel Program</span>
+          <span class="tag-pill">✓ Düzenli Takip</span>
+        </div>
+      </div>
+      <a href="/services/fitness-body-transformation" style="font-family:var(--mono);font-size:15px;color:var(--primary-blue);font-weight:bold;border-top:1px solid var(--border-light);padding-top:14px;">Hizmet İncele &rarr;</a>
+    </div>
+
+    <!-- 2. BESLENME & DİYETİSYEN -->
+    <div class="premium-card" style="display:flex;flex-direction:column;justify-content:space-between;">
+      <div>
+        <span class="service-badge" style="color:var(--amber-accent);background:#FEF3C7;border-color:#FDE68A;">02 • BESLENME</span>
+        <h3 style="font-family:var(--display);font-size:28px;color:var(--navy-dark);margin:14px 0 8px;">BESLENME &amp; DİYETİSYEN</h3>
+        <p style="font-size:17px;color:var(--text-sub);margin-bottom:10px;">Kişiye özel beslenme planları, sporcu beslenmesi ve online beslenme danışmanlığı.</p>
+        <div style="font-family:var(--mono);font-size:13px;color:#B45309;background:#FEF3C7;padding:8px;border-radius:10px;margin-bottom:12px;">ℹ️ Yetkin diyetisyen ve beslenme uzmanları iş birliğiyle sunulmaktadır.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;">
+          <span class="tag-pill">✓ Online Eğitim</span>
+          <span class="tag-pill">✓ Yüz Yüze Eğitim</span>
+          <span class="tag-pill">✓ Kişiye Özel Program</span>
+          <span class="tag-pill">✓ Düzenli Takip</span>
+        </div>
+      </div>
+      <a href="/services/nutrition-dietetics" style="font-family:var(--mono);font-size:15px;color:var(--primary-blue);font-weight:bold;border-top:1px solid var(--border-light);padding-top:14px;">Hizmet İncele &rarr;</a>
+    </div>
+
+    <!-- 3. ATLETİK PERFORMANS -->
+    <div class="premium-card" style="display:flex;flex-direction:column;justify-content:space-between;">
+      <div>
+        <span class="service-badge">03 • ATLETİK</span>
+        <h3 style="font-family:var(--display);font-size:28px;color:var(--navy-dark);margin:14px 0 8px;">ATLETİK PERFORMANS</h3>
+        <p style="font-size:17px;color:var(--text-sub);margin-bottom:14px;">Hız, kuvvet, çeviklik ve branşa özel performans gelişimi için yüz yüze veya online eğitim programları.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;">
+          <span class="tag-pill">✓ Online Eğitim</span>
+          <span class="tag-pill">✓ Yüz Yüze Eğitim</span>
+          <span class="tag-pill">✓ Kişiye Özel Program</span>
+          <span class="tag-pill">✓ Düzenli Takip</span>
+        </div>
+      </div>
+      <a href="/services/athletic-performance" style="font-family:var(--mono);font-size:15px;color:var(--primary-blue);font-weight:bold;border-top:1px solid var(--border-light);padding-top:14px;">Hizmet İncele &rarr;</a>
+    </div>
+
+    <!-- 4. MAT & REFORMER PİLATES -->
+    <div class="premium-card" style="display:flex;flex-direction:column;justify-content:space-between;">
+      <div>
+        <span class="service-badge">04 • PİLATES</span>
+        <h3 style="font-family:var(--display);font-size:28px;color:var(--navy-dark);margin:14px 0 8px;">MAT &amp; REFORMER PİLATES</h3>
+        <p style="font-size:17px;color:var(--text-sub);margin-bottom:14px;">Core kuvveti, esneklik, denge ve postür gelişimine yönelik yüz yüze veya online pilates eğitimleri.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;">
+          <span class="tag-pill">✓ Online Eğitim</span>
+          <span class="tag-pill">✓ Yüz Yüze Eğitim</span>
+          <span class="tag-pill">✓ Kişiye Özel Program</span>
+          <span class="tag-pill">✓ Düzenli Takip</span>
+        </div>
+      </div>
+      <a href="/services/pilates" style="font-family:var(--mono);font-size:15px;color:var(--primary-blue);font-weight:bold;border-top:1px solid var(--border-light);padding-top:14px;">Hizmet İncele &rarr;</a>
+    </div>
+
+    <!-- 5. FONKSİYONEL ANTRENMAN -->
+    <div class="premium-card" style="display:flex;flex-direction:column;justify-content:space-between;">
+      <div>
+        <span class="service-badge">05 • FONKSİYONEL</span>
+        <h3 style="font-family:var(--display);font-size:28px;color:var(--navy-dark);margin:14px 0 8px;">FONKSİYONEL ANTRENMAN</h3>
+        <p style="font-size:17px;color:var(--text-sub);margin-bottom:14px;">Mobilite, stabilite, hareket kalitesi ve günlük yaşam performansını geliştiren online veya yüz yüze antrenman programları.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;">
+          <span class="tag-pill">✓ Online Eğitim</span>
+          <span class="tag-pill">✓ Yüz Yüze Eğitim</span>
+          <span class="tag-pill">✓ Kişiye Özel Program</span>
+          <span class="tag-pill">✓ Düzenli Takip</span>
+        </div>
+      </div>
+      <a href="/services/functional-training" style="font-family:var(--mono);font-size:15px;color:var(--primary-blue);font-weight:bold;border-top:1px solid var(--border-light);padding-top:14px;">Hizmet İncele &rarr;</a>
+    </div>
+
+    <!-- 6. MEDİKAL EGZERSİZ -->
+    <div class="premium-card" style="display:flex;flex-direction:column;justify-content:space-between;">
+      <div>
+        <span class="service-badge" style="color:var(--green-success);background:#DCFCE7;border-color:#BBF7D0;">06 • MEDİKAL</span>
+        <h3 style="font-family:var(--display);font-size:28px;color:var(--navy-dark);margin:14px 0 8px;">MEDİKAL EGZERSİZ</h3>
+        <p style="font-size:17px;color:var(--text-sub);margin-bottom:14px;">Postür analizi, koruyucu egzersizler ve hareket kalitesini geliştirmeye yönelik yüz yüze veya uzaktan takip edilen programlar.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;">
+          <span class="tag-pill">✓ Online Eğitim</span>
+          <span class="tag-pill">✓ Yüz Yüze Eğitim</span>
+          <span class="tag-pill">✓ Kişiye Özel Program</span>
+          <span class="tag-pill">✓ Düzenli Takip</span>
+        </div>
+      </div>
+      <a href="/services/medical-exercise" style="font-family:var(--mono);font-size:15px;color:var(--primary-blue);font-weight:bold;border-top:1px solid var(--border-light);padding-top:14px;">Hizmet İncele &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 5. COLLAPSIBLE ACCORDION EGZERSİZ KÜTÜPHANESİ (NO CARDS VISIBLE, INFRASTRUCTURE READY) -->
+<section id="egzersizler" class="wrap" style="background:var(--bg-subtle); border-radius:28px; padding:28px; border:1px solid var(--border-light);">
+  
+  <!-- ACCORDION TOGGLE BAR BUTTON -->
+  <button onclick="toggleExerciseLibrary()" id="ex-library-toggle-btn" style="width:100%; display:flex; justify-content:space-between; align-items:center; cursor:pointer; background:#FFFFFF; border:1px solid var(--border-light); padding:24px 28px; border-radius:22px; text-align:left; box-shadow:0 4px 14px rgba(0,0,0,0.04); transition:all 0.3s ease;">
+    <div>
+      <span class="section-tag" style="margin:0;">BİYOMEKANİK KÜTÜPHANE</span>
+      <h2 style="margin:6px 0 0; font-size:34px; color:var(--navy-dark); font-family:var(--display);">BİLİMSEL EGZERSİZ KÜTÜPHANESİ KATEGORİ ALTYAPISI</h2>
+      <span style="font-family:var(--mono); font-size:14px; color:var(--text-muted);">Kategori altyapısını aşağı doğru açmak / gizlemek için tıklayın</span>
+    </div>
+    <div id="ex-toggle-icon" style="font-size:22px; font-weight:bold; color:#fff; background:var(--primary-blue); width:48px; height:48px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(37,99,235,0.3); transition:transform 0.3s;">▼</div>
+  </button>
+
+  <!-- COLLAPSIBLE CONTENT (HIDDEN BY DEFAULT) -->
+  <div id="ex-collapsible-content" style="display:none; margin-top:28px;">
+    
+    <!-- CATEGORY FILTER BUTTONS -->
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:32px;font-family:var(--mono);font-size:15px;">
+      <button class="ex-filter-btn" style="padding:12px 24px;border-radius:14px;background:var(--primary-blue);color:#fff;border:none;cursor:pointer;font-weight:bold;">Tümü</button>
+      <button class="ex-filter-btn" style="padding:12px 24px;border-radius:14px;background:#FFFFFF;color:var(--text-sub);border:1px solid var(--border-light);cursor:pointer;font-weight:bold;">Göğüs</button>
+      <button class="ex-filter-btn" style="padding:12px 24px;border-radius:14px;background:#FFFFFF;color:var(--text-sub);border:1px solid var(--border-light);cursor:pointer;font-weight:bold;">Sırt</button>
+      <button class="ex-filter-btn" style="padding:12px 24px;border-radius:14px;background:#FFFFFF;color:var(--text-sub);border:1px solid var(--border-light);cursor:pointer;font-weight:bold;">Omuz</button>
+      <button class="ex-filter-btn" style="padding:12px 24px;border-radius:14px;background:#FFFFFF;color:var(--text-sub);border:1px solid var(--border-light);cursor:pointer;font-weight:bold;">Bacak</button>
+      <button class="ex-filter-btn" style="padding:12px 24px;border-radius:14px;background:#FFFFFF;color:var(--text-sub);border:1px solid var(--border-light);cursor:pointer;font-weight:bold;">Kol</button>
+    </div>
+
+    <!-- UPCOMING BULK CONTENT PLACEHOLDER -->
+    <div style="background:#FFFFFF;padding:48px 32px;border-radius:24px;border:1px solid var(--border-light);text-align:center;max-width:650px;margin:0 auto;">
+      <span style="font-size:48px;display:block;margin-bottom:12px;">📚</span>
+      <h3 style="font-family:var(--display);font-size:30px;color:var(--navy-dark);margin-bottom:12px;">EGZERSİZ KÜTÜPHANESİ YAKINDA AKTİF EDİLECEKTİR</h3>
+      <p style="font-size:16px;color:var(--text-sub);line-height:1.6;margin-bottom:16px;">Tüm nizami egzersiz rehberleri, biyomekanik analiz görselleri ve yüksek çözünürlüklü kapaklar toplu içerik yüklemesi ile bu alanda yayınlanacaktır. Kategori ve kod altyapısı eksiksiz hazırlanmıştır.</p>
+      <span style="background:#EFF6FF;color:var(--primary-blue);font-family:var(--mono);font-size:12px;font-weight:800;padding:6px 16px;border-radius:20px;border:1px solid #BFDBFE;">⚡ TOPLU İÇERİK YÜKLEMESİNE HAZIR ALTYAPI</span>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 6. REDESIGNED SPOR BİLİMLERİ & AKADEMİ SHOWCASE -->
+<section id="academy" class="wrap">
+  
+  <!-- MASTER REDESIGNED HEADER -->
+  <div class="premium-card" style="background:var(--navy-dark);color:#fff;border-color:#1E293B;padding:48px;text-align:center;max-width:900px;margin:0 auto 48px;border-radius:28px;">
+    <span style="font-family:var(--mono);font-size:12px;color:#60A5FA;font-weight:bold;background:#1E3A8A;padding:6px 16px;border-radius:20px;border:1px solid #1E40AF;display:inline-block;margin-bottom:16px;letter-spacing:1px;">ULUSLARARASI SPOR BİLİMLERİ &amp; ATLETİK SAĞLIK AKADEMİSİ</span>
+    <h2 style="color:#fff;font-size:44px;margin-bottom:16px;">TK PERFORMANCE SPOR BİLİMLERİ &amp; AKADEMİ MERKEZİ</h2>
+    <p style="color:#CBD5E1;font-size:18px;line-height:1.7;max-width:780px;margin:0 auto;">Hakemli spor bilimi araştırmaları, klinik fizyoloji, beslenme diyetetiği, biyomekanik rehberler ve interaktif biyometrik hesaplayıcıların yer aldığı kurumsal eğitim ve bilgi merkezi.</p>
+  </div>
+
+  <!-- 12 FUTURE CATEGORIES INFRASTRUCTURE GRID -->
+  <span class="section-tag">AKADEMİ KATEGORİ YAPISI</span>
+  <h2>12 UZMANLIK DİSİPLİNİ</h2>
+
+  <div class="grid-4" style="margin-bottom:48px;">
+    <div class="premium-card" style="background:var(--bg-subtle);"><span style="font-size:32px;display:block;margin-bottom:8px;">🔬</span><h4 style="font-family:var(--display);font-size:24px;color:var(--navy-dark);">Egzersiz Bilimleri</h4><p style="font-size:14px;color:var(--text-sub);">Hipertrofi ve kinesiyoloji makaleleri.</p></div>
+    <div class="premium-card" style="background:var(--bg-subtle);"><span style="font-size:32px;display:block;margin-bottom:8px;">📖</span><h4 style="font-family:var(--display);font-size:24px;color:var(--navy-dark);">Antrenman Rehberleri</h4><p style="font-size:14px;color:var(--text-sub);">Formlar ve periodizasyon.</p></div>
+    <div class="premium-card" style="background:var(--bg-subtle);"><span style="font-size:32px;display:block;margin-bottom:8px;">🥗</span><h4 style="font-family:var(--display);font-size:24px;color:var(--navy-dark);">Beslenme</h4><p style="font-size:14px;color:var(--text-sub);">Metabolizma ve makro rehberleri.</p></div>
+    <div class="premium-card" style="background:var(--bg-subtle);"><span style="font-size:32px;display:block;margin-bottom:8px;">💊</span><h4 style="font-family:var(--display);font-size:24px;color:var(--navy-dark);">Supplement Rehberi</h4><p style="font-size:14px;color:var(--text-sub);">Ergojenik destekler.</p></div>
+    <div class="premium-card" style="background:var(--bg-subtle);"><span style="font-size:32px;display:block;margin-bottom:8px;">🏥</span><h4 style="font-family:var(--display);font-size:24px;color:var(--navy-dark);">Sporcu Sağlığı</h4><p style="font-size:14px;color:var(--text-sub);">Recovery ve rejenerasyon.</p></div>
+    <div class="premium-card" style="background:var(--bg-subtle);"><span style="font-size:32px;display:block;margin-bottom:8px;">🧘‍♀️</span><h4 style="font-family:var(--display);font-size:24px;color:var(--navy-dark);">Pilates</h4><p style="font-size:14px;color:var(--text-sub);">Omurga hizalama ve core.</p></div>
+    <div class="premium-card" style="background:var(--bg-subtle);"><span style="font-size:32px;display:block;margin-bottom:8px;">⚡</span><h4 style="font-family:var(--display);font-size:24px;color:var(--navy-dark);">Atletik Performans</h4><p style="font-size:14px;color:var(--text-sub);">VBT ve dikey sıçrama.</p></div>
+    <div class="premium-card" style="background:var(--bg-subtle);"><span style="font-size:32px;display:block;margin-bottom:8px;">🩹</span><h4 style="font-family:var(--display);font-size:24px;color:var(--navy-dark);">Medikal Egzersiz</h4><p style="font-size:14px;color:var(--text-sub);">Postür analizi ve koruma.</p></div>
+    <div class="premium-card" style="background:var(--bg-subtle);"><span style="font-size:32px;display:block;margin-bottom:8px;">📐</span><h4 style="font-family:var(--display);font-size:24px;color:var(--navy-dark);">Hareket Analizi</h4><p style="font-size:14px;color:var(--text-sub);">Biyomekanik açı analizi.</p></div>
+    <div class="premium-card" style="background:var(--bg-subtle);"><span style="font-size:32px;display:block;margin-bottom:8px;">🎥</span><h4 style="font-family:var(--display);font-size:24px;color:var(--navy-dark);">Video Eğitimleri</h4><p style="font-size:14px;color:var(--text-sub);">Teknik dersler ve seminerler.</p></div>
+    <div class="premium-card" style="background:var(--bg-subtle);"><span style="font-size:32px;display:block;margin-bottom:8px;">🧮</span><h4 style="font-family:var(--display);font-size:24px;color:var(--navy-dark);">Hesaplayıcılar</h4><p style="font-size:14px;color:var(--text-sub);">BMR, 1RM, Nabız ve Yağ Oranı.</p></div>
+    <div class="premium-card" style="background:var(--bg-subtle);"><span style="font-size:32px;display:block;margin-bottom:8px;">❓</span><h4 style="font-family:var(--display);font-size:24px;color:var(--navy-dark);">Sık Sorulan Sorular</h4><p style="font-size:14px;color:var(--text-sub);">Merak edilen tüm detaylar.</p></div>
+  </div>
+
+  <!-- BIOMETRIC CALCULATORS CARDS -->
+  <span class="section-tag" style="color:var(--amber-accent);">BİYOMETRİK HESAPLAYICILAR</span>
+  <h2>BİYOMETRİK SAĞLIK VE PERFORMANS ARAÇLARI</h2>
+  <div class="grid-4">
+    <div class="premium-card"><span style="font-size:36px;display:block;margin-bottom:8px;">🔥</span><h4 style="font-family:var(--display);font-size:24px;color:var(--navy-dark);">BMR &amp; TDEE Kalori</h4><p style="font-size:15px;color:var(--text-sub);">Metabolizma hızınızı ve enerji harcamanızı hesaplayın.</p><a href="/academy" style="font-family:var(--mono);font-size:13px;color:var(--amber-accent);font-weight:bold;display:block;margin-top:10px;">Hesapla &rarr;</a></div>
+    <div class="premium-card"><span style="font-size:36px;display:block;margin-bottom:8px;">🏋️‍♂️</span><h4 style="font-family:var(--display);font-size:24px;color:var(--navy-dark);">1RM Maksimal Kuvvet</h4><p style="font-size:15px;color:var(--text-sub);">Tek tekrarda kaldırabileceğiniz maksimum ağırlığı bulun.</p><a href="/academy" style="font-family:var(--mono);font-size:13px;color:var(--amber-accent);font-weight:bold;display:block;margin-top:10px;">Hesapla &rarr;</a></div>
+    <div class="premium-card"><span style="font-size:36px;display:block;margin-bottom:8px;">❤️</span><h4 style="font-family:var(--display);font-size:24px;color:var(--navy-dark);">Hedef Nabız (Max HR)</h4><p style="font-size:15px;color:var(--text-sub);">Kardiyo ve laktat tolerans nabız bölgelerinizi belirleyin.</p><a href="/academy" style="font-family:var(--mono);font-size:13px;color:var(--amber-accent);font-weight:bold;display:block;margin-top:10px;">Hesapla &rarr;</a></div>
+    <div class="premium-card"><span style="font-size:36px;display:block;margin-bottom:8px;">📊</span><h4 style="font-family:var(--display);font-size:24px;color:var(--navy-dark);">Vücut Yağ Oranı</h4><p style="font-size:15px;color:var(--text-sub);">Yağ yüzdenizi ve kas kütlenizi görün.</p><a href="/academy" style="font-family:var(--mono);font-size:13px;color:var(--amber-accent);font-weight:bold;display:block;margin-top:10px;">Hesapla &rarr;</a></div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 7. SUCCESS STORIES SECTION -->
+<section id="success-stories" class="wrap">
+  <span class="section-tag" style="color:var(--green-success);">GERÇEK DANIŞAN SONUÇLARI</span>
+  <h2>BAŞARI HİKAYELERİ</h2>
+
+  <div class="grid-3">
+    <div class="premium-card">
+      <span style="font-family:var(--mono);font-size:12px;color:var(--amber-accent);background:#FEF3C7;padding:4px 10px;border-radius:10px;font-weight:bold;">12 HAFTALIK DÖNÜŞÜM</span>
+      <h3 style="font-family:var(--display);font-size:28px;color:var(--navy-dark);margin-top:10px;">Emre T. (29, Yazılım Mühendisi)</h3>
+      <p style="font-size:17px;color:var(--text-sub);font-style:italic;margin:10px 0;">"12 haftada bel ağrılarım tamamen bitti ve vücudum yeniden şekillendi."</p>
+      <div style="font-family:var(--mono);font-size:15px;color:var(--green-success);font-weight:bold;">-11 kg Yağ / +4 kg Kas</div>
+    </div>
+    <div class="premium-card">
+      <span style="font-family:var(--mono);font-size:12px;color:var(--amber-accent);background:#FEF3C7;padding:4px 10px;border-radius:10px;font-weight:bold;">POSTÜR &amp; ŞEKİLLENME</span>
+      <h3 style="font-family:var(--display);font-size:28px;color:var(--navy-dark);margin-top:10px;">Selin K. (26, Mimar)</h3>
+      <p style="font-size:17px;color:var(--text-sub);font-style:italic;margin:10px 0;">"Postürümdeki duruş bozukluğu 4 haftada düzelmeye başladı."</p>
+      <div style="font-family:var(--mono);font-size:15px;color:var(--green-success);font-weight:bold;">Kifoz Düzeltimi / -8 cm Bel</div>
+    </div>
+    <div class="premium-card">
+      <span style="font-family:var(--mono);font-size:12px;color:var(--amber-accent);background:#FEF3C7;padding:4px 10px;border-radius:10px;font-weight:bold;">ATLETİK PERFORMANS</span>
+      <h3 style="font-family:var(--display);font-size:28px;color:var(--navy-dark);margin-top:10px;">Berkay A. (22, Futbolcu)</h3>
+      <p style="font-size:17px;color:var(--text-sub);font-style:italic;margin:10px 0;">"Sahadaki patlayıcı gücümde ve sıçramamda harika bir artış yaşadım."</p>
+      <div style="font-family:var(--mono);font-size:15px;color:var(--green-success);font-weight:bold;">+12 cm Dikey Sıçrama / Hız +%8</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 8. ABOUT SECTION -->
+<section id="hakkimda" class="wrap">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;">
+    <div>
+      <span class="section-tag">SPOR BİLİMCİ &amp; PERFORMANS KOÇU</span>
+      <h2>TUNAHAN KESKİN HAKKINDA</h2>
+      <p style="font-size:18px;color:var(--text-main);margin-bottom:18px;">
+        Beden Eğitimi ve Spor Öğretmeni unvanına sahip olan Tunahan Keskin, Spor Yöneticiliği alanında yüksek lisans eğitimine devam etmekte ve 2. Kademe Fitness Antrenörü olarak çalışmalarını sürdürmektedir.
+      </p>
+      <p style="font-size:17px;color:var(--text-sub);margin-bottom:28px;">
+        TK Performance &amp; Health; kulaktan dolma fitness fikirleri yerine %100 bilimsel araştırmalar ve biyomekanik altyapı ile hazırlanan uluslararası bir performans markasıdır.
+      </p>
+      <a href="/about" class="glass-btn">Akademik Özgeçmiş &amp; Vizyon &rarr;</a>
+    </div>
+
+    <div class="premium-card" style="background:var(--bg-subtle);">
+      <h3 style="font-family:var(--display);font-size:32px;color:var(--navy-dark);margin-bottom:20px;">UZMANLIK &amp; SERTİFİKALAR</h3>
+      <ul style="list-style:none;font-family:var(--mono);font-size:15px;color:var(--text-sub);">
+        <li style="margin-bottom:14px;">🎓 <strong>Lisans:</strong> Beden Eğitimi ve Spor Öğretmenliği</li>
+        <li style="margin-bottom:14px;">🎓 <strong>Yüksek Lisans:</strong> Spor Yöneticiliği (Devam Ediyor)</li>
+        <li style="margin-bottom:14px;">📜 <strong>Antrenörlük:</strong> 2. Kademe Fitness Antrenörü</li>
+        <li style="margin-bottom:14px;">🔬 <strong>Uzmanlık:</strong> Biyomekanik, VBT &amp; Atletik Performans</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 9. CONTACT SECTION & BOOKING FORM -->
+<section id="contact" class="wrap">
+  <div style="display:grid;grid-template-columns:1.2fr 0.8fr;gap:44px;">
+    
+    <div class="premium-card">
+      <span class="section-tag">YOLCULUĞUNU BAŞLAT</span>
+      <h2>BAŞVURU &amp; RANDEVU FORMU</h2>
+      
+      <form style="display:flex;flex-direction:column;gap:16px;font-family:var(--mono);font-size:14px;margin-top:20px;">
+        <input type="text" placeholder="Ad Soyad *" required style="background:var(--bg-subtle);border:1px solid var(--border-light);padding:16px;border-radius:12px;color:var(--navy-dark);font-size:16px;">
+        <input type="tel" placeholder="Telefon (WhatsApp) *" required style="background:var(--bg-subtle);border:1px solid var(--border-light);padding:16px;border-radius:12px;color:var(--navy-dark);font-size:16px;">
+        <select style="background:var(--bg-subtle);border:1px solid var(--border-light);padding:16px;border-radius:12px;color:var(--navy-dark);font-size:16px;">
+          <option>Fitness &amp; Vücut Dönüşümü</option>
+          <option>Sporcu Beslenmesi &amp; Diyet</option>
+          <option>Atletik Performans</option>
+          <option>Pilates (Mat &amp; Reformer)</option>
+          <option>Fonksiyonel Antrenman</option>
+          <option>Medikal Egzersiz</option>
+        </select>
+        <textarea rows="4" placeholder="Hedefiniz ve sormak istedikleriniz..." style="background:var(--bg-subtle);border:1px solid var(--border-light);padding:16px;border-radius:12px;color:var(--navy-dark);font-size:16px;"></textarea>
+        <button type="button" onclick="alert('Başvurunuz alındı. En kısa sürede iletişime geçilecektir.')" class="btn-primary" style="justify-content:center;">🚀 BAŞVURUYU GÖNDER</button>
+      </form>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:24px;">
+      <div class="premium-card" style="background:#DCFCE7;border-color:#BBF7D0;">
+        <span class="service-badge" style="color:var(--green-success);background:#FFFFFF;">WHATSAPP DİREKT İLETİŞİM</span>
+        <h3 style="font-family:var(--display);font-size:26px;color:var(--navy-dark);margin:12px 0 8px;">HIZLI BİLGİ HATTI</h3>
+        <p style="font-size:16px;color:var(--text-sub);margin-bottom:20px;">Randevu ve sormak istedikleriniz için direkt WhatsApp hattımıza ulaşın.</p>
+        <a href="https://wa.me/905445300481?text=Merhaba%20Tunahan%20Hocam,%20bilgi%20almak%20istiyorum." target="_blank" class="btn-primary" style="background:var(--green-success);display:block;text-align:center;">💬 WhatsApp İle Yazın</a>
+      </div>
+
+      <div class="premium-card">
+        <h3 style="font-family:var(--display);font-size:26px;color:var(--navy-dark);margin-bottom:14px;">LOKASYON &amp; BİLGİ</h3>
+        <p style="font-size:16px;color:var(--text-sub);margin-bottom:8px;">📍 Trabzon, Türkiye</p>
+        <p style="font-size:16px;color:var(--text-sub);margin-bottom:8px;">✉️ pt.tuna61@gmail.com</p>
+        <p style="font-size:16px;color:var(--text-sub);">⏰ Pazartesi - Cumartesi: 08:00 - 21:30</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap footer-inner">
+    <div>
+      <div style="font-family:var(--display);font-size:26px;color:#fff;margin-bottom:14px;">TK PERFORMANCE &amp; HEALTH</div>
+      <p style="margin-bottom:18px;font-size:16px;line-height:1.7;">Spor Bilimci Tunahan Keskin ile %100 bilimsel, ölçülebilir ve kişiselleştirilmiş performans ve sağlık platformu.</p>
+      <p style="font-size:15px;color:#94A3B8;">© 2026 Tunahan Keskin Performance. Tüm Hakları Saklıdır.</p>
+    </div>
+    <div>
+      <div class="footer-title">Hizmetler</div>
+      <ul class="footer-links">
+        <li><a href="/services/fitness-body-transformation">Fitness Dönüşümü</a></li>
+        <li><a href="/services/athletic-performance">Atletik Performans</a></li>
+        <li><a href="/services/pilates">Pilates</a></li>
+        <li><a href="/services/medical-exercise">Medikal Egzersiz</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-title">Platform</div>
+      <ul class="footer-links">
+        <li><a href="/services">Hizmetler</a></li>
+        <li><a href="#egzersizler">Egzersiz Kütüphanesi</a></li>
+        <li><a href="/academy">Akademi</a></li>
+        <li><a href="/success-stories">Başarı Hikayeleri</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-title">İletişim</div>
+      <p style="font-size:16px;color:#CBD5E1;">Trabzon / Türkiye</p>
+      <p style="font-size:16px;color:#CBD5E1;">pt.tuna61@gmail.com</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/905445300481?text=Merhaba%20Tunahan%20Hocam,%20online%20ko%C3%A7luk%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="wa-float">
+  💬 WhatsApp İletişim
+</a>
+
+<script>
+function toggleExerciseLibrary(forceOpen) {
+  const content = document.getElementById('ex-collapsible-content');
+  const icon = document.getElementById('ex-toggle-icon');
+  if (!content) return;
+
+  if (forceOpen || content.style.display === 'none' || content.style.display === '') {
+    content.style.display = 'block';
+    if (icon) icon.innerText = '▲';
+  } else {
+    content.style.display = 'none';
+    if (icon) icon.innerText = '▼';
+  }
+}
+
+window.addEventListener('hashchange', function() {
+  if (window.location.hash === '#egzersizler') {
+    toggleExerciseLibrary(true);
+  }
+});
+if (window.location.hash === '#egzersizler') {
+  toggleExerciseLibrary(true);
+}
+</script>
+
+</body>
+</html>
