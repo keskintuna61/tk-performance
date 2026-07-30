@@ -55,28 +55,35 @@
     position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.94);
     backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
     border-bottom:1px solid var(--border-light);
-    padding:20px 24px;box-shadow: 0 4px 20px -2px rgba(0,0,0,0.05);
+    padding:16px 20px;box-shadow: 0 4px 20px -2px rgba(0,0,0,0.05);
     transition: all 0.3s ease;
+    width: 100%;
+    overflow: hidden;
   }
-  .nav-inner{display:flex;justify-content:space-between;align-items:center;max-width:1240px;margin:0 auto;gap:24px;}
-  .brand{display:flex;align-items:center;gap:16px;flex-shrink:0;}
+  .nav-inner{display:flex;justify-content:space-between;align-items:center;max-width:1400px;margin:0 auto;gap:16px;}
+  .brand{display:flex;align-items:center;gap:12px;flex-shrink:0;}
   .brand-logo{
-    width:48px;height:48px;border-radius:14px;
+    width:42px;height:42px;border-radius:12px;
     background:var(--primary-blue);
     display:flex;align-items:center;justify-content:center;
-    font-family:var(--display);font-size:26px;font-weight:bold;color:#fff;
+    font-family:var(--display);font-size:24px;font-weight:bold;color:#fff;
     box-shadow: 0 4px 14px rgba(37,99,235,0.3);
+    flex-shrink:0;
   }
-  .brand-title{font-family:var(--display);font-size:28px;letter-spacing:0.5px;color:var(--navy-dark);line-height:1;margin-bottom:3px;}
-  .brand-sub{font-family:var(--mono);font-size:11px;color:var(--primary-blue);letter-spacing:0.5px;text-transform:uppercase;font-weight:800;}
+  .brand-title{font-family:var(--display);font-size:24px;letter-spacing:0;color:var(--navy-dark);line-height:1;margin-bottom:2px;white-space:nowrap;}
+  .brand-sub{font-family:var(--mono);font-size:10px;color:var(--primary-blue);letter-spacing:0.5px;text-transform:uppercase;font-weight:800;white-space:nowrap;}
   
-  .nav-links{display:flex;gap:28px;font-family:var(--mono);font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0;}
+  .nav-links{display:flex;gap:16px;font-family:var(--mono);font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0;}
   .nav-links a{color:var(--text-sub);transition:color .2s;position:relative;white-space:nowrap;padding:4px 0;}
   .nav-links a:hover, .nav-links a.active{color:var(--primary-blue);}
 
+  @media(min-width: 1600px) {
+    .nav-links { gap: 26px; font-size: 15px; }
+  }
+
   .btn-cta{
     background:var(--primary-blue);color:#fff;font-family:var(--mono);
-    font-size:16px;font-weight:900;padding:14px 26px;border-radius:12px;
+    font-size:15px;font-weight:900;padding:12px 20px;border-radius:12px;
     box-shadow:0 4px 14px rgba(37,99,235,0.25);transition:all .2s;display:inline-flex;align-items:center;gap:8px;
     white-space:nowrap;flex-shrink:0;
   }
@@ -172,8 +179,15 @@
   }
   .wa-float:hover{transform:scale(1.05);}
 
+  @media(max-width:1200px){
+    .nav-links, .nav-inner > .btn-cta { display:none !important; }
+    .nav-hamburger-btn { display:flex !important; }
+  }
+  @media(min-width:1201px){
+    .nav-hamburger-btn { display:none !important; }
+  }
+
   @media(max-width:860px){
-    .nav-links{display:none;}
     .grid-3, .grid-4, .grid-2{grid-template-columns:1fr;}
     .footer-inner{grid-template-columns:1fr 1fr;}
   }
@@ -206,6 +220,20 @@
       <a href="#contact">İLETİŞİM</a>
     </div>
     <a href="#contact" class="btn-cta">🚀 Yolculuğunu Başlat</a>
+    <button class="nav-hamburger-btn" onclick="toggleMobileNav()" style="display:none;background:none;border:none;font-size:26px;color:var(--navy-dark);cursor:pointer;padding:4px;">☰</button>
+  </div>
+  
+  <div id="mobile-nav-dropdown" style="display:none;background:#FFFFFF;border-top:1px solid var(--border-light);padding:20px;font-family:var(--mono);font-size:16px;font-weight:bold;margin-top:12px;">
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <a href="#hero" onclick="toggleMobileNav()">ANA SAYFA</a>
+      <a href="#services" onclick="toggleMobileNav()">HİZMETLERİMİZ</a>
+      <a href="#egzersizler" onclick="toggleMobileNav()">EGZERSİZ KÜTÜPHANESİ</a>
+      <a href="#academy" onclick="toggleMobileNav()">AKADEMİ</a>
+      <a href="#success-stories" onclick="toggleMobileNav()">BAŞARI HİKAYELERİ</a>
+      <a href="#hakkimda" onclick="toggleMobileNav()">HAKKIMIZDA</a>
+      <a href="#contact" onclick="toggleMobileNav()">İLETİŞİM</a>
+      <a href="#contact" onclick="toggleMobileNav()" class="btn-cta" style="display:block;text-align:center;margin-top:8px;">🚀 Yolculuğunu Başlat</a>
+    </div>
   </div>
 </nav>
 
@@ -642,6 +670,12 @@
 </a>
 
 <script>
+function toggleMobileNav() {
+  const dropdown = document.getElementById('mobile-nav-dropdown');
+  if (!dropdown) return;
+  dropdown.style.display = (dropdown.style.display === 'none' || dropdown.style.display === '') ? 'block' : 'none';
+}
+
 function toggleExerciseLibrary(forceOpen) {
   const content = document.getElementById('ex-collapsible-content');
   const icon = document.getElementById('ex-toggle-icon');
