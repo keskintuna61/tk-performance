@@ -197,6 +197,69 @@
     word-break: normal;
   }
 
+  /* SECTION SCOPED BOX-SIZING FOR CONTACT */
+  #contact, #contact * {
+    box-sizing: border-box !important;
+  }
+
+  /* CONTACT GRID CONTAINER BASE */
+  .contact-grid-container {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 40px;
+    align-items: start;
+    margin-top: 32px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* FORM ROWS BASE */
+  .contact-form-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .contact-form-row-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+  }
+
+  /* CONTACT FORM INPUTS, SELECTS & TEXTAREAS BASE STYLES */
+  .contact-form-card input,
+  .contact-form-card select,
+  .contact-form-card textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 56px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 1px solid var(--border-light);
+    background: var(--bg-subtle);
+    font-size: 16px;
+    font-family: var(--sans);
+    color: var(--navy-dark);
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  .contact-form-card select {
+    padding-right: 48px;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%232563EB'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 20px;
+  }
+
+  .contact-form-card textarea {
+    min-height: 140px;
+    resize: vertical;
+  }
+
   @media(max-width:1200px){
     .nav-links, .nav-inner > .btn-cta { display:none !important; }
     .nav-hamburger-btn { display:flex !important; }
@@ -212,6 +275,76 @@
 
   @media (max-width: 768px) {
     .wrap { padding-left: 16px !important; padding-right: 16px !important; }
+
+    /* CONTACT SINGLE COLUMN MOBILE */
+    .contact-grid-container {
+      display: grid !important;
+      grid-template-columns: minmax(0, 1fr) !important;
+      gap: 24px !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+    }
+
+    .contact-form-card {
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      margin: 0 !important;
+      padding: 24px 18px !important;
+      box-sizing: border-box !important;
+      position: relative !important;
+      transform: none !important;
+    }
+
+    .contact-form-row-2, .contact-form-row-3 {
+      display: grid !important;
+      grid-template-columns: minmax(0, 1fr) !important;
+      gap: 16px !important;
+      width: 100% !important;
+      min-width: 0 !important;
+    }
+
+    .contact-form-card button[type="submit"] {
+      width: 100% !important;
+      max-width: 100% !important;
+      min-height: 54px !important;
+      box-sizing: border-box !important;
+      white-space: normal !important;
+      text-align: center !important;
+    }
+
+    /* FLOATING WHATSAPP BUTTON MOBILE (CIRCULAR 56x56) */
+    .wa-float {
+      position: fixed !important;
+      right: 16px !important;
+      left: auto !important;
+      bottom: calc(16px + env(safe-area-inset-bottom)) !important;
+      width: 56px !important;
+      height: 56px !important;
+      min-width: 56px !important;
+      max-width: 56px !important;
+      padding: 0 !important;
+      border-radius: 50% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      transform: none !important;
+      overflow: hidden !important;
+      white-space: nowrap !important;
+      z-index: 1000 !important;
+    }
+
+    .wa-float .wa-text {
+      display: none !important;
+    }
+
+    .wa-float .wa-icon {
+      font-size: 26px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
 
     /* HERO 1-COLUMN STACK & FLUID TYPOGRAPHY */
     .hero > div { grid-template-columns: 1fr !important; gap: 24px !important; }
@@ -1429,8 +1562,8 @@ function handleContactSubmit(e) {
   </div>
 </footer>
 
-<a href="https://wa.me/905445300481?text=Merhaba%20Tunahan%20Hocam,%20online%20ko%C3%A7luk%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="wa-float">
-  💬 WhatsApp İletişim
+<a href="https://wa.me/905445300481?text=Merhaba%20Tunahan%20Hocam,%20online%20ko%C3%A7luk%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="wa-float" aria-label="WhatsApp İletişim">
+  <span class="wa-icon">💬</span><span class="wa-text">WhatsApp İletişim</span>
 </a>
 
 <!-- FULLSCREEN SERVICE LANDING MODAL CONTAINER -->
