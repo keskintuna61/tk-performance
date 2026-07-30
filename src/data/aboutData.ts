@@ -49,11 +49,11 @@ export const aboutData: AboutData = {
   qualifications: [
     { title: 'Spor Yöneticiliği Lisans Mezunu', badge: 'LİSANS DİPLOMASI' },
     { title: 'Pedagojik Formasyon Eğitimi', badge: 'FORMASYON BELGESİ' },
-    { title: 'Spor Yöneticiliği Yüksek Lisans', badge: 'DEVAM EDİYOR' },
+    { title: 'Spor Yöneticiliği Yüksek Lisans Programı (Devam Ediyor)', badge: 'DEVAM EDİYOR' },
     { title: '2. Kademe Fitness Antrenörlük Belgesi', badge: 'TVGFBF SERTİFİKALI' },
     { title: '1. Kademe Basketbol Antrenörlük Belgesi', badge: 'TBF LİSANSLI' },
     { title: '1. Kademe Floor Curling Antrenörlük Belgesi', badge: 'FEDERASYON LİSANSLI' },
-    { title: 'Atletik Performans & Fitness Deneyimi', badge: 'SAHA UYGULAMALARI' }
+    { title: 'Atletik performans ve fitness antrenörlüğü deneyimi', badge: 'DENEYİM' }
   ],
   approachSteps: [
     {

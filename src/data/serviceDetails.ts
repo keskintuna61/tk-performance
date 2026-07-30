@@ -303,15 +303,15 @@ export const serviceDetailsMap: Record<string, ServiceDetail> = {
     
     coachInfo: {
       name: 'Tunahan Keskin',
-      title: 'Spor Bilimci & Performans Koçu',
+      title: 'Spor Yöneticisi | Beden Eğitimi ve Spor Öğretmeni | 2. Kademe Fitness Antrenörü',
       philosophy: 'Spor bilimi; rastgele yorulmak değil, hedefe yönelik en verimli biyomekanik uyarıyı vermektir.',
       degrees: [
-        'Beden Eğitimi ve Spor Öğretmenliği (Lisans)',
-        'Spor Yöneticiliği (Yüksek Lisans Devam Ediyor)',
-        '2. Kademe Fitness Antrenörü (TVGFBF)',
-        'NASM & FMS Sertifikalı Biyomekanik Uzmanı'
+        'Spor Yöneticiliği Lisans Mezunu',
+        'Pedagojik Formasyon Eğitimi',
+        'Spor Yöneticiliği Yüksek Lisans Programı (Devam Ediyor)',
+        '2. Kademe Fitness Antrenörü (TVGFBF)'
       ],
-      experience: '8+ Yıl Akademik & Birebir Saha Deneyimi'
+      experience: 'Atletik performans ve fitness antrenörlüğü deneyimi'
     },
     
     tools: [

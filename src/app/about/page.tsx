@@ -37,7 +37,7 @@ export default function AboutPage() {
             TUNAHAN KESKİN
           </h1>
           <p className="font-mono text-sm text-amber-700 font-bold italic">
-            Beden Eğitimi ve Spor Öğretmeni | Spor Yöneticiliği Yüksek Lisans | 2. Kademe Fitness Antrenörü
+            Spor Yöneticisi | Beden Eğitimi ve Spor Öğretmeni | 2. Kademe Fitness Antrenörü
           </p>
 
           <p className="text-sm sm:text-base text-slate-600 font-sans leading-relaxed">
@@ -54,11 +54,15 @@ export default function AboutPage() {
             <ul className="space-y-3 text-xs text-slate-600 font-mono">
               <li className="flex items-start gap-2">
                 <span className="text-blue-600 font-bold">●</span>
-                <span><strong>Lisans:</strong> Beden Eğitimi ve Spor Öğretmenliği Unvanı</span>
+                <span><strong>Lisans:</strong> Spor Yöneticiliği Lisans Mezunu</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-blue-600 font-bold">●</span>
-                <span><strong>Yüksek Lisans:</strong> Spor Yöneticiliği Anabilim Dalı (Devam Ediyor)</span>
+                <span><strong>Formasyon:</strong> Pedagojik Formasyon Eğitimi</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-blue-600 font-bold">●</span>
+                <span><strong>Yüksek Lisans:</strong> Spor Yöneticiliği Programı (Devam Ediyor)</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-blue-600 font-bold">●</span>

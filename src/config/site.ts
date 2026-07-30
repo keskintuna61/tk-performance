@@ -3,20 +3,19 @@ export const siteConfig = {
   shortName: "TK Performance",
   altName: "TK Performance Lab",
   title: "Tunahan Keskin Performance — Sports Scientist | Performance Coach",
-  description: "Hedefine uygun kişisel antrenman sistemi, profesyonel takip ve sürdürülebilir gelişim. Biyomekanik analiz ve %100 bilimsel spor altyapısı.",
+  description: "Tunahan Keskin ile bilimsel temelli online fitness koçluğu, bire bir antrenman, atletik performans ve hareket kalitesi odaklı kişiye özel egzersiz programları.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://tunahan-keskin-website.onrender.com",
   author: "Tunahan Keskin",
-  role: "Sports Scientist | Performance Coach",
-  roleTr: "Spor Bilimci | Performans Antrenörü",
-  slogan: "BİLİMSEL ANTRENMAN. ÖLÇÜLEBİLİR GELİŞİM.",
+  role: "Spor Yöneticisi | Beden Eğitimi ve Spor Öğretmeni | 2. Kademe Fitness Antrenörü",
+  roleTr: "Spor Yöneticisi | Beden Eğitimi ve Spor Öğretmeni | 2. Kademe Fitness Antrenörü",
+  slogan: "BİLİMSEL PERFORMANS. ÖLÇÜLEBİLİR GELİŞİM.",
   subtext: "Hedefine uygun kişisel antrenman sistemi, profesyonel takip ve sürdürülebilir gelişim.",
   credentials: [
-    "2. Kademe Fitness Antrenörü",
-    "Spor Yöneticiliği Yüksek Lisans Öğrencisi",
-    "Pedagojik Formasyon Sahibi Beden Eğitimi Öğretmeni",
-    "Trabzon Yüz Yüze PT & Türkiye Geneli Online Koçluk"
+    "Spor Yöneticiliği Lisans Mezunu",
+    "Pedagojik Formasyon Eğitimi",
+    "Spor Yöneticiliği Yüksek Lisans Programı (Devam Ediyor)",
+    "2. Kademe Fitness Antrenörü"
   ],
-  // PREMİUM KOYU VE SİNEMATİK RENK PALETİ
   colors: {
     bgDark: "#070B12",
     bgNavy: "#0B1220",
@@ -31,16 +30,14 @@ export const siteConfig = {
     borderBright: "#1E90FF",
     greenSuccess: "#22C55E"
   },
-  // GÜNCEL PREMİUM PİYASA FİYATLARI
   pricing: {
-    coaching1Month: 1950,
-    coaching3Month: 4850,
-    coaching6Month: 8950,
+    coaching1Month: 2990,
+    coaching3Month: 4990,
     currency: "TL"
   },
   contact: {
     whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "905445300481",
-    instagram: process.env.NEXT_PUBLIC_INSTAGRAM_USERNAME || "pt.tunahankeskin",
+    instagram: process.env.NEXT_PUBLIC_INSTAGRAM_USERNAME || "tunahan.keskin.pt",
     email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "pt.tuna61@gmail.com",
     city: "Trabzon",
     address: "Trabzon / Türkiye (Yüz yüze PT & Türkiye Geneli Online Koçluk)"
