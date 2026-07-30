@@ -11,6 +11,7 @@ import { servicesData } from '@/data/services';
 import { exercisesData } from '@/data/exercises';
 import { successStoriesData, platformStats } from '@/data/successStories';
 import { academyCategories, academyCalculators } from '@/data/academy';
+import { ServiceSectionClient } from '@/components/services/ServiceSectionClient';
 
 export const metadata: Metadata = {
   title: 'TK Performance & Health — Spor Bilimleri, Performans & Sağlık Platformu',
@@ -31,7 +32,7 @@ export default function HomePage() {
 
       <main className="flex-1 space-y-24 pb-24">
         
-        {/* 1. HERO SECTION (MODULAR UI SHOWCASE, NO PERSON PHOTO) */}
+        {/* 1. HERO SECTION */}
         <HeroSection />
 
         {/* 2. STAT COUNTERS STRIP */}
@@ -50,7 +51,7 @@ export default function HomePage() {
         {/* SECTION DIVIDER */}
         <div className="max-w-7xl mx-auto px-6"><div className="section-divider" /></div>
 
-        {/* 3. 6 CORE SERVICES SECTION WITH ONLINE TRAINING EMBEDDED TAGS */}
+        {/* 3. 6 CORE SERVICES SECTION WITH INTERACTIVE FULLSCREEN MODAL */}
         <section id="services" className="max-w-7xl mx-auto px-6 space-y-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div className="space-y-3">
@@ -58,7 +59,7 @@ export default function HomePage() {
                 UZMANLIK ALANLARIMIZ &amp; HİZMETLER
               </span>
               <h2 className="font-display text-4xl sm:text-5xl uppercase text-slate-900 tracking-tight">
-                6 UZMANLIK ALANI &amp; DİJİTAL DESTEK
+                6 UZMANLIK ALANI &amp; İNTERAKTİF PREMİUM LANDING
               </h2>
             </div>
             <Link href="/services" className="font-mono text-base text-blue-600 font-extrabold hover:underline">
@@ -66,62 +67,14 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {coreHomeServices.map((serv, idx) => (
-              <Link
-                key={serv.id}
-                href={`/services/${serv.slug}`}
-                className="premium-card rounded-2xl p-8 flex flex-col justify-between group hover:-translate-y-1 bg-white border border-slate-200 hover:border-blue-400 transition-all duration-300 shadow-sm hover:shadow-xl space-y-6"
-              >
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-4xl p-3.5 bg-slate-50 rounded-xl border border-slate-200">
-                      {serv.icon}
-                    </span>
-                    <span className="font-mono text-xs text-blue-600 font-extrabold bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-200">
-                      0{idx + 1} • {serv.badge}
-                    </span>
-                  </div>
-
-                  <div>
-                    <h3 className="font-display text-2.5xl text-slate-900 group-hover:text-blue-600 transition-colors uppercase">
-                      {serv.title}
-                    </h3>
-                    <p className="text-base text-slate-700 font-sans leading-relaxed mt-2.5">
-                      {serv.shortDesc}
-                    </p>
-                  </div>
-
-                  {/* DISCLAIMER LABEL IF APPLICABLE */}
-                  {serv.disclaimer && (
-                    <div className="text-xs font-mono text-amber-800 bg-amber-50 p-3 rounded-xl border border-amber-200">
-                      ℹ️ {serv.disclaimer}
-                    </div>
-                  )}
-
-                  {/* ONLINE & HYBRID TRAINING TAGS */}
-                  <div className="flex flex-wrap gap-2 pt-2 font-mono text-xs">
-                    {serv.tags.map((tag, tIdx) => (
-                      <span key={tIdx} className="bg-slate-100 text-slate-700 font-bold px-3 py-1 rounded-md border border-slate-200">
-                        ✓ {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="pt-4 border-t border-slate-100 font-mono text-sm text-blue-600 font-extrabold flex justify-between items-center group-hover:translate-x-1 transition-transform">
-                  <span>HİZMET DETAYLARI &amp; PROTOKOL</span>
-                  <span>&rarr;</span>
-                </div>
-              </Link>
-            ))}
-          </div>
+          {/* INTERACTIVE SERVICE SECTION CLIENT */}
+          <ServiceSectionClient services={coreHomeServices} />
         </section>
 
         {/* SECTION DIVIDER */}
         <div className="max-w-7xl mx-auto px-6"><div className="section-divider" /></div>
 
-        {/* 4. EXERCISE LIBRARY ACCORDION (NO CARDS VISIBLE, BULK READY) */}
+        {/* 4. EXERCISE LIBRARY ACCORDION */}
         <section className="max-w-7xl mx-auto px-6">
           <ExerciseFilterSection exercises={exercisesData} defaultOpen={false} />
         </section>
@@ -131,8 +84,6 @@ export default function HomePage() {
 
         {/* 5. REDESIGNED SPOR BİLİMLERİ & AKADEMİ SHOWCASE */}
         <section id="academy" className="max-w-7xl mx-auto px-6 space-y-12">
-          
-          {/* MASTER REDESIGNED HEADER */}
           <div className="premium-card p-10 rounded-3xl bg-slate-900 text-white border border-slate-800 shadow-2xl space-y-4 text-center max-w-4xl mx-auto">
             <span className="font-mono text-xs text-blue-400 font-extrabold tracking-widest uppercase bg-blue-950 px-4 py-1.5 rounded-full border border-blue-800 inline-block">
               ULUSLARARASI SPOR BİLİMLERİ &amp; ATLETİK SAĞLIK AKADEMİSİ
@@ -145,7 +96,6 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* 12 FUTURE CATEGORIES INFRASTRUCTURE GRID */}
           <div className="space-y-6">
             <h3 className="font-display text-3xl text-slate-900 uppercase border-l-4 border-blue-600 pl-4">
               AKADEMİ KATEGORİ YAPISI (12 UZMANLIK DİSİPLİNİ)
@@ -162,7 +112,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* BIOMETRIC CALCULATORS SECTION */}
           <div className="space-y-6 pt-6">
             <h3 className="font-display text-3xl text-slate-900 uppercase border-l-4 border-amber-500 pl-4">
               BİYOMETRİK HESAPLAYICILAR &amp; ARAÇLAR

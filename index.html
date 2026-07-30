@@ -348,7 +348,7 @@
   <div class="grid-3">
     
     <!-- 1. FITNESS & VÜCUT DÖNÜŞÜMÜ -->
-    <div class="premium-card" style="display:flex;flex-direction:column;justify-content:space-between;">
+    <div class="premium-card" onclick="openServiceLandingModal('fitness-body-transformation')" style="display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;">
       <div>
         <span class="service-badge">01 • DÖNÜŞÜM</span>
         <h3 style="font-family:var(--display);font-size:28px;color:var(--navy-dark);margin:14px 0 8px;">FITNESS &amp; VÜCUT DÖNÜŞÜMÜ</h3>
@@ -360,11 +360,11 @@
           <span class="tag-pill">✓ Düzenli Takip</span>
         </div>
       </div>
-      <a href="/services/fitness-body-transformation" style="font-family:var(--mono);font-size:15px;color:var(--primary-blue);font-weight:bold;border-top:1px solid var(--border-light);padding-top:14px;">Hizmet İncele &rarr;</a>
+      <button onclick="event.stopPropagation(); openServiceLandingModal('fitness-body-transformation')" style="font-family:var(--mono);font-size:15px;color:var(--primary-blue);font-weight:bold;border:none;background:none;border-top:1px solid var(--border-light);padding-top:14px;text-align:left;cursor:pointer;width:100%;">Hizmet İncele &rarr;</button>
     </div>
 
     <!-- 2. BESLENME & DİYETİSYEN -->
-    <div class="premium-card" style="display:flex;flex-direction:column;justify-content:space-between;">
+    <div class="premium-card" onclick="openServiceLandingModal('nutrition-dietetics')" style="display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;">
       <div>
         <span class="service-badge" style="color:var(--amber-accent);background:#FEF3C7;border-color:#FDE68A;">02 • BESLENME</span>
         <h3 style="font-family:var(--display);font-size:28px;color:var(--navy-dark);margin:14px 0 8px;">BESLENME &amp; DİYETİSYEN</h3>
@@ -377,11 +377,11 @@
           <span class="tag-pill">✓ Düzenli Takip</span>
         </div>
       </div>
-      <a href="/services/nutrition-dietetics" style="font-family:var(--mono);font-size:15px;color:var(--primary-blue);font-weight:bold;border-top:1px solid var(--border-light);padding-top:14px;">Hizmet İncele &rarr;</a>
+      <button onclick="event.stopPropagation(); openServiceLandingModal('nutrition-dietetics')" style="font-family:var(--mono);font-size:15px;color:var(--primary-blue);font-weight:bold;border:none;background:none;border-top:1px solid var(--border-light);padding-top:14px;text-align:left;cursor:pointer;width:100%;">Hizmet İncele &rarr;</button>
     </div>
 
     <!-- 3. ATLETİK PERFORMANS -->
-    <div class="premium-card" style="display:flex;flex-direction:column;justify-content:space-between;">
+    <div class="premium-card" onclick="openServiceLandingModal('athletic-performance')" style="display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;">
       <div>
         <span class="service-badge">03 • ATLETİK</span>
         <h3 style="font-family:var(--display);font-size:28px;color:var(--navy-dark);margin:14px 0 8px;">ATLETİK PERFORMANS</h3>
@@ -393,11 +393,11 @@
           <span class="tag-pill">✓ Düzenli Takip</span>
         </div>
       </div>
-      <a href="/services/athletic-performance" style="font-family:var(--mono);font-size:15px;color:var(--primary-blue);font-weight:bold;border-top:1px solid var(--border-light);padding-top:14px;">Hizmet İncele &rarr;</a>
+      <button onclick="event.stopPropagation(); openServiceLandingModal('athletic-performance')" style="font-family:var(--mono);font-size:15px;color:var(--primary-blue);font-weight:bold;border:none;background:none;border-top:1px solid var(--border-light);padding-top:14px;text-align:left;cursor:pointer;width:100%;">Hizmet İncele &rarr;</button>
     </div>
 
     <!-- 4. MAT & REFORMER PİLATES -->
-    <div class="premium-card" style="display:flex;flex-direction:column;justify-content:space-between;">
+    <div class="premium-card" onclick="openServiceLandingModal('pilates')" style="display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;">
       <div>
         <span class="service-badge">04 • PİLATES</span>
         <h3 style="font-family:var(--display);font-size:28px;color:var(--navy-dark);margin:14px 0 8px;">MAT &amp; REFORMER PİLATES</h3>
@@ -409,11 +409,11 @@
           <span class="tag-pill">✓ Düzenli Takip</span>
         </div>
       </div>
-      <a href="/services/pilates" style="font-family:var(--mono);font-size:15px;color:var(--primary-blue);font-weight:bold;border-top:1px solid var(--border-light);padding-top:14px;">Hizmet İncele &rarr;</a>
+      <button onclick="event.stopPropagation(); openServiceLandingModal('pilates')" style="font-family:var(--mono);font-size:15px;color:var(--primary-blue);font-weight:bold;border:none;background:none;border-top:1px solid var(--border-light);padding-top:14px;text-align:left;cursor:pointer;width:100%;">Hizmet İncele &rarr;</button>
     </div>
 
     <!-- 5. FONKSİYONEL ANTRENMAN -->
-    <div class="premium-card" style="display:flex;flex-direction:column;justify-content:space-between;">
+    <div class="premium-card" onclick="openServiceLandingModal('functional-training')" style="display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;">
       <div>
         <span class="service-badge">05 • FONKSİYONEL</span>
         <h3 style="font-family:var(--display);font-size:28px;color:var(--navy-dark);margin:14px 0 8px;">FONKSİYONEL ANTRENMAN</h3>
@@ -425,11 +425,11 @@
           <span class="tag-pill">✓ Düzenli Takip</span>
         </div>
       </div>
-      <a href="/services/functional-training" style="font-family:var(--mono);font-size:15px;color:var(--primary-blue);font-weight:bold;border-top:1px solid var(--border-light);padding-top:14px;">Hizmet İncele &rarr;</a>
+      <button onclick="event.stopPropagation(); openServiceLandingModal('functional-training')" style="font-family:var(--mono);font-size:15px;color:var(--primary-blue);font-weight:bold;border:none;background:none;border-top:1px solid var(--border-light);padding-top:14px;text-align:left;cursor:pointer;width:100%;">Hizmet İncele &rarr;</button>
     </div>
 
     <!-- 6. MEDİKAL EGZERSİZ -->
-    <div class="premium-card" style="display:flex;flex-direction:column;justify-content:space-between;">
+    <div class="premium-card" onclick="openServiceLandingModal('medical-exercise')" style="display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;">
       <div>
         <span class="service-badge" style="color:var(--green-success);background:#DCFCE7;border-color:#BBF7D0;">06 • MEDİKAL</span>
         <h3 style="font-family:var(--display);font-size:28px;color:var(--navy-dark);margin:14px 0 8px;">MEDİKAL EGZERSİZ</h3>
@@ -441,7 +441,7 @@
           <span class="tag-pill">✓ Düzenli Takip</span>
         </div>
       </div>
-      <a href="/services/medical-exercise" style="font-family:var(--mono);font-size:15px;color:var(--primary-blue);font-weight:bold;border-top:1px solid var(--border-light);padding-top:14px;">Hizmet İncele &rarr;</a>
+      <button onclick="event.stopPropagation(); openServiceLandingModal('medical-exercise')" style="font-family:var(--mono);font-size:15px;color:var(--primary-blue);font-weight:bold;border-top:1px solid var(--border-light);padding-top:14px;text-align:left;cursor:pointer;width:100%;">Hizmet İncele &rarr;</button>
     </div>
 
   </div>
@@ -669,7 +669,304 @@
   💬 WhatsApp İletişim
 </a>
 
+<!-- FULLSCREEN SERVICE LANDING MODAL CONTAINER -->
+<div id="service-modal-overlay" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:9999;background:rgba(15,23,42,0.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);display:none;align-items:center;justify-content:center;padding:16px;" onclick="closeServiceLandingModal()">
+  <div id="service-modal-container" style="position:relative;width:100%;max-width:1320px;max-height:94vh;background:#FFFFFF;border-radius:28px;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,0.3);display:flex;flex-direction:column;border:1px solid var(--border-light);" onclick="event.stopPropagation()">
+    
+    <!-- TOP STICKY HEADER -->
+    <div style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border-light);padding:16px 28px;display:flex;justify-content:space-between;align-items:center;">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <span id="sm-badge" class="service-badge"></span>
+        <h3 id="sm-title" style="font-family:var(--display);font-size:26px;color:var(--navy-dark);margin:0;"></h3>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <a href="https://wa.me/905445300481?text=Merhaba%20Tunahan%20Hocam,%20bilgi%20almak%20istiyorum." target="_blank" class="btn-primary" style="background:var(--green-success);padding:10px 20px;font-size:14px;">💬 WhatsApp Bilgi Al</a>
+        <button onclick="closeServiceLandingModal()" style="width:40px;height:40px;border-radius:50%;background:#F1F5F9;color:#0F172A;border:1px solid #CBD5E1;font-size:20px;font-weight:bold;cursor:pointer;display:flex;align-items:center;justify-content:center;">✕</button>
+      </div>
+    </div>
+
+    <!-- MODAL BODY SCROLL AREA -->
+    <div id="sm-body" style="overflow-y:auto;padding:32px;display:flex;flex-direction:column;gap:48px;">
+      <!-- Dynamically filled by openServiceLandingModal JS -->
+    </div>
+
+  </div>
+</div>
+
 <script>
+const serviceDetailsDatabase = {
+  'fitness-body-transformation': {
+    title: 'FITNESS & VÜCUT DÖNÜŞÜMÜ',
+    subtitle: 'Bilimsel Yaklaşımla Kalıcı Vücut Dönüşümü',
+    badge: 'DÖNÜŞÜM & HİPERTROFİ',
+    shortDesc: 'Kas geliştirme, yağ yakımı ve vücut şekillendirmeye yönelik kişiye özel yüz yüze veya online antrenman programları.',
+    about: [
+      'Vücut dönüşümü, tesadüfi hareketler veya rastgele seçilmiş ağır yüklerle değil; insan fizyolojisinin biyomekanik ve metabolik yasalarına tam uyum gösteren bilimsel protokollerle mümkündür.',
+      'Sistemimiz, kulaktan dolma fitness fikirleri yerine mekanik gerilim, kas hasarı ve metabolik stres dengesini optimize eden akıllı periodizasyon modellerine dayanır. RIR ve RPE skalaları ile her antrenman seansının şiddeti ölçülür.',
+      'Kişiye özel hazırlanan antrenman şablonlarında omurga sağlığını koruyan biyomekanik hizalamalar önceliklendirilir.'
+    ],
+    timeline: [
+      { num: '01', title: 'Analiz', desc: 'Postür, mobilite ve kinesiyolojik değerlendirme.' },
+      { num: '02', title: 'Hedef Belirleme', desc: 'Kas kütlesi ve yağ yüzdesi hedefleri.' },
+      { num: '03', title: 'Kişiye Özel Planlama', desc: 'Biyomekanik haftalık şablon.' },
+      { num: '04', title: 'Başlangıç', desc: 'Nizami form entegrasyonu.' },
+      { num: '05', title: 'Haftalık Takip', desc: 'RIR/RPE şiddet takibi ve form analizi.' },
+      { num: '06', title: 'Performans Analizi', desc: 'Aylık anthropometrik ölçümler.' },
+      { num: '07', title: 'Güncelleme', desc: 'Progressive Overload yüklenmesi.' },
+      { num: '08', title: 'Sürdürülebilir Sonuç', desc: 'Kalıcı estetik koruma.' }
+    ],
+    pricing: [
+      { name: 'Online Eğitim', price: '2.990 TL / Ay', badge: 'Başlangıç Fiyatı', items: ['Kişiye Özel Program', 'Video Form Analizi', 'RIR/RPE Takibi', 'WhatsApp İletişim'] },
+      { name: 'Premium Online', price: '4.990 TL / Ay', badge: 'EN ÇOK TERCİH EDİLEN', items: ['Tüm Online Özellikler', 'Beslenme Rehberi', '7/24 Öncelikli WhatsApp', 'Postür Analizi'] },
+      { name: 'Yüz Yüze PT', price: '900 TL / Seans', badge: 'Başlangıç Fiyatı', items: ['60 Dakika Birebir Seans', 'Postür Hizalama', 'Stüdyo Kullanımı', 'Gelişim Raporlaması'] }
+    ]
+  },
+  'nutrition-dietetics': {
+    title: 'BESLENME & DİYETİSYEN',
+    subtitle: 'Metabolik Hızınıza Uygun Bilimsel Diyetetik',
+    badge: 'SPORCU DİYETETİĞİ & METABOLİZMA',
+    shortDesc: 'Kişiye özel beslenme planları, sporcu beslenmesi ve online beslenme danışmanlığı.',
+    about: [
+      'Beslenme; kalori kısıtlamasından ibaret bir şablon değil, vücut kompozisyonunu ve performans kapasitesini doğrudan yöneten bir hücresel yakıt yönetimidir.',
+      'Sistemimiz yetkin diyetisyen ve beslenme uzmanları iş birliğiyle yürütülür. BMR ve TDEE kalibrasyonu ile günlük makro dengesi miligram hassasiyetinde kalibre edilir.',
+      'Antrenman öncesi ve sonrası anabolik pencere ve protein sentezi optimizasyonu ön plandadır.'
+    ],
+    timeline: [
+      { num: '01', title: 'Analiz', desc: 'TDEE ve BMR ölçümü.' },
+      { num: '02', title: 'Hedef Belirleme', desc: 'Kalori ve makro oranları.' },
+      { num: '03', title: 'Planlama', desc: 'Günlük menü tasarımı.' },
+      { num: '04', title: 'Başlangıç', desc: 'Alışveriş rehberi.' },
+      { num: '05', title: 'Haftalık Takip', desc: 'Kilo ve enerji takibi.' },
+      { num: '06', title: 'Analiz', desc: 'Yağsız kas kütlesi ölçümü.' },
+      { num: '07', title: 'Revizyon', desc: 'Metabolik kalibrasyon.' },
+      { num: '08', title: 'Kalıcı Sonuç', desc: 'Sezgisel beslenme.' }
+    ],
+    pricing: [
+      { name: 'Online Beslenme', price: '2.990 TL / Ay', badge: 'Başlangıç Fiyatı', items: ['Kişiye Özel Diyet', 'Makro-Mikro Plan', 'Suplement Rehberi', 'Haftalık Kontrol'] },
+      { name: 'Premium Diyet', price: '4.990 TL / Ay', badge: 'EN ÇOK TERCİH EDİLEN', items: ['Tüm Diyet Özellikleri', 'Diyetisyen Görüşmesi', '7/24 Öncelikli İletişim', 'Vücut Analizi'] },
+      { name: 'Yüz Yüze Diyet', price: '900 TL / Seans', badge: 'Başlangıç Fiyatı', items: ['Klinik Ölçüm', 'InBody Vücut Analizi', 'Öğün Planlama', 'Gelişim Kartı'] }
+    ]
+  },
+  'athletic-performance': {
+    title: 'ATLETİK PERFORMANS',
+    subtitle: 'Saha İçi Hız, Güç ve Çeviklik Gelişimi',
+    badge: 'ATLETİK GELİŞİM & VBT',
+    shortDesc: 'Hız, kuvvet, çeviklik ve branşa özel performans gelişimi için yüz yüze veya online eğitim programları.',
+    about: [
+      'Atletik performans, genel bir antrenman salonu çalışması değildir. Sporcular için Velocity-Based Training (VBT) ve Force-Velocity eğrisi esas alınır.',
+      'Bar hızı metre/saniye cinsinden ölçülerek sinir sistemi yorgunluğu tespit edilir.',
+      'Sakatlık sonrası Return to Sport protokolleri uygulanır.'
+    ],
+    timeline: [
+      { num: '01', title: 'Analiz', desc: 'FMS ve VBT profillemesi.' },
+      { num: '02', title: 'Hedef Belirleme', desc: 'Sprint ve sıçrama hedefleri.' },
+      { num: '03', title: 'Planlama', desc: 'VBT kondisyonerlik programı.' },
+      { num: '04', title: 'Başlangıç', desc: 'Nöromüsküler adaptasyon.' },
+      { num: '05', title: 'Haftalık Takip', desc: 'Bar hızı takibi.' },
+      { num: '06', title: 'Analiz', desc: 'Sprint & jump testleri.' },
+      { num: '07', title: 'Güncelleme', desc: 'Sezon periodizasyonu.' },
+      { num: '08', title: 'Peak Performans', desc: 'Zirve form.' }
+    ],
+    pricing: [
+      { name: 'Online Atletik', price: '2.990 TL / Ay', badge: 'Başlangıç Fiyatı', items: ['Branşa Özel Program', 'VBT Yük Rehberi', 'Sprint Video Analizi', 'Yorgunluk Takibi'] },
+      { name: 'Premium Atletik', price: '4.990 TL / Ay', badge: 'EN ÇOK TERCİH EDİLEN', items: ['Tüm Online Atletik', 'Video Profilleme', 'Sakatlık Önleme', '7/24 İletişim'] },
+      { name: 'Yüz Yüze Atletik', price: '900 TL / Seans', badge: 'Başlangıç Fiyatı', items: ['Birebir Saha Seansı', 'VBT Hız Ölçer', 'Plyometrik Çalışma', 'Performans Raporu'] }
+    ]
+  },
+  'pilates': {
+    title: 'MAT & REFORMER PİLATES',
+    subtitle: 'Core Stabilitesi, Omurga Hizalaması ve Esneklik',
+    badge: 'PİLATES & OMURGA SAĞLIĞI',
+    shortDesc: 'Core kuvveti, esneklik, denge ve postür gelişimine yönelik yüz yüze veya online pilates eğitimleri.',
+    about: [
+      'Pilates; omurganın doğal kavislerini koruyarak derin karın ve pelvik taban kaslarını harekete geçiren biyomekanik bir disiplindir.',
+      'Mat ve Reformer Pilates prensipleri spor bilimi altyapısıyla harmanlanır.',
+      'Postüral hiza ve dik duruş kazandırır.'
+    ],
+    timeline: [
+      { num: '01', title: 'Analiz', desc: 'Postür ve omurga değerlendirmesi.' },
+      { num: '02', title: 'Hedef Belirleme', desc: 'Core ve esneklik hedefleri.' },
+      { num: '03', title: 'Planlama', desc: 'Seviyelendirilmiş ders akışı.' },
+      { num: '04', title: 'Başlangıç', desc: 'Derin core aktivasyonu.' },
+      { num: '05', title: 'Haftalık Takip', desc: 'Duruş hizalama kontrolü.' },
+      { num: '06', title: 'Analiz', desc: 'Esneklik ölçümleri.' },
+      { num: '07', title: 'Güncelleme', desc: 'İleri seviye akış.' },
+      { num: '08', title: 'Kalıcı Sonuç', desc: 'Zarif ve ağrısız duruş.' }
+    ],
+    pricing: [
+      { name: 'Online Pilates', price: '2.990 TL / Ay', badge: 'Başlangıç Fiyatı', items: ['Mat Pilates Akışı', 'Core Aktivasyon', 'Video Düzeltim', 'Postür Takibi'] },
+      { name: 'Premium Online', price: '4.990 TL / Ay', badge: 'EN ÇOK TERCİH EDİLEN', items: ['Tüm Online Pilates', 'Canlı Görüntülü Ders', 'Ekipmanlı Akış', '7/24 WhatsApp'] },
+      { name: 'Yüz Yüze Reformer', price: '900 TL / Seans', badge: 'Başlangıç Fiyatı', items: ['Birebir Reformer Seansı', 'Aletli Omurga Çalışması', 'Pelvik Taban', 'Esneklik Raporu'] }
+    ]
+  },
+  'functional-training': {
+    title: 'FONKSİYONEL ANTRENMAN',
+    subtitle: '3 Boyutlu Hareket Kalitesi ve Günlük Performans',
+    badge: 'FONKSİYONEL HAREKET & MOBİLİTE',
+    shortDesc: 'Mobilite, stabilite, hareket kalitesi ve günlük yaşam performansını geliştiren online veya yüz yüze antrenman programları.',
+    about: [
+      'Fonksiyonel antrenman, vücudun doğal hareket kalıplarını 3 boyutlu düzlemde geliştiren bilimsel bir yaklaşımdır.',
+      'Joint-by-Joint eklem hiyerarşisi esas alınarak mobilite ve stabilite dengelenir.',
+      'Gerçek hayatta sakatlanmayan, dinamik ve atletik bir beden inşa eder.'
+    ],
+    timeline: [
+      { num: '01', title: 'Analiz', desc: 'Joint-by-Joint taraması.' },
+      { num: '02', title: 'Hedef Belirleme', desc: 'Mobilite ve kondisyon.' },
+      { num: '03', title: 'Planlama', desc: 'Multi-planar antrenman.' },
+      { num: '04', title: 'Başlangıç', desc: 'Temel hareket kalıpları.' },
+      { num: '05', title: 'Haftalık Takip', desc: 'Hareket akıcılığı.' },
+      { num: '06', title: 'Analiz', desc: 'Mobilite cm ölçümleri.' },
+      { num: '07', title: 'Güncelleme', desc: 'Kompleks antrenman.' },
+      { num: '08', title: 'Kalıcı Sonuç', desc: 'Yüksek günlük vitalite.' }
+    ],
+    pricing: [
+      { name: 'Online Fonksiyonel', price: '2.990 TL / Ay', badge: 'Başlangıç Fiyatı', items: ['Fonksiyonel Şablon', 'Mobilite Rutini', 'Video Form Analizi', 'Kondisyon Takibi'] },
+      { name: 'Premium Fonksiyonel', price: '4.990 TL / Ay', badge: 'EN ÇOK TERCİH EDİLEN', items: ['Tüm Online Özellikler', 'Canlı Hareket Taraması', 'Kişisel Ekipman Planı', '7/24 İletişim'] },
+      { name: 'Yüz Yüze Fonksiyonel', price: '900 TL / Seans', badge: 'Başlangıç Fiyatı', items: ['Birebir 60dk Seans', 'TRX & Kettlebell', 'Laktat Testi', 'Gelişim Raporu'] }
+    ]
+  },
+  'medical-exercise': {
+    title: 'MEDİKAL EGZERSİZ',
+    subtitle: 'Postür Analizi ve Koruyucu Biyomekanik',
+    badge: 'MEDİKAL EGZERSİZ & POSTÜR',
+    shortDesc: 'Postür analizi, koruyucu egzersizler ve hareket kalitesini geliştirmeye yönelik yüz yüze veya uzaktan takip edilen programlar.',
+    about: [
+      'Medikal egzersiz; postüral duruş bozukluklarını ve kassal dengesizlikleri koruyucu yöntemlerle giderir.',
+      'Amerikan NASM CES metodolojisi: Inhibite ➔ Lengthen ➔ Activate ➔ Integrate zincirini uygular.',
+      'Omurga dekompresyonu ve ağrısız hizalama sağlar.'
+    ],
+    timeline: [
+      { num: '01', title: 'Analiz', desc: 'Açılı postür taraması.' },
+      { num: '02', title: 'Hedef Belirleme', desc: 'Duruş düzeltim hedefleri.' },
+      { num: '03', title: 'Planlama', desc: 'NASM CES düzeltici plan.' },
+      { num: '04', title: 'Başlangıç', desc: 'SMR gevşetme & germe.' },
+      { num: '05', title: 'Haftalık Takip', desc: 'Kas aktivasyon kontrolü.' },
+      { num: '06', title: 'Analiz', desc: 'Açısal karşılaştırma.' },
+      { num: '07', title: 'Güncelleme', desc: 'Entegrasyon hareketleri.' },
+      { num: '08', title: 'Kalıcı Sonuç', desc: 'Ağrısız omurga sağlığı.' }
+    ],
+    pricing: [
+      { name: 'Online Medikal', price: '2.990 TL / Ay', badge: 'Başlangıç Fiyatı', items: ['Postür Düzeltici Plan', 'SMR Gevşetme Rehberi', 'Haftalık Fotoğraf Analizi', 'Ergonomi Kartı'] },
+      { name: 'Premium Medikal', price: '4.990 TL / Ay', badge: 'EN ÇOK TERCİH EDİLEN', items: ['Tüm Online Özellikler', 'Canlı Postür Hizalaması', 'Omurga Dekompresyonu', '7/24 Danışmanlık'] },
+      { name: 'Yüz Yüze Medikal', price: '900 TL / Seans', badge: 'Başlangıç Fiyatı', items: ['Birebir Düzeltici Seans', 'Açılı Kinesiyoloji', 'Traksiyon Egzersizi', 'Postür Raporu'] }
+    ]
+  }
+};
+
+function openServiceLandingModal(slug) {
+  const data = serviceDetailsDatabase[slug] || serviceDetailsDatabase['fitness-body-transformation'];
+  
+  document.getElementById('sm-badge').innerText = data.badge;
+  document.getElementById('sm-title').innerText = data.title;
+  
+  const bodyContainer = document.getElementById('sm-body');
+  
+  bodyContainer.innerHTML = `
+    <!-- 1. HERO -->
+    <div style="background:var(--navy-dark);color:#fff;padding:40px;border-radius:24px;border:1px solid #1E293B;">
+      <span style="font-family:var(--mono);font-size:12px;color:#60A5FA;background:#1E3A8A;padding:4px 12px;border-radius:20px;font-weight:bold;">${data.badge}</span>
+      <h1 style="font-family:var(--display);font-size:48px;color:#fff;margin:12px 0 6px;">${data.title}</h1>
+      <div style="font-family:var(--display);font-size:24px;color:var(--amber-accent);margin-bottom:12px;">${data.subtitle}</div>
+      <p style="font-size:17px;color:#CBD5E1;max-width:750px;line-height:1.6;">${data.shortDesc}</p>
+    </div>
+
+    <!-- 2. HİZMET HAKKINDA -->
+    <div>
+      <span class="section-tag">BİLİMSEL METODOLOJİ</span>
+      <h2>HİZMET HAKKINDA</h2>
+      <div class="grid-3" style="margin-top:16px;">
+        ${data.about.map((p, idx) => `
+          <div class="premium-card" style="background:var(--bg-subtle);">
+            <span style="font-family:var(--mono);font-size:12px;color:var(--primary-blue);font-weight:bold;display:block;margin-bottom:6px;">BÖLÜM 0${idx+1}</span>
+            <p style="font-size:16px;color:var(--text-sub);">${p}</p>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+
+    <!-- 3. TIMELINE (8 ADIM) -->
+    <div>
+      <span class="section-tag">SÜREÇ HARİTASI</span>
+      <h2>PROGRAM NASIL İLERLİYOR? (8 ADIMLI SİSTEM)</h2>
+      <div class="grid-4" style="margin-top:16px;">
+        ${data.timeline.map(t => `
+          <div class="premium-card">
+            <span style="font-family:var(--display);font-size:32px;color:var(--primary-blue);font-weight:bold;display:block;">${t.num}</span>
+            <h3 style="font-family:var(--display);font-size:22px;color:var(--navy-dark);margin:6px 0;">${t.title}</h3>
+            <p style="font-size:14px;color:var(--text-sub);">${t.desc}</p>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+
+    <!-- 4. CHECKLIST -->
+    <div>
+      <span class="section-tag">PAKET KAPSAMI</span>
+      <h2>PROGRAM İÇERİĞİ & KAPSAMLI MODÜLLER</h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;background:var(--bg-subtle);padding:24px;border-radius:20px;margin-top:16px;">
+        <div>✓ Fiziksel Değerlendirme</div>
+        <div>✓ Hedef Analizi</div>
+        <div>✓ Vücut Analizi</div>
+        <div>✓ Program Tasarımı</div>
+        <div>✓ Egzersiz Kütüphanesi</div>
+        <div>✓ Video Destekleri</div>
+        <div>✓ Form Analizi</div>
+        <div>✓ Haftalık Kontrol</div>
+        <div>✓ Aylık Güncelleme</div>
+        <div>✓ Performans Raporu</div>
+        <div>✓ WhatsApp Destek</div>
+        <div>✓ Beslenme Rehberi</div>
+        <div>✓ Yaşam Tarzı Önerileri</div>
+      </div>
+    </div>
+
+    <!-- 7. PAKETLER -->
+    <div>
+      <span class="section-tag">FİYATLANDIRMA</span>
+      <h2>EĞİTİM & PAKET SEÇENEKLERİ</h2>
+      <div class="grid-3" style="margin-top:16px;">
+        ${data.pricing.map(pr => `
+          <div class="premium-card" style="display:flex;flex-direction:column;justify-content:space-between;">
+            <div>
+              <span style="font-family:var(--mono);font-size:12px;color:var(--primary-blue);font-weight:bold;">${pr.badge}</span>
+              <h3 style="font-family:var(--display);font-size:26px;color:var(--navy-dark);margin:8px 0;">${pr.name}</h3>
+              <div style="font-family:var(--display);font-size:36px;color:var(--primary-blue);margin:12px 0;">${pr.price}</div>
+              <ul style="list-style:none;font-family:var(--mono);font-size:13px;color:var(--text-sub);">
+                ${pr.items.map(it => `<li style="margin-bottom:6px;">✓ ${it}</li>`).join('')}
+              </ul>
+            </div>
+            <a href="https://wa.me/905445300481" target="_blank" class="btn-primary" style="text-align:center;display:block;margin-top:20px;">Başvur / Bilgi Al &rarr;</a>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+
+    <!-- 15. CTA -->
+    <div style="background:var(--navy-dark);color:#fff;padding:40px;border-radius:24px;text-align:center;">
+      <h2 style="color:#fff;font-size:42px;margin-bottom:12px;">Bugün Başla. Yarın Daha Güçlü Ol.</h2>
+      <p style="color:#CBD5E1;font-size:18px;margin-bottom:24px;">Bilimsel programlama ile hedeflerine güvenli ve sürdürülebilir şekilde ulaş.</p>
+      <div style="display:flex;justify-content:center;gap:16px;">
+        <a href="https://wa.me/905445300481?text=Merhaba%20Tunahan%20Hocam,%20ön%20görüşme%20almak%20istiyorum." target="_blank" class="btn-primary">🚀 Ücretsiz Ön Görüşme Oluştur</a>
+        <a href="https://wa.me/905445300481?text=Merhaba%20Tunahan%20Hocam,%20bilgi%20almak%20istiyorum." target="_blank" class="glass-btn" style="color:#fff;background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2);">💬 WhatsApp'tan Bilgi Al</a>
+      </div>
+    </div>
+  `;
+
+  document.getElementById('service-modal-overlay').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeServiceLandingModal() {
+  document.getElementById('service-modal-overlay').style.display = 'none';
+  document.body.style.overflow = 'unset';
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeServiceLandingModal();
+  }
+});
+
 function toggleMobileNav() {
   const dropdown = document.getElementById('mobile-nav-dropdown');
   if (!dropdown) return;
