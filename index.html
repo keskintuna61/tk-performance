@@ -997,10 +997,10 @@
   <h2>Hedeflerine ulaşmak için ilk adımı at. Kısa formu doldur, en kısa sürede seninle iletişime geçelim.</h2>
 
   <!-- FORM LEFT & INFO RIGHT -->
-  <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:start;margin-top:32px;">
+  <div class="contact-grid-container">
     
     <!-- LEFT: FORM -->
-    <div class="premium-card" style="padding:40px;border-radius:28px;background:#FFFFFF;">
+    <div class="contact-form-card premium-card">
       <div style="border-bottom:1px solid var(--border-light);padding-bottom:14px;margin-bottom:24px;">
         <span style="font-family:var(--mono);font-size:12px;color:var(--primary-blue);font-weight:bold;text-transform:uppercase;">ÜCRETSİZ ÖN GÖRÜŞME FORMU</span>
         <h3 style="font-family:var(--display);font-size:28px;color:var(--navy-dark);margin-top:4px;">KİŞİSEL BAŞVURU FORMU</h3>
@@ -1009,39 +1009,39 @@
       <form onsubmit="handleContactSubmit(event)" style="display:flex;flex-direction:column;gap:16px;">
         <div>
           <label style="font-family:var(--mono);font-size:12px;font-weight:bold;color:var(--navy-dark);display:block;margin-bottom:4px;">Ad Soyad *</label>
-          <input type="text" required placeholder="Ahmet Yılmaz" style="width:100%;padding:14px 18px;border-radius:12px;border:1px solid var(--border-light);background:var(--bg-subtle);font-size:15px;box-sizing:border-box;">
+          <input type="text" required placeholder="Ahmet Yılmaz">
         </div>
 
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div class="contact-form-row-2">
           <div>
             <label style="font-family:var(--mono);font-size:12px;font-weight:bold;color:var(--navy-dark);display:block;margin-bottom:4px;">Telefon Numarası *</label>
-            <input type="tel" required placeholder="05XX XXX XX XX" style="width:100%;padding:14px 18px;border-radius:12px;border:1px solid var(--border-light);background:var(--bg-subtle);font-size:15px;box-sizing:border-box;">
+            <input type="tel" required placeholder="05XX XXX XX XX">
           </div>
           <div>
             <label style="font-family:var(--mono);font-size:12px;font-weight:bold;color:var(--navy-dark);display:block;margin-bottom:4px;">E-posta Adresi *</label>
-            <input type="email" required placeholder="ornek@gmail.com" style="width:100%;padding:14px 18px;border-radius:12px;border:1px solid var(--border-light);background:var(--bg-subtle);font-size:15px;box-sizing:border-box;">
+            <input type="email" required placeholder="ornek@gmail.com">
           </div>
         </div>
 
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+        <div class="contact-form-row-3">
           <div>
             <label style="font-family:var(--mono);font-size:12px;font-weight:bold;color:var(--navy-dark);display:block;margin-bottom:4px;">Yaş</label>
-            <input type="number" placeholder="28" style="width:100%;padding:14px 12px;border-radius:12px;border:1px solid var(--border-light);background:var(--bg-subtle);font-size:15px;box-sizing:border-box;">
+            <input type="number" placeholder="28">
           </div>
           <div>
             <label style="font-family:var(--mono);font-size:12px;font-weight:bold;color:var(--navy-dark);display:block;margin-bottom:4px;">Boy (cm)</label>
-            <input type="number" placeholder="180" style="width:100%;padding:14px 12px;border-radius:12px;border:1px solid var(--border-light);background:var(--bg-subtle);font-size:15px;box-sizing:border-box;">
+            <input type="number" placeholder="180">
           </div>
           <div>
             <label style="font-family:var(--mono);font-size:12px;font-weight:bold;color:var(--navy-dark);display:block;margin-bottom:4px;">Kilo (kg)</label>
-            <input type="number" placeholder="78" style="width:100%;padding:14px 12px;border-radius:12px;border:1px solid var(--border-light);background:var(--bg-subtle);font-size:15px;box-sizing:border-box;">
+            <input type="number" placeholder="78">
           </div>
         </div>
 
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div class="contact-form-row-2">
           <div>
             <label style="font-family:var(--mono);font-size:12px;font-weight:bold;color:var(--navy-dark);display:block;margin-bottom:4px;">Ana Hedefiniz</label>
-            <select style="width:100%;padding:14px 18px;border-radius:12px;border:1px solid var(--border-light);background:var(--bg-subtle);font-size:15px;box-sizing:border-box;">
+            <select>
               <option>Kas Kazanımı (Hipertrofi)</option>
               <option>Yağ Yakımı &amp; Vücut Şekillendirme</option>
               <option>Atletik Performans &amp; Hız</option>
@@ -1051,7 +1051,7 @@
 
           <div>
             <label style="font-family:var(--mono);font-size:12px;font-weight:bold;color:var(--navy-dark);display:block;margin-bottom:4px;">Tercih Edilen Hizmet</label>
-            <select style="width:100%;padding:14px 18px;border-radius:12px;border:1px solid var(--border-light);background:var(--bg-subtle);font-size:15px;box-sizing:border-box;">
+            <select>
               <option>Online Eğitim (2.990 TL/Ay)</option>
               <option>Premium Online (4.990 TL/Ay)</option>
               <option>Yüz Yüze Personal Training</option>
@@ -1064,15 +1064,15 @@
 
         <div>
           <label style="font-family:var(--mono);font-size:12px;font-weight:bold;color:var(--navy-dark);display:block;margin-bottom:4px;">Mesajınız / Ek Notlar</label>
-          <textarea rows="3" placeholder="Mevcut antrenman geçmişiniz, varsa sağlık hassasiyetiniz..." style="width:100%;padding:14px 18px;border-radius:12px;border:1px solid var(--border-light);background:var(--bg-subtle);font-size:15px;box-sizing:border-box;"></textarea>
+          <textarea rows="3" placeholder="Mevcut antrenman geçmişiniz, varsa sağlık hassasiyetiniz..."></textarea>
         </div>
 
-        <button type="submit" class="btn-primary" style="padding:16px;font-size:16px;text-align:center;width:100%;margin-top:8px;">🚀 ÜCRETSİZ ÖN GÖRÜŞME TALEP ET</button>
+        <button type="submit" class="btn-primary">🚀 ÜCRETSİZ ÖN GÖRÜŞME TALEP ET</button>
       </form>
     </div>
 
     <!-- RIGHT: INFO CARDS -->
-    <div style="display:flex;flex-direction:column;gap:16px;">
+    <div style="display:flex;flex-direction:column;gap:16px;width:100%;max-width:100%;min-width:0;box-sizing:border-box;">
       <div class="premium-card" style="display:flex;align-items:center;gap:16px;">
         <span style="font-size:32px;">📞</span>
         <div><span style="font-family:var(--mono);font-size:11px;color:var(--text-muted);display:block;">TELEFON</span><strong style="font-family:var(--display);font-size:22px;color:var(--navy-dark);">+90 544 530 04 81</strong></div>
