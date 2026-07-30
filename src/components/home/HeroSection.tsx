@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 
 interface HeroSectionProps {
-  customImage?: string; // Optional custom photo prop if user wants to supply one later
+  customImage?: string;
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ customImage }) => {
@@ -21,67 +21,65 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ customImage }) => {
           
           <div className="inline-flex items-center gap-2.5 bg-blue-50 text-blue-700 font-mono text-sm font-extrabold px-5 py-2.5 rounded-full border border-blue-200 shadow-sm uppercase tracking-wider">
             <span className="w-2.5 h-2.5 rounded-full bg-blue-600 animate-pulse" />
-            <span>ULUSLARARASI SAĞLIK &amp; PERFORMANS PLATFORMU</span>
+            <span>SPOR BİLİMLERİ &amp; PERFORMANS PLATFORMU</span>
           </div>
 
-          {/* H1 (56–64px) */}
+          {/* H1 */}
           <h1 className="font-display text-5xl sm:text-6xl lg:text-[64px] text-slate-900 uppercase tracking-tight leading-[1.05]">
             BİLİMSEL PERFORMANS. <br />
-            <span className="text-blue-600">ÖLÇÜLEBİLİR SAĞLIK.</span>
+            <span className="text-blue-600">ÖLÇÜLEBİLİR GELİŞİM.</span>
           </h1>
 
-          {/* NORMAL CONTENT (18px) */}
+          {/* PARAGRAPH */}
           <p className="text-lg sm:text-xl text-slate-700 font-sans leading-relaxed max-w-2xl">
-            TK Performance &amp; Health; performans, beslenme, pilates, medikal egzersiz ve atletik gelişimi spor bilimi çatısı altında toplayan bütüncül ve kişiselleştirilmiş sağlık markasıdır.
+            TK Performance &amp; Health; fitness, atletik performans, mobilite ve beslenme danışmanlığını spor bilimi çatısı altında toplayan kişiselleştirilmiş performans platformudur.
           </p>
 
-          {/* KEY BENEFITS LIST (16-18px) */}
+          {/* KEY BENEFITS LIST */}
           <div className="space-y-4 font-mono text-base text-slate-700 border-l-4 border-blue-600 pl-5 py-2">
             <div className="flex items-center gap-3">
               <span className="text-blue-600 font-bold text-lg">➔</span>
-              <span>İhtiyacınıza uygun %100 kişiselleştirilmiş antrenman ve beslenme protokolü.</span>
+              <span>İhtiyacınıza uygun %100 kişiselleştirilmiş antrenman ve takip planı.</span>
             </div>
             <div className="flex items-center gap-3">
               <span className="text-blue-600 font-bold text-lg">➔</span>
-              <span>Biyomekanik postür analizleri ve koruyucu medikal egzersiz yaklaşımı.</span>
+              <span>Biyomekanik kontrol, mobilite farkındalığı ve koruyucu egzersiz yaklaşımı.</span>
             </div>
             <div className="flex items-center gap-3">
               <span className="text-blue-600 font-bold text-lg">➔</span>
-              <span>Spor Bilimci Tunahan Keskin rehberliğinde kesintisiz 7/24 dijital takip.</span>
+              <span>Spor Bilimci Tunahan Keskin rehberliğinde düzenli takip ve iletişim.</span>
             </div>
           </div>
 
-          {/* CTA BUTTONS (17-18px) */}
+          {/* CTA BUTTONS */}
           <div className="flex flex-wrap gap-4 pt-3 font-mono text-base">
-            <Link
-              href="/contact"
+            <a
+              href="#contact"
               className="bg-blue-600 hover:bg-blue-700 text-white font-extrabold uppercase tracking-wider px-9 py-4.5 rounded-xl shadow-lg shadow-blue-500/25 hover:scale-105 transition-all flex items-center gap-3 text-[17px]"
             >
               <span>🚀</span>
-              <span>YOLCULUĞUNU BAŞLAT</span>
-            </Link>
+              <span>İLETİŞİME GEÇ VE BAŞLA</span>
+            </a>
 
-            <Link
-              href="/services"
+            <a
+              href="#services"
               className="bg-white hover:bg-slate-100 text-slate-900 font-extrabold uppercase tracking-wider px-8 py-4.5 rounded-xl border border-slate-300 shadow-sm transition-all text-[17px]"
             >
               Hizmet Alanlarımız &rarr;
-            </Link>
+            </a>
           </div>
 
         </div>
 
-        {/* RIGHT COLUMN: MODERN ABSTRACT UI PERFORMANCE & ANALYTICS SHOWCASE */}
+        {/* RIGHT COLUMN: MODERN UI PERFORMANCE SHOWCASE (NO UNVERIFIED NUMBERS) */}
         <div className="lg:col-span-5">
           {customImage ? (
-            /* IF CUSTOM PHOTO SUPPLIED LATER */
             <div className="relative rounded-3xl p-3 bg-white border border-slate-200 shadow-2xl">
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-slate-900">
                 <img src={customImage} alt="Tunahan Keskin Performance" className="w-full h-full object-cover" />
               </div>
             </div>
           ) : (
-            /* MODERN PREMIUM UI ANALYTICS COMPOSITION (NO PERSON PHOTO) */
             <div className="relative rounded-3xl p-8 bg-slate-900 text-white border border-slate-800 shadow-2xl space-y-6">
               
               {/* BRAND CARD HEADER */}
@@ -92,7 +90,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ customImage }) => {
                   </div>
                   <div>
                     <div className="font-display text-xl tracking-wide uppercase text-white">PERFORMANCE LAB</div>
-                    <div className="font-mono text-[10px] text-blue-400 font-extrabold uppercase tracking-wider">Spor Bilimi Analytics v3.0</div>
+                    <div className="font-mono text-[10px] text-blue-400 font-extrabold uppercase tracking-wider">Spor Bilimi Takip Sistemi</div>
                   </div>
                 </div>
                 <span className="bg-emerald-500/20 text-emerald-400 font-mono text-xs font-bold px-3 py-1.5 rounded-full border border-emerald-500/30 flex items-center gap-1.5">
@@ -101,29 +99,28 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ customImage }) => {
                 </span>
               </div>
 
-              {/* CORE METRIC TILES */}
+              {/* CORE METRIC TILES (QUALITATIVE) */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-slate-800/80 p-4 rounded-2xl border border-slate-700 space-y-1">
-                  <span className="font-mono text-[11px] text-slate-400 uppercase font-bold block">BİYOMEKANİK POSTÜR</span>
-                  <div className="font-display text-3xl text-blue-400">96.8 <span className="text-xs font-mono text-slate-400">/ 100</span></div>
-                  <span className="font-mono text-[10px] text-emerald-400 font-bold block">✓ Optimal Omurga Dizilimi</span>
+                  <span className="font-mono text-[11px] text-slate-400 uppercase font-bold block">HAREKET KONTROLÜ</span>
+                  <div className="font-display text-2xl text-blue-400 uppercase">OPTİMAL</div>
+                  <span className="font-mono text-[10px] text-emerald-400 font-bold block">✓ Biyomekanik Hizalama</span>
                 </div>
 
                 <div className="bg-slate-800/80 p-4 rounded-2xl border border-slate-700 space-y-1">
-                  <span className="font-mono text-[11px] text-slate-400 uppercase font-bold block">ATLETİK BAŞARI</span>
-                  <div className="font-display text-3xl text-amber-400">%98.4</div>
-                  <span className="font-mono text-[10px] text-slate-400 font-bold block">500+ Ölçümlü Danışan</span>
+                  <span className="font-mono text-[11px] text-slate-400 uppercase font-bold block">TAKİP SİSTEMİ</span>
+                  <div className="font-display text-2xl text-amber-400 uppercase">DÜZENLİ</div>
+                  <span className="font-mono text-[10px] text-slate-400 font-bold block">Kişiye Özel Yüklenme</span>
                 </div>
               </div>
 
-              {/* GRAPH / WAVEFORM VISUALIZATION */}
+              {/* WAVEFORM VISUALIZATION */}
               <div className="bg-slate-800/60 p-5 rounded-2xl border border-slate-700 space-y-3">
                 <div className="flex justify-between items-center font-mono text-xs text-slate-300 font-bold">
-                  <span>VBT KUVVET-HIZ PROFİLİ</span>
-                  <span className="text-blue-400">1.48 m/s Peak</span>
+                  <span>YÜKLENME &amp; İLERLEME GRAFİĞİ</span>
+                  <span className="text-blue-400">Veri Odaklı</span>
                 </div>
                 
-                {/* SVG WAVE GRAPH */}
                 <div className="h-16 w-full flex items-end gap-1.5 pt-2">
                   {[40, 55, 35, 70, 85, 60, 95, 80, 100, 75, 90, 85, 95].map((val, idx) => (
                     <div
@@ -139,7 +136,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ customImage }) => {
               <div className="bg-blue-950/60 p-4 rounded-2xl border border-blue-800/50 flex items-center justify-between font-mono text-xs">
                 <div className="flex items-center gap-2 text-slate-300">
                   <span className="text-blue-400 text-base">🛡️</span>
-                  <span><strong>%100 Veriye Dayalı</strong> Bilimsel Takip</span>
+                  <span><strong>Bilimsel Temelli</strong> Antrenman Yaklaşımı</span>
                 </div>
                 <span className="text-blue-400 font-bold">Trabzon &amp; Online</span>
               </div>

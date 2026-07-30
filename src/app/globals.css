@@ -140,6 +140,165 @@ p, .body-text {
   width: 100%;
 }
 
+/* GLOBAL MOBILE RESPONSIVE OVERFLOW CONTROL */
+html, body {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+*, ::after, ::before {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/* RESPONSIVE BREAKPOINT RULES */
+@media (max-width: 1024px) {
+  .wrap {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* HERO FLUID TYPOGRAPHY & BUTTON STACKING */
+  h1 {
+    font-size: clamp(32px, 9vw, 54px) !important;
+  }
+  h2 {
+    font-size: clamp(26px, 7vw, 38px) !important;
+  }
+  h3 {
+    font-size: clamp(22px, 6vw, 34px) !important;
+  }
+  p, .body-text {
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+  }
+
+  /* BUTTON MOBILE FULL WIDTH & MIN HEIGHT */
+  .btn-primary, .glass-btn, button[type="submit"] {
+    width: 100% !important;
+    min-height: 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+/* CONTACT SECTION SPECIFIC MOBILE RESPONSIVE OVERRIDES */
+#contact, #contact * {
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 768px) {
+  /* LAYOUT GRID TO SINGLE COLUMN FLEX / GRID STACK */
+  .contact-grid-container {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 24px !important;
+  }
+
+  /* FORM CARD MOBILE STYLING */
+  .contact-form-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 24px 18px !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    transform: none !important;
+  }
+
+  /* FORM ROWS SINGLE COLUMN */
+  .contact-form-row-2, .contact-form-row-3 {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 16px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* UNIFORM INPUT, SELECT & TEXTAREA STYLING */
+  .contact-form-card input,
+  .contact-form-card select,
+  .contact-form-card textarea {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: 56px !important;
+    font-size: 16px !important; /* Prevents iOS auto-zoom */
+    padding: 14px 18px !important;
+    border-radius: 12px !important;
+    border: 1px solid #E2E8F0 !important;
+    background-color: #F8FAFC !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+  }
+
+  .contact-form-card select {
+    padding-right: 48px !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+  }
+
+  .contact-form-card textarea {
+    min-height: 140px !important;
+    resize: vertical !important;
+  }
+
+  /* FORM SUBMIT BUTTON MOBILE */
+  .contact-form-card button[type="submit"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 54px !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+    text-align: center !important;
+  }
+
+  /* FLOATING WHATSAPP BUTTON MOBILE (CIRCULAR 56x56) */
+  .wa-float, .wa-float-btn {
+    position: fixed !important;
+    right: 16px !important;
+    left: auto !important;
+    bottom: calc(16px + env(safe-area-inset-bottom)) !important;
+    width: 56px !important;
+    height: 56px !important;
+    min-width: 56px !important;
+    max-width: 56px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transform: none !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    z-index: 1000 !important;
+  }
+
+  .wa-float span, .wa-float-text {
+    display: none !important;
+  }
+}
+
 /* CUSTOM SCROLLBAR */
 ::-webkit-scrollbar {
   width: 8px;

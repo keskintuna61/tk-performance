@@ -6,27 +6,31 @@ import { Footer } from '@/components/layout/Footer';
 import { AnnouncementBar } from '@/components/layout/AnnouncementBar';
 import { WhatsAppFloatingButton } from '@/components/layout/WhatsAppFloatingButton';
 import { HeroSection } from '@/components/home/HeroSection';
-import { ExerciseFilterSection } from '@/components/features/ExerciseFilterSection';
 import { servicesData } from '@/data/services';
-import { exercisesData } from '@/data/exercises';
-import { successStoriesData, platformStats } from '@/data/successStories';
-import { academyCategories, academyCalculators } from '@/data/academy';
 import { ServiceSectionClient } from '@/components/services/ServiceSectionClient';
 import { TransformationsSection } from '@/components/transformations/TransformationsSection';
 import { AboutSection } from '@/components/home/AboutSection';
 import { FaqSection } from '@/components/home/FaqSection';
 import { ContactSection } from '@/components/home/ContactSection';
+import { aboutData } from '@/data/aboutData';
 
 export const metadata: Metadata = {
-  title: 'TK Performance & Health — Spor Bilimleri, Performans & Sağlık Platformu',
-  description: 'Spor Bilimci Tunahan Keskin rehberliğinde Performans, Sağlık, Hareket, Beslenme, Pilates, Medikal Egzersiz ve Atletik Gelişim Platformu.',
+  title: 'Tunahan Keskin — Spor Yöneticisi & Fitness Antrenörü | Performans Koçluğu',
+  description: 'Tunahan Keskin ile bilimsel temelli online fitness koçluğu, bire bir antrenman, atletik performans ve hareket kalitesi odaklı kişiye özel egzersiz programları.',
   alternates: {
     canonical: 'https://tunahankeskin.com',
   },
 };
 
+// QUALITATIVE TRUST BADGES (REPLACING UNVERIFIED STAT NUMBERS)
+const trustBadges = [
+  { icon: '📋', title: 'Kişiye Özel Programlama', desc: 'Mevcut seviyeye ve hedeflere özel tasarım' },
+  { icon: '🔬', title: 'Bilimsel Temelli Yaklaşım', desc: 'Kanıta dayalı antrenman ve yüklenme prensipleri' },
+  { icon: '📈', title: 'Düzenli Gelişim Takibi', desc: 'RIR/RPE takibi ve teknik form değerlendirmeleri' },
+  { icon: '🤝', title: 'Online ve Yüz Yüze Destek', desc: 'Birebir iletişim ve sürekli yönlendirme' }
+];
+
 export default function HomePage() {
-  // FILTER ONLY THE 6 CORE SERVICES FOR HOMEPAGE DISPLAY
   const coreHomeServices = servicesData.filter((s) => s.isCoreHomeService);
 
   return (
@@ -34,19 +38,19 @@ export default function HomePage() {
       <AnnouncementBar />
       <Navbar />
 
-      <main className="flex-1 space-y-24 pb-24">
+      <main className="flex-1 space-y-20 sm:space-y-28 pb-20">
         
         {/* 1. HERO SECTION */}
         <HeroSection />
 
-        {/* 2. STAT COUNTERS STRIP */}
-        <section className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {platformStats.map((stat, idx) => (
-              <div key={idx} className="premium-card p-7 rounded-2xl text-center space-y-2 bg-slate-50 border border-slate-200">
-                <span className="text-4xl block">{stat.icon}</span>
-                <div className="font-display text-4.5xl text-blue-600 tracking-tight">{stat.value}</div>
-                <div className="font-mono text-sm text-slate-700 font-extrabold uppercase">{stat.label}</div>
+        {/* 2. GÜVEN VE UZMANLIK ŞERİDİ (QUALITATIVE TRUST BADGES) */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {trustBadges.map((badge, idx) => (
+              <div key={idx} className="premium-card p-6 rounded-2xl text-center space-y-2 bg-slate-50 border border-slate-200">
+                <span className="text-3xl block">{badge.icon}</span>
+                <h3 className="font-display text-xl text-slate-900 uppercase">{badge.title}</h3>
+                <p className="text-xs text-slate-600 font-sans">{badge.desc}</p>
               </div>
             ))}
           </div>
@@ -55,160 +59,129 @@ export default function HomePage() {
         {/* SECTION DIVIDER */}
         <div className="max-w-7xl mx-auto px-6"><div className="section-divider" /></div>
 
-        {/* 3. 6 CORE SERVICES SECTION WITH INTERACTIVE FULLSCREEN MODAL */}
-        <section id="services" className="max-w-7xl mx-auto px-6 space-y-12">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-            <div className="space-y-3">
-              <span className="font-mono text-sm text-blue-600 font-extrabold tracking-widest uppercase bg-blue-50 px-4 py-1.5 rounded-full border border-blue-200">
-                UZMANLIK ALANLARIMIZ &amp; HİZMETLER
-              </span>
-              <h2 className="font-display text-4xl sm:text-5xl uppercase text-slate-900 tracking-tight">
-                6 UZMANLIK ALANI &amp; İNTERAKTİF PREMİUM LANDING
-              </h2>
-            </div>
-            <Link href="/services" className="font-mono text-base text-blue-600 font-extrabold hover:underline">
-              Tüm Hizmet Detaylarını Gör &rarr;
-            </Link>
+        {/* 3. HİZMETLER SECTION */}
+        <section id="services" className="max-w-7xl mx-auto px-4 sm:px-6 space-y-12">
+          <div className="space-y-3 text-center sm:text-left">
+            <span className="font-mono text-xs sm:text-sm text-blue-600 font-extrabold tracking-widest uppercase bg-blue-50 px-4 py-1.5 rounded-full border border-blue-200 inline-block">
+              UZMANLIK ALANLARIMIZ &amp; HİZMETLER
+            </span>
+            <h2 className="font-display text-4xl sm:text-5xl uppercase text-slate-900 tracking-tight">
+              KİŞİYE ÖZEL EĞİTİM VE KOÇLUK ÇÖZÜMLERİ
+            </h2>
           </div>
 
-          {/* INTERACTIVE SERVICE SECTION CLIENT */}
           <ServiceSectionClient services={coreHomeServices} />
         </section>
 
-        {/* 4. DANIŞAN DÖNÜŞÜMLERİ (DARK THEME TRANSFORMATIONS SECTION) */}
-        <TransformationsSection />
-
-        {/* 5. HAKKIMDA (ABOUT SECTION) */}
-        <AboutSection />
-
-        {/* 6. BRAND NEW SIK SORULAN SORULAR (FAQ SECTION - INSERTED DIRECTLY ABOVE CONTACT) */}
-        <FaqSection />
-
-        {/* 7. İLETİŞİM & BAŞVURU (CONTACT SECTION) */}
-        <ContactSection />
-
         {/* SECTION DIVIDER */}
         <div className="max-w-7xl mx-auto px-6"><div className="section-divider" /></div>
 
-        {/* 8. EXERCISE LIBRARY ACCORDION */}
-        <section className="max-w-7xl mx-auto px-6">
-          <ExerciseFilterSection exercises={exercisesData} defaultOpen={false} />
-        </section>
-
-        {/* SECTION DIVIDER */}
-        <div className="max-w-7xl mx-auto px-6"><div className="section-divider" /></div>
-
-        {/* 9. REDESIGNED SPOR BİLİMLERİ & AKADEMİ SHOWCASE */}
-        <section id="academy" className="max-w-7xl mx-auto px-6 space-y-12">
-          <div className="premium-card p-10 rounded-3xl bg-slate-900 text-white border border-slate-800 shadow-2xl space-y-4 text-center max-w-4xl mx-auto">
-            <span className="font-mono text-xs text-blue-400 font-extrabold tracking-widest uppercase bg-blue-950 px-4 py-1.5 rounded-full border border-blue-800 inline-block">
-              ULUSLARARASI SPOR BİLİMLERİ &amp; ATLETİK SAĞLIK AKADEMİSİ
+        {/* 4. NASIL ÇALIŞIYORUM? (3 ADIMLI SİSTEM) */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 space-y-12">
+          <div className="space-y-3">
+            <span className="font-mono text-xs sm:text-sm text-emerald-800 font-extrabold tracking-widest uppercase bg-emerald-50 px-4 py-1.5 rounded-full border border-emerald-200 inline-block">
+              SİSTEMATİK YAKLAŞIM
             </span>
-            <h2 className="font-display text-4xl sm:text-6xl text-white uppercase tracking-tight">
-              TK PERFORMANCE SPOR BİLİMLERİ &amp; AKADEMİ MERKEZİ
+            <h2 className="font-display text-4xl sm:text-5xl uppercase text-slate-900 tracking-tight">
+              NASIL ÇALIŞIYORUM? (3 ADIMLI SİSTEM)
             </h2>
-            <p className="text-base sm:text-lg text-slate-300 font-sans leading-relaxed max-w-3xl mx-auto">
-              Hakemli spor bilimi araştırmaları, klinik fizyoloji, beslenme diyetetiği, biyomekanik rehberler ve interaktif biyometrik hesaplayıcıların yer aldığı kurumsal eğitim ve bilgi merkezi.
-            </p>
           </div>
 
-          <div className="space-y-6">
-            <h3 className="font-display text-3xl text-slate-900 uppercase border-l-4 border-blue-600 pl-4">
-              AKADEMİ KATEGORİ YAPISI (12 UZMANLIK DİSİPLİNİ)
-            </h3>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {academyCategories.map((cat) => (
-                <div key={cat.id} className="premium-card p-6 rounded-2xl space-y-2 bg-slate-50 border border-slate-200 hover:border-blue-400 transition-all">
-                  <span className="text-3xl block">{cat.icon}</span>
-                  <h4 className="font-display text-2xl text-slate-900 uppercase">{cat.name}</h4>
-                  <p className="text-sm text-slate-600 font-sans">{cat.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            {aboutData.approachSteps.map((step) => (
+              <div key={step.stepNumber} className="premium-card p-8 rounded-3xl bg-white border border-slate-200 space-y-4 shadow-sm">
+                <div className="flex justify-between items-center">
+                  <span className="font-display text-4xl text-blue-600 font-bold">{step.stepNumber}</span>
+                  <span className="text-3xl">{step.icon}</span>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="space-y-6 pt-6">
-            <h3 className="font-display text-3xl text-slate-900 uppercase border-l-4 border-amber-500 pl-4">
-              BİYOMETRİK HESAPLAYICILAR &amp; ARAÇLAR
-            </h3>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {academyCalculators.map((calc) => (
-                <Link key={calc.id} href="/academy" className="premium-card p-6 rounded-2xl space-y-3 bg-white border border-slate-200 hover:border-amber-400 transition-all shadow-sm">
-                  <span className="text-4xl block">{calc.icon}</span>
-                  <h4 className="font-display text-2xl text-slate-900 uppercase">{calc.title}</h4>
-                  <p className="text-sm text-slate-700 font-sans leading-normal">{calc.desc}</p>
-                  <div className="font-mono text-sm text-amber-700 font-extrabold pt-2">Hesapla &rarr;</div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* SECTION DIVIDER */}
-        <div className="max-w-7xl mx-auto px-6"><div className="section-divider" /></div>
-
-        {/* 10. SUCCESS STORIES SECTION */}
-        <section id="success-stories" className="max-w-7xl mx-auto px-6 space-y-12">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-            <div className="space-y-3">
-              <span className="font-mono text-sm text-emerald-800 font-extrabold tracking-widest uppercase bg-emerald-50 px-4 py-1.5 rounded-full border border-emerald-200">
-                KANITLANMIŞ DANIŞAN SONUÇLARI
-              </span>
-              <h2 className="font-display text-4xl sm:text-5xl uppercase text-slate-900 tracking-tight">
-                GERÇEK DÖNÜŞÜM HİKAYELERİ
-              </h2>
-            </div>
-            <Link href="/success-stories" className="font-mono text-base text-emerald-800 font-extrabold hover:underline">
-              Tüm Başarı Hikayelerini Gör &rarr;
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {successStoriesData.map((story) => (
-              <div key={story.id} className="premium-card p-7 rounded-2xl space-y-4 bg-white border border-slate-200 shadow-sm">
-                <span className="font-mono text-xs text-amber-800 bg-amber-50 px-3.5 py-1 rounded-full border border-amber-200 font-extrabold uppercase">
-                  {story.badge}
-                </span>
-
-                <h3 className="font-display text-2.5xl text-slate-900 uppercase">
-                  {story.clientName}
-                </h3>
-
-                <p className="text-base text-slate-700 font-sans italic bg-slate-50 p-4 rounded-xl border border-slate-200 leading-relaxed">
-                  "{story.quote}"
-                </p>
-
-                <div className="font-mono text-sm text-emerald-700 font-extrabold">
-                  {story.statChange}
-                </div>
+                <h3 className="font-display text-2xl text-slate-900 uppercase">{step.title}</h3>
+                <p className="text-sm sm:text-base text-slate-600 font-sans leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* 11. GLOBAL CTA BANNER */}
-        <section className="max-w-7xl mx-auto px-6">
-          <div className="premium-card rounded-3xl p-14 text-center space-y-6 bg-slate-900 text-white border border-slate-800 shadow-2xl">
-            <span className="font-mono text-sm text-blue-400 font-extrabold tracking-widest uppercase bg-blue-950 px-4 py-1.5 rounded-full border border-blue-800">
-              TK PERFORMANCE &amp; HEALTH PLATFORM
+        {/* 5. DANIŞAN GELİŞİMLERİ (PLACEHOLDER WITH DISCLAIMER) */}
+        <TransformationsSection />
+
+        {/* 6. HAKKIMDA (ABOUT SECTION) */}
+        <AboutSection />
+
+        {/* SECTION DIVIDER */}
+        <div className="max-w-7xl mx-auto px-6"><div className="section-divider" /></div>
+
+        {/* 7. DİJİTAL PLATFORMLAR KISA TANITIM (KOMPAKT 3 KART) */}
+        <section id="academy" className="max-w-7xl mx-auto px-4 sm:px-6 space-y-8">
+          <div className="space-y-3 text-center">
+            <span className="font-mono text-xs sm:text-sm text-amber-800 font-extrabold tracking-widest uppercase bg-amber-50 px-4 py-1.5 rounded-full border border-amber-200 inline-block">
+              DİJİTAL REHBERLER &amp; ARAÇLAR
             </span>
-            <h2 className="font-display text-4xl sm:text-6xl text-white uppercase tracking-tight">
-              BİLİMSEL GELİŞİM YOLCULUĞUNA BUGÜN BAŞLAYIN
+            <h2 className="font-display text-3xl sm:text-5xl uppercase text-slate-900 tracking-tight">
+              BİLİMSEL İÇERİKLER VE PERFORMANS ARAÇLARI
             </h2>
-            <p className="text-lg text-slate-300 font-sans max-w-xl mx-auto leading-relaxed">
-              Sadece rastgele program satın almayın; Spor Bilimci Tunahan Keskin rehberliğinde kendi potansiyelinizi keşfedin.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-mono text-base font-black uppercase tracking-wider px-10 py-5 rounded-xl shadow-xl shadow-blue-500/30 hover:scale-105 transition-all"
-            >
-              <span>🚀</span>
-              <span>YOLCULUĞUNU BAŞLAT</span>
-            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            {/* KART 1: TK ACADEMY */}
+            <div className="premium-card p-8 rounded-3xl bg-white border border-slate-200 space-y-4 shadow-sm text-center flex flex-col justify-between">
+              <div className="space-y-3">
+                <span className="text-4xl block">🎓</span>
+                <h3 className="font-display text-2xl text-slate-900 uppercase">TK ACADEMY</h3>
+                <p className="text-sm text-slate-600 font-sans">
+                  Bilimsel temelli antrenman rehberlerini ve eğitim içeriklerini keşfet.
+                </p>
+              </div>
+              <div className="pt-2">
+                <Link href="/academy" className="inline-block w-full py-3 bg-slate-900 hover:bg-blue-600 text-white font-mono text-xs font-bold uppercase rounded-xl transition-all">
+                  Eğitimleri Keşfet &rarr;
+                </Link>
+              </div>
+            </div>
+
+            {/* KART 2: EGZERSİZ KÜTÜPHANESİ */}
+            <div className="premium-card p-8 rounded-3xl bg-white border border-slate-200 space-y-4 shadow-sm text-center flex flex-col justify-between">
+              <div className="space-y-3">
+                <span className="text-4xl block">🏋️‍♂️</span>
+                <h3 className="font-display text-2xl text-slate-900 uppercase">EGZERSİZ KÜTÜPHANESİ</h3>
+                <p className="text-sm text-slate-600 font-sans">
+                  Hareketlerin biyomekanik açıdan doğru uygulama tekniklerini incele.
+                </p>
+              </div>
+              <div className="pt-2">
+                <Link href="/exercises" className="inline-block w-full py-3 bg-slate-900 hover:bg-blue-600 text-white font-mono text-xs font-bold uppercase rounded-xl transition-all">
+                  Kütüphaneyi Gör &rarr;
+                </Link>
+              </div>
+            </div>
+
+            {/* KART 3: PERFORMANS ARAÇLARI */}
+            <div className="premium-card p-8 rounded-3xl bg-white border border-slate-200 space-y-4 shadow-sm text-center flex flex-col justify-between">
+              <div className="space-y-3">
+                <span className="text-4xl block">🧮</span>
+                <h3 className="font-display text-2xl text-slate-900 uppercase">PERFORMANS ARAÇLARI</h3>
+                <p className="text-sm text-slate-600 font-sans">
+                  Antrenman ve performans kalibrasyonu için biyometrik hesaplayıcıları kullan.
+                </p>
+              </div>
+              <div className="pt-2">
+                <Link href="/academy" className="inline-block w-full py-3 bg-slate-900 hover:bg-blue-600 text-white font-mono text-xs font-bold uppercase rounded-xl transition-all">
+                  Araçları İncele &rarr;
+                </Link>
+              </div>
+            </div>
+
           </div>
         </section>
+
+        {/* SECTION DIVIDER */}
+        <div className="max-w-7xl mx-auto px-6"><div className="section-divider" /></div>
+
+        {/* 8. SIK SORULAN SORULAR (FAQ) */}
+        <FaqSection />
+
+        {/* 9. İLETİŞİM & BAŞVURU (SINGLE #contact SECTION) */}
+        <ContactSection />
 
       </main>
 

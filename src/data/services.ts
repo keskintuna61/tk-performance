@@ -20,224 +20,171 @@ export const servicesData: ServiceItem[] = [
   {
     id: 'fitness-body-transformation',
     slug: 'fitness-body-transformation',
-    title: 'FITNESS & VÜCUT DÖNÜŞÜMÜ',
-    badge: 'DÖNÜŞÜM',
-    tagline: 'Kas Geliştirme, Yağ Yakımı ve Vücut Şekillendirme',
-    shortDesc: 'Kas geliştirme, yağ yakımı ve vücut şekillendirmeye yönelik kişiye özel yüz yüze veya online antrenman programları.',
-    fullDesc: 'Kişinin anatomik yapısı, metabolik hızı ve yaşam tarzı analiz edilerek hazırlanan bilimsel fitness ve vücut dönüşümü programı. Hipertrofi periodizasyonu, RIR/RPE yük takibi ve vücut kompozisyonu optimizasyonu içerir.',
-    icon: '🏋️‍♂️',
-    category: 'Vücut Dönüşümü',
+    title: 'ONLINE FITNESS KOÇLUĞU',
+    badge: 'DİJİTAL KOÇLUK',
+    tagline: 'Kişiye Özel Antrenman ve Düzenli Takip',
+    shortDesc: 'Hedeflerinize, antrenman geçmişinize ve ekipman durumunuza özel hazırlanan uzaktan antrenman ve takip sistemi.',
+    fullDesc: 'Kişinin mevcut seviyesi ve hedefleri doğrultusunda planlanan bilimsel online koçluk programı. Hacim periodizasyonu, RIR/RPE yüklenme takibi ve haftalık form kontrolleri içerir.',
+    icon: '💻',
+    category: 'Online Koçluk',
     isCoreHomeService: true,
-    tags: ['Online Eğitim', 'Yüz Yüze Eğitim', 'Kişiye Özel Program', 'Düzenli Takip'],
+    tags: ['Online Eğitim', 'Kişiye Özel Program', 'Düzenli Takip'],
     features: [
-      'Kişiselleştirilmiş Hipertrofi & Yağ Yakımı Protokolü',
-      'Yüz Yüze veya Online Takip Seçeneği',
-      'Haftalık Vücut Ölçümü & Video Form Analizi',
-      '7/24 Kesintisiz Koçluk İletişimi'
+      'Kişiselleştirilmiş Antrenman Planlaması',
+      'Haftalık Form Kontrolü & Geri Bildirim',
+      'RIR/RPE Yüklenme ve İlerleme Takibi',
+      'Düzenli İletişim Destek Hattı'
     ],
     targetAudience: [
-      'Kas kütlesini artırmak isteyenler',
-      'Vücut yağ oranını sağlıklı şekilde düşürmek isteyenler',
-      'Estetik ve atletik bir fizik hedefleyenler'
+      'Uzaktan profesyonel antrenman takibi almak isteyenler',
+      'Sürdürülebilir antrenman alışkanlığı kazanmayı hedefleyenler',
+      'Kendi seviyesine uygun bilimsel program arayanlar'
     ],
     methodology: [
-      'Progressive Overload (Kademeli Yüklenme)',
-      'Mekanik Gerilim ve Kas Hasarı Dengesi',
-      'Veriye Dayalı RIR/RPE Takibi'
+      'Kademeli Yüklenme (Progressive Overload)',
+      'Veriye Dayalı RIR/RPE Yük Takibi',
+      'Düzenli Hareket Formu Analizi'
     ]
   },
   {
-    id: 'nutrition-dietetics',
-    slug: 'nutrition-dietetics',
-    title: 'BESLENME & DİYETİSYEN',
-    badge: 'DİYETETİK',
-    tagline: 'Kişiye Özel Beslenme ve Sporcu Diyetetiği',
-    shortDesc: 'Kişiye özel beslenme planları, sporcu beslenmesi ve online beslenme danışmanlığı.',
-    fullDesc: 'Metabolik ihtiyaçlarınıza, makro-mikro besin dengenize ve antrenman şiddetinize göre planlanan beslenme protokolü. Sporcu performansını artırırken sürdürülebilir beslenme alışkanlıkları kazandırır.',
-    icon: '🥗',
-    category: 'Beslenme',
+    id: 'one-on-one-fitness',
+    slug: 'one-on-one-fitness',
+    title: 'BİRE BİR FİTNESS ANTRENMANLARI',
+    badge: 'PERSONAL TRAINING',
+    tagline: 'Birebir Odaklı Yüz Yüze Seanslar',
+    shortDesc: 'Trabzon\'da stüdyo ortamında birebir eğitmen rehberliğinde gerçekleştirilen antrenman seansları.',
+    fullDesc: 'Bireyin hareket kapasitesine uygun olarak planlanan, birebir teknik takibin ve biyomekanik hizalamanın yapıldığı yüz yüze antrenman seansları.',
+    icon: '🏋️‍♂️',
+    category: 'Yüz Yüze Eğitim',
     isCoreHomeService: true,
-    disclaimer: 'Beslenme hizmetleri yetkin diyetisyen ve beslenme uzmanları iş birliğiyle sunulmaktadır.',
-    tags: ['Online Eğitim', 'Yüz Yüze Eğitim', 'Kişiye Özel Program', 'Düzenli Takip'],
+    tags: ['Yüz Yüze PT', 'Birebir Takip', 'Teknik Düzeltim'],
     features: [
-      'Metabolik Hız ve TDEE Kalibrasyonu',
-      'Antrenman Öncesi & Sonrası Beslenme Zamanlaması',
-      'Sporcu Suplement & Takviye Rehberliği',
-      'Haftalık Beslenme Güncellemesi'
+      'Birebir Eğitmen Eşliğinde Antrenman',
+      'Anlık Hareket Tekniği Geri Bildirimi',
+      'Kişiye Özel Yük Kalibrasyonu',
+      'Stüdyo Ortamında Güvenli Seanslar'
     ],
     targetAudience: [
-      'Performansını beslenme ile desteklemek isteyen sporcular',
-      'Kilo vermek veya kilo almak isteyen bireyler',
-      'Sağlıklı beslenmeyi yaşam tarzı haline getirmek isteyenler'
+      'Doğrudan yüz yüze eğitmen takibi isteyenler',
+      'Egzersiz tekniklerini doğru öğrenmeyi hedefleyenler',
+      'Birebir motivasyon ve disiplin arayanlar'
     ],
     methodology: [
-      'Makro & Mikro Besin Dengesi',
-      'Glisemik İndeks ve İnsülin Hassasiyeti Analizi',
-      'Biyo-bireysellik Prensibi'
+      'Biyomekanik Hizalama ve Form Kontrolü',
+      'Kişiye Özel Seans Şiddeti Ayarı',
+      'Güvenli İlerleme Prensipleri'
     ]
   },
   {
     id: 'athletic-performance',
     slug: 'athletic-performance',
     title: 'ATLETİK PERFORMANS',
-    badge: 'ATLETİK',
+    badge: 'PERFORMANS',
     tagline: 'Hız, Patlayıcı Güç ve Branşa Özel Gelişim',
-    shortDesc: 'Hız, kuvvet, çeviklik ve branşa özel performans gelişimi için yüz yüze veya online eğitim programları.',
-    fullDesc: 'Futbol, basketbol, tenis, dövüş sporları ve bireysel branş sporcuları için Velocity-Based Training (VBT), patlayıcı güç, dikey sıçrama ve laktat toleransı geliştiren atletik performans programı.',
+    shortDesc: 'Hız, kuvvet, çeviklik ve branşa özel performans gelişimi için hazırlanan antrenman programları.',
+    fullDesc: 'Sporcular ve branşına özel performansını geliştirmek isteyen bireyler için patlayıcı güç, çeviklik ve atletik altyapıyı destekleyen antrenman planlamaları.',
     icon: '⚡',
     category: 'Atletik Performans',
     isCoreHomeService: true,
-    tags: ['Online Eğitim', 'Yüz Yüze Eğitim', 'Kişiye Özel Program', 'Düzenli Takip'],
+    tags: ['Atletik Gelişim', 'Hız & Çeviklik', 'Branşa Özel'],
     features: [
-      'VBT (Velocity-Based Training) Yük Takibi',
-      'Dikey Sıçrama & Çeviklik Gelişimi',
-      'Sakatlık Önleyici Nöromüsküler Çalışmalar',
-      'Branşa Özel Kondisyon & Kuvvet Profilleme'
+      'Patlayıcı Güç ve Çeviklik Çalışmaları',
+      'Kuvvet-Hız Dengesi Analizi',
+      'Saha İçi Hareket Kapasitesi Gelişimi',
+      'Sürdürülebilir Atletik Altyapı'
     ],
     targetAudience: [
-      'Profosyonel ve amatör sporcular',
-      'Saha içi patlayıcı gücünü ve hızını artırmak isteyenler',
-      'Sakatlık sonrası sahaya güvenle dönmek isteyenler (Return to Sport)'
+      'Sporcular ve atletik kapasitesini artırmak isteyenler',
+      'Hız, sıçrama ve çeviklik hedefleyenler',
+      'Branşına özel fiziksel altyapı inşa etmek isteyenler'
     ],
     methodology: [
-      'Kuvvet-Hız Eğrisi (Force-Velocity Curve)',
-      'Plyometrik ve Eksantrik Aşırı Yükleme',
-      'Nöromüsküler Adaptasyon'
+      'Kuvvet-Hız Eğrisi Prensipleri',
+      'Nöromüsküler Adaptasyon',
+      'Plyometrik Egzersiz Protokolleri'
     ]
   },
   {
-    id: 'pilates',
-    slug: 'pilates',
-    title: 'MAT & REFORMER PİLATES',
-    badge: 'PİLATES',
-    tagline: 'Core Kuvveti, Omurga Sağlığı ve Denge',
-    shortDesc: 'Core kuvveti, esneklik, denge ve postür gelişimine yönelik yüz yüze veya online pilates eğitimleri.',
-    fullDesc: 'Mat Pilates ve Reformer Pilates prensipleriyle derin core kaslarının aktivasyonu, omurga mobilizasyonu ve postüral hiza kazanımı sağlayan bütüncül hareket eğitimi.',
-    icon: '🧘‍♀️',
-    category: 'Pilates',
+    id: 'posture-mobility',
+    slug: 'posture-mobility',
+    title: 'POSTÜR, MOBİLİTE & HAREKET EĞİTİMİ',
+    badge: 'HAREKET KALİTESİ',
+    tagline: 'Postür Farkındalığı ve Mobilite Gelişimi',
+    shortDesc: 'Hareket kalitesini, mobiliteyi ve temel postür farkındalığını destekleyen kişiye özel egzersiz çalışmaları.',
+    fullDesc: 'Hareket kalitesini, mobiliteyi ve temel postür farkındalığını destekleyen kişiye özel egzersiz çalışmaları. Bu hizmet tıbbi tanı veya tedavi yerine geçmez. Ağrı veya sağlık problemi durumunda hekim veya fizyoterapist yönlendirmesi yapılır.',
+    icon: '🧘‍♂️',
+    category: 'Hareket Kalitesi',
     isCoreHomeService: true,
-    tags: ['Online Eğitim', 'Yüz Yüze Eğitim', 'Kişiye Özel Program', 'Düzenli Takip'],
+    disclaimer: 'Sunulan egzersiz hizmetleri tıbbi tanı veya tedavi yerine geçmez. Ağrı veya sağlık problemi bulunan bireylerin öncelikle hekim veya fizyoterapiste danışması önerilir.',
+    tags: ['Mobilite', 'Postür Farkındalığı', 'Hareket Kalitesi'],
     features: [
-      'Mat ve Reformer Pilates Odaklı Müfredat',
-      'Derin Core Stabilitesi & Pelvik Taban Çalışmaları',
-      'Omurga Hizalama & Esneklik Gelişimi',
-      'Nefes ve Hareket Senkronizasyonu'
+      'Eklem Mobilitesi ve Esneklik Çalışmaları',
+      'Postüral Hizalama Farkındalığı',
+      'Günlük Yaşam Hareket Konforunu Destekleme',
+      'Kişiye Özel Mobilite Protokolü'
     ],
     targetAudience: [
-      'Core bölgesini güçlendirmek isteyenler',
-      'Duruşunu düzeltmek ve omurga sağlığını korumak isteyenler',
-      'Esneklik ve vücut farkındalığını artırmak isteyenler'
+      'Masa başı çalışanlar ve hareket kısıtlılığı hissedenler',
+      'Mobilite ve duruş farkındalığını artırmak isteyenler',
+      'Günlük hayatta daha konforlu hareket etmeyi hedefleyenler'
     ],
     methodology: [
-      'Pilates Temel Prensipleri (Nefes, Kontrol, Merkezlenme)',
-      'Kinesiyolojik Hareket Analizi',
-      'Postüral Koruma'
-    ]
-  },
-  {
-    id: 'functional-training',
-    slug: 'functional-training',
-    title: 'FONKSİYONEL ANTRENMAN',
-    badge: 'FONKSİYONEL',
-    tagline: 'Mobilite, Hareket Kalitesi ve Günlük Performans',
-    shortDesc: 'Mobilite, stabilite, hareket kalitesi ve günlük yaşam performansını geliştiren online veya yüz yüze antrenman programları.',
-    fullDesc: 'İnsan vücudunun doğal 3 boyutlu hareket düzlemlerine (sagittal, frontal, transversal) uygun olarak tasarlanan; eklem mobilitesi, stabilite ve günlük yaşam kalitesini artıran fonksiyonel antrenman sistemi.',
-    icon: '🔄',
-    category: 'Fonksiyonel Antrenman',
-    isCoreHomeService: true,
-    tags: ['Online Eğitim', 'Yüz Yüze Eğitim', 'Kişiye Özel Program', 'Düzenli Takip'],
-    features: [
-      '3 Boyutlu Hareket Kalitesi (Movement Quality)',
-      'Eklem Mobilitesi & Dinamik Denge',
-      'Fonksiyonel Core & Bağ Bağ doku Güçlendirme',
-      'Günlük Yaşam Kinesiyolojisi'
-    ],
-    targetAudience: [
-      'Günlük hayatta daha dinç ve ağrısız hareket etmek isteyenler',
-      'Eklem açıklığını ve hareket kalitesini artırmak isteyenler',
-      'Çok yönlü kondisyon kazanmak isteyenler'
-    ],
-    methodology: [
-      'Multi-planar Movement Patterns',
-      'Joint-by-Joint Approach (Joint Mobilite/Stabilite)',
-      'Fascial Net Aktivasyonu'
-    ]
-  },
-  {
-    id: 'medical-exercise',
-    slug: 'medical-exercise',
-    title: 'MEDİKAL EGZERSİZ',
-    badge: 'MEDİKAL',
-    tagline: 'Postür Analizi ve Koruyucu Egzersiz',
-    shortDesc: 'Postür analizi, koruyucu egzersizler ve hareket kalitesini geliştirmeye yönelik yüz yüze veya uzaktan takip edilen programlar.',
-    fullDesc: 'Masa başı çalışma, yanlış duruş veya kassal dengesizliklerden kaynaklanan postüral problemleri (kifoz, lordoz, skolyoz eğilimi, düzleşme) koruyucu ve düzeltici egzersiz yöntemleriyle gideren medikal yaklaşım.',
-    icon: '🏥',
-    category: 'Medikal Egzersiz',
-    isCoreHomeService: true,
-    tags: ['Online Eğitim', 'Yüz Yüze Eğitim', 'Kişiye Özel Program', 'Düzenli Takip'],
-    features: [
-      'Detaylı Postür & Kinesiyoloji Analizi',
-      'Omurga Dekompresyonu & Düzeltici Egzersizler',
-      'Kassal Dengesizlik (Muscle Imbalance) Giderimi',
-      'Ağrısız Hareket Odaklı Programlama'
-    ],
-    targetAudience: [
-      'Masa başı çalışanlar ve duruş bozukluğu olanlar',
-      'Kronik bel, boyun veya omuz gerginliği yaşayanlar',
-      'Koruyucu sağlık için biyomekanik egzersiz yapmak isteyenler'
-    ],
-    methodology: [
-      'NASM Corrective Exercise Continuum (CES)',
-      'Postüral Kinesiyoloji',
-      'Koruyucu Sağlık Protokolü'
+      'Eklem Odaklı Mobilite Yöntemleri',
+      'Postüral Hareket Farkındalığı',
+      'Koruyucu Egzersiz Prensipleri'
     ]
   },
   {
     id: 'performance-testing',
     slug: 'performance-testing',
-    title: 'PERFORMANS TESTLERİ',
-    badge: 'ANALİZ',
-    tagline: 'FMS, Biyomekanik ve Profilleme',
-    shortDesc: 'Postür analizi, FMS taraması, mobilite, kuvvet, dayanıklılık ve atletik performans profilleme testleri.',
-    fullDesc: 'FMS (Functional Movement Screen), 1RM, dikey sıçrama ve biyomekanik postür analizleriyle fiziksel kapasitenizi somut verilerle ölçen profilleme sistemi.',
+    title: 'SPORCU PERFORMANS TESTLERİ',
+    badge: 'TEST & ANALİZ',
+    tagline: 'Fiziksel Kapasite ve Profil Ölçümü',
+    shortDesc: 'Mobilite, kuvvet, dayanıklılık ve hareket profili ölçümüne yönelik temel performans değerlendirmeleri.',
+    fullDesc: 'Bireyin mevcut fiziksel kapasitesini ve hareket profilini objektif değerlendirmelerle ortaya koyan performans profilleme çalışmaları.',
     icon: '📊',
     category: 'Test & Analiz',
-    isCoreHomeService: false,
-    tags: ['Kişiye Özel Program', 'Düzenli Takip'],
-    features: ['FMS Hareket Taraması', '1RM & Kuvvet Ölçümü', 'Postür Analizi'],
-    targetAudience: ['Performansını verilerle görmek isteyenler'],
-    methodology: ['Functional Movement Screening', 'Force Velocity Profiling']
+    isCoreHomeService: true,
+    tags: ['Performans Testi', 'Kuvvet Ölçümü', 'Hareket Taraması'],
+    features: [
+      'Hareket Kalitesi Değerlendirmesi',
+      'Kuvvet ve Dayanıklılık Profilleme',
+      'Kişisel Gelişim Verisi Oluşturma'
+    ],
+    targetAudience: [
+      'Mevcut fiziksel seviyesini ölçtürmek isteyenler',
+      'Gelişimini objektif verilerle takip etmeyi hedefleyenler'
+    ],
+    methodology: [
+      'Standart Hareket Taramaları',
+      'Performans Ölçüm Yöntemleri'
+    ]
   },
   {
-    id: 'police-military-preparation',
-    slug: 'police-military-preparation',
-    title: 'POLİS & ASKERİ PARKUR',
-    badge: 'PARKUR',
-    tagline: 'Fiziki Yeterlilik ve Laktat Toleransı',
-    shortDesc: 'PMYO, POMEM, Bekçilik, MSÜ fiziki yeterlilik parkur hazırlığı ve yüksek şiddetli laktat tolerans çalışmaları.',
-    fullDesc: 'PMYO, POMEM, Bekçilik ve Askeri fiziki yeterlilik parkurlarında maksimum derece elde etmeye yönelik parkur tekniği ve laktat tolerans antrenmanları.',
-    icon: '🎖️',
-    category: 'Parkur Hazırlığı',
-    isCoreHomeService: false,
-    tags: ['Yüz Yüze Eğitim', 'Kişiye Özel Program'],
-    features: ['Parkur Tekniği', 'Laktat Toleransı', 'Süre Optimizasyonu'],
-    targetAudience: ['Sınav parkurlarına hazırlanan adaylar'],
-    methodology: ['High Intensity Interval Training', 'Parkour Biomechanics']
-  },
-  {
-    id: 'online-coaching',
-    slug: 'online-coaching',
-    title: 'ONLİNE KOÇLUK SİSTEMİ',
-    badge: 'DİJİTAL',
-    tagline: 'Uzaktan PT ve Kesintisiz Takip',
-    shortDesc: 'Uzaktan Personal Training, 7/24 whatsapp iletişimi, haftalık video form analizi ve grafiksel gelişim takibi.',
-    fullDesc: 'Dünyanın neresinde olursanız olun, Spor Bilimci Tunahan Keskin ile 7/24 iletişimde kalarak hedeflerinize ulaşmanızı sağlayan dijital performans koçluğu.',
-    icon: '📱',
-    category: 'Dijital Koçluk',
-    isCoreHomeService: false,
-    tags: ['Online Eğitim', 'Düzenli Takip'],
-    features: ['Video Form Analizi', '7/24 İletişim', 'Haftalık Güncelleme'],
-    targetAudience: ['Uzaktan profesyonel koçluk almak isteyenler'],
-    methodology: ['Digital Form Assessment', 'Remote Load Management']
+    id: 'nutrition-coaching',
+    slug: 'nutrition-coaching',
+    title: 'BESLENME DANIŞMANLIĞI',
+    badge: 'BESLENME',
+    tagline: 'Sürdürülebilir Beslenme Alışkanlıkları',
+    shortDesc: 'Antrenman sürecini destekleyen kişiye özel beslenme farkındalığı ve günlük enerji dengesi danışmanlığı.',
+    fullDesc: 'Antrenman hedeflerinizle uyumlu, sürdürülebilir beslenme farkındalığı kazandırmayı amaçlayan danışmanlık hizmeti. Özel diyet ve sağlık durumlarında yetkili diyetisyen iş birliği ile yürütülür.',
+    icon: '🥗',
+    category: 'Beslenme Danışmanlığı',
+    isCoreHomeService: true,
+    disclaimer: 'Beslenme danışmanlığı hizmeti genel bilgilendirme ve farkındalık amaçlıdır. Tıbbi beslenme tedavileri yetkili diyetisyenler tarafından yürütülür.',
+    tags: ['Beslenme Farkındalığı', 'Makro Dengesi', 'Düzenli Takip'],
+    features: [
+      'Günlük Enerji Dengesi Hesaplaması',
+      'Antrenman Destekli Beslenme Zamanlaması',
+      'Sürdürülebilir Alışkanlık Rehberliği'
+    ],
+    targetAudience: [
+      'Antrenmanlarını doğru beslenme ile desteklemek isteyenler',
+      'Dengeli beslenme alışkanlığı edinmeyi hedefleyenler'
+    ],
+    methodology: [
+      'Enerji Dengesi Prensipleri',
+      'Bireysel Beslenme Farkındalığı'
+    ]
   }
 ];

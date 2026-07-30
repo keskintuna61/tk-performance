@@ -170,6 +170,12 @@ export const Footer: React.FC = () => {
 
         </div>
 
+        {/* RESPONSIBLE HEALTH & MEDICAL DISCLAIMER */}
+        <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-xs text-slate-400 font-sans leading-relaxed text-center max-w-4xl mx-auto">
+          <span className="font-bold text-slate-300">Yasal Bilgilendirme: </span>
+          Sunulan egzersiz ve koçluk hizmetleri tıbbi tanı veya tedavi yerine geçmez. Ağrı, yaralanma veya sağlık problemi bulunan bireylerin öncelikle hekim veya fizyoterapiste danışması önerilir.
+        </div>
+
         {/* BOTTOM LEGAL BAR & BACK TO TOP */}
         <div className="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-slate-500">
           

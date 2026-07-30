@@ -5,44 +5,36 @@ export interface FAQItem {
 
 export const faqDataList: FAQItem[] = [
   {
-    question: 'Online eğitim nasıl işliyor?',
-    answer: 'Öncelikle postür ve hareket kapasiteniz analiz edilir. Size özel hazırlanan antrenman ve takip paneliniz kurulur; hareket kütüphanesi, RIR/RPE yüklenme takibi ve haftalık form kontrolleri ile uzaktan birebir koordinasyon yürütülür.'
+    question: 'Online koçluk süreci nasıl ilerliyor?',
+    answer: 'Başlangıç değerlendirmesinin ardından hedeflerinize ve mevcut seviyenize uygun kişiye özel antrenman ve takip programı hazırlanır. Süreç boyunca antrenman takibi, form videoları geri bildirimi ve düzenli güncellemeler sağlanır.'
+  },
+  {
+    question: 'Programlar kişiye özel mi?',
+    answer: 'Evet. Programlar kişinin hedefi, antrenman deneyimi, yaşam düzeni, ekipman imkânı ve hareket kapasitesi dikkate alınarak sıfırdan hazırlanır.'
+  },
+  {
+    question: 'Ağrım veya sakatlığım varsa çalışabilir miyim?',
+    answer: 'Ağrı, yaralanma veya sağlık problemi bulunan bireylerin öncelikle hekim ya da fizyoterapist değerlendirmesi alması gerekir. Uygun görülmesi durumunda egzersiz planı sağlık profesyonelinin önerileri dikkate alınarak düzenlenebilir.'
+  },
+  {
+    question: 'Sonuçlar garanti mi?',
+    answer: 'Sonuçlar kişinin başlangıç seviyesi, antrenman devamlılığı, uyku, beslenme ve yaşam düzeni gibi birçok etkene bağlıdır. Tıbbi veya kesin bir süre garantisi verilmez.'
   },
   {
     question: 'Yüz yüze dersler nerede yapılıyor?',
-    answer: 'Yüz yüze Personal Training seanslarımız Trabzon\'daki özel donanımlı stüdyomuzda birebir 60 dakikalık odaklanmış antrenman blokları halinde gerçekleştirilir.'
+    answer: 'Yüz yüze antrenman seanslarımız Trabzon\'da uygun stüdyo ve antrenman alanlarında birebir odaklanmış seanslar halinde gerçekleştirilmektedir.'
   },
   {
-    question: 'Programlar tamamen kişiye özel mi?',
-    answer: 'Evet. Her antrenman ve takip programı bireyin anatomik yapısı, yaşam düzeni, mevcut hareket kapasitesi, salon/ev ekipman durumu ve hedefleri doğrultusunda sıfırdan tasarlanır.'
-  },
-  {
-    question: 'Beslenme desteği sunuyor musunuz?',
-    answer: 'Evet. Beslenme ve diyetetik hizmetlerimiz yetkin diyetisyen ve beslenme uzmanları iş birliğiyle sporcu diyetetiği, TDEE kalibrasyonu ve metabolik beslenme çerçevesinde sunulmaktadır.'
+    question: 'Beslenme desteği sunuluyor mu?',
+    answer: 'Antrenman sürecini destekleyici genel beslenme farkındalığı ve makro rehberliği sunulur. Özel diyet ve hastalık durumlarında yetkili diyetisyen yönlendirmesi yapılır.'
   },
   {
     question: 'Haftalık takip nasıl yapılıyor?',
-    answer: 'Her hafta RIR/RPE şiddet skorlarınız, kilo ve vücut ölçüm grafikleriniz ile WhatsApp üzerinden gönderdiğiniz hareket form videolarınız detaylıca incelenerek anında geribildirim verilir.'
-  },
-  {
-    question: 'Program ne kadar sürüyor?',
-    answer: 'Biyolojik adaptasyon ve kalıcı kas hipertrofisi blokları minimum 12 haftalık periyotlar halinde planlanır. İdeal ve sürdürülebilir gelişim süreci 16-24 haftadır.'
+    answer: 'Her hafta antrenman verileriniz, yüklenme hissiyatınız ve hareket videolarınız incelenerek gerekli teknik düzeltmeler ve program ayarlamaları yapılır.'
   },
   {
     question: 'Yeni başlayanlar da katılabilir mi?',
-    answer: 'Kesinlikle evet. Yeni başlayan danışanlarımız için temel hareket okuryazarlığı, omurga sağlığı ve koruyucu biyomekanik hizalamalardan başlayan özel seviyelendirilmiş protokoller uygulanır.'
-  },
-  {
-    question: 'Spor geçmişim yok, yine de başlayabilir miyim?',
-    answer: 'Evet. Spor biliminin temeli her bireyi kendi seviyesinden başlatmaktır. Hiç spor geçmişi olmayan danışanlarımızla sakatlık riski sıfırlanarak adım adım gelişim inşa edilir.'
-  },
-  {
-    question: 'Programlar güncelleniyor mu?',
-    answer: 'Evet. Gelişim ivmenize, kas toparlanma hızınıza ve antrenman adapte sürenize göre antrenman hacmi, şiddeti ve egzersiz varyasyonları haftalık kontrollerde sürekli güncellenir.'
-  },
-  {
-    question: 'Ödeme seçenekleri nelerdir?',
-    answer: 'Bankatransferi / Havale / EFT ve kredi kartı ile güvenli ödeme imkanı sunulmaktadır. Seçtiğiniz online veya yüz yüze eğitim paketine göre aylık veya seanslık planlamalar mevcuttur.'
+    answer: 'Kesinlikle evet. Hiç spor geçmişi olmayan danışanlarımız için temel hareket okuryazarlığı ve güvenli ilerleme prensiplerine dayalı özel başlangıç seviyesi uygulanır.'
   }
 ];
 
