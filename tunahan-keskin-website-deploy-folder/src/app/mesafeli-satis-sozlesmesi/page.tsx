@@ -1,0 +1,21 @@
+import React from 'react';
+import { Navbar } from '@/components/layout/Navbar';
+import { Footer } from '@/components/layout/Footer';
+
+export default function MesafeliSatisPage() {
+  return (
+    <div className="min-h-screen flex flex-col bg-[#070B12] text-[#F8FAFC]">
+      <Navbar />
+      <main className="flex-1 py-16 px-6 max-w-4xl mx-auto w-full">
+        <div className="bg-amber-500/10 border border-amber-500/30 text-amber-300 font-mono text-xs p-4 rounded-xl mb-8">
+          ⚠️ <strong>Hukuki Taslak Uyarısı:</strong> Bu metin bir taslaktır. Yayımlamadan önce bir hukuk uzmanı tarafından kontrol edilmelidir.
+        </div>
+        <h1 className="font-display text-4xl text-white uppercase mb-6">MESAFELİ SATIŞ SÖZLEŞMESİ</h1>
+        <div className="bg-[#111827] border border-white/10 p-8 rounded-2xl space-y-4 text-sm text-[#D9D9D9] leading-relaxed">
+          <p>İşbu sözleşme Alıcı ile Satıcı (Tunahan Keskin Performance) arasındaki dijital içerik ve online koçluk hizmeti satış esaslarını düzenler.</p>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+}

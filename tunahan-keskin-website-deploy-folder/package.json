@@ -1,0 +1,20 @@
+{
+  "name": "tunahan-keskin-website",
+  "version": "1.0.0",
+  "description": "Tunahan Keskin — Sports Scientist & Strength Coach Web Site & Admin Panel",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "iyzipay": "^2.0.60",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

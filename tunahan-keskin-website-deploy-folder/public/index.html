@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tunahan Keskin Performance — Sports Scientist | Performance Coach</title>
+<meta name="description" content="Hedefine uygun kişisel antrenman sistemi, profesyonel takip ve sürdürülebilir gelişim. Biyomekanik analiz ve %100 bilimsel spor altyapısı.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-dark: #070B12;
+    --bg-navy: #0B1220;
+    --card-bg: #111827;
+    --card-hover: #162032;
+    --electric-blue: #1E90FF;
+    --amber-glow: #FFC857;
+    --text-white: #F8FAFC;
+    --text-light: #D9D9D9;
+    --text-muted: #94A3B8;
+    --border-dark: rgba(255, 255, 255, 0.08);
+    --border-bright: #1E90FF;
+    --green-success: #22C55E;
+    
+    --display: 'Bebas Neue', sans-serif;
+    --body: 'Inter', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background-color: var(--bg-dark);
+    background-image: 
+      radial-gradient(ellipse 80% 80% at 50% -20%, rgba(30, 144, 255, 0.12), transparent),
+      radial-gradient(ellipse 60% 60% at 80% 50%, rgba(255, 200, 87, 0.04), transparent);
+    color: var(--text-white);
+    font-family: var(--body);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
+
+  /* DUYURU BANDI */
+  .announcement{
+    background: var(--electric-blue); color: #fff; text-align: center;
+    font-family: var(--mono); font-size: 11px; font-weight: 800; letter-spacing: 1.5px;
+    padding: 8px 16px; border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  /* NAVBAR */
+  nav{
+    position:sticky;top:0;z-index:100;background:rgba(11,18,32,0.92);
+    backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+    border-bottom:1px solid var(--border-dark);
+    padding:16px 24px;box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+  }
+  .nav-inner{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;}
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand-logo{
+    width:40px;height:40px;border-radius:12px;
+    background:linear-gradient(135deg, var(--electric-blue), var(--amber-glow));
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--display);font-size:22px;font-weight:bold;color:#fff;
+    box-shadow: 0 4px 14px rgba(30,144,255,0.3);
+  }
+  .brand-title{font-family:var(--display);font-size:28px;letter-spacing:1px;color:#fff;}
+  .brand-sub{font-family:var(--mono);font-size:9px;color:var(--text-muted);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;}
+  
+  .nav-links{display:flex;gap:24px;font-family:var(--mono);font-size:12px;font-weight:700;text-transform:uppercase;}
+  .nav-links a{color:var(--text-muted);transition:color .2s;position:relative;}
+  .nav-links a:hover, .nav-links a.active{color:var(--electric-blue);}
+
+  .btn-cta{
+    background:var(--electric-blue);color:#fff;font-family:var(--mono);
+    font-size:12px;font-weight:900;padding:10px 20px;border-radius:10px;
+    box-shadow:0 4px 14px rgba(30,144,255,0.3);transition:all .2s;
+  }
+  .btn-cta:hover{background:#187bcd;transform:scale(1.04);}
+
+  /* SİNEMATİK HERO */
+  .hero{min-height:88vh;padding:90px 0 70px;position:relative;background:linear-gradient(180deg, var(--bg-navy) 0%, var(--bg-dark) 100%);border-bottom:1px solid var(--border-dark);}
+  .hero-eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    background:rgba(30,144,255,0.1);border:1px solid rgba(30,144,255,0.3);
+    color:var(--electric-blue);padding:6px 16px;border-radius:20px;
+    font-family:var(--mono);font-size:11px;font-weight:800;letter-spacing:1.5px;margin-bottom:20px;
+  }
+  .hero h1{
+    font-family:var(--display);font-size:clamp(54px,8vw,110px);
+    line-height:0.92;text-transform:uppercase;letter-spacing:1px;margin-bottom:24px;color:#fff;
+  }
+  .hero h1 .blue{color:var(--electric-blue);}
+  .hero h1 .amber{color:var(--amber-glow);}
+
+  .hero-sub-list{border-left:4px solid var(--electric-blue);padding-left:16px;margin-bottom:32px;font-size:16px;color:var(--text-light);}
+  .hero-sub-item{display:flex;align-items:center;gap:8px;margin-bottom:6px;font-weight:600;}
+
+  .hero-btns{display:flex;gap:16px;flex-wrap:wrap;}
+  .btn-primary{background:var(--electric-blue);color:#fff;padding:16px 32px;border-radius:12px;font-family:var(--mono);font-size:13px;font-weight:900;letter-spacing:1px;text-transform:uppercase;box-shadow:0 8px 25px rgba(30,144,255,0.35);transition:all .2s;}
+  .btn-primary:hover{background:#187bcd;transform:translateY(-2px);}
+  
+  .glass-btn{
+    background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.12);color:#fff;padding:16px 32px;border-radius:12px;
+    font-family:var(--mono);font-size:13px;font-weight:700;text-transform:uppercase;transition:all 0.3s;
+  }
+  .glass-btn:hover{background:rgba(30,144,255,0.12);border-color:var(--electric-blue);box-shadow:0 0 25px rgba(30,144,255,0.3);transform:translateY(-2px);}
+
+  /* SECTIONS & DIVIDERS */
+  section{padding:90px 0;}
+  .section-divider{height:1px;background:linear-gradient(90deg, transparent 0%, rgba(30,144,255,0.25) 50%, transparent 100%);width:100%;}
+  .section-tag{font-family:var(--mono);font-size:11px;color:var(--electric-blue);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;font-weight:800;}
+  h2{font-family:var(--display);font-size:clamp(36px,5vw,64px);letter-spacing:1px;margin-bottom:36px;text-transform:uppercase;color:#fff;}
+
+  /* KART ELEVATION & HOVER */
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .grid-5{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
+  
+  .premium-card{
+    background:var(--card-bg);border:1px solid var(--border-dark);padding:24px;border-radius:20px;
+    transition:all .35s cubic-bezier(0.4, 0, 0.2, 1);box-shadow:0 10px 30px rgba(0,0,0,0.5);
+  }
+  .premium-card:hover{
+    background:var(--card-hover);border-color:var(--border-[#1E90FF]);transform:translateY(-3px);
+    box-shadow:0 16px 36px rgba(0,0,0,0.6), 0 0 20px rgba(30,144,255,0.15);
+  }
+
+  .card-title{font-family:var(--display);font-size:26px;margin-bottom:6px;color:#fff;}
+  .card-desc{font-size:13px;color:var(--text-muted);line-height:1.6;margin-bottom:20px;}
+  .card-price{font-family:var(--mono);font-size:32px;font-weight:800;color:var(--text-white);margin-bottom:20px;}
+
+  /* CUSTOM BRAND INFOGRAPHIC CARD COVER (NO YOUTUBE THUMBNAILS!) */
+  .exercise-cover-box {
+    position: relative;
+    aspect-ratio: 4/3;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #070B12;
+    border: 1px solid var(--border-dark);
+    margin: 16px 0;
+    cursor: pointer;
+  }
+  .exercise-cover-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.4s ease;
+    filter: brightness(0.9) contrast(1.05);
+  }
+  .exercise-cover-box:hover img {
+    transform: scale(1.05);
+  }
+  .play-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: rgba(30,144,255,0.9);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 10px 30px rgba(30,144,255,0.5);
+    border: 1px solid rgba(255,255,255,0.3);
+    transition: all 0.3s;
+  }
+  .exercise-cover-box:hover .play-badge {
+    transform: translate(-50%, -50%) scale(1.1);
+    background: #187bcd;
+  }
+
+  /* FOOTER */
+  footer{background:var(--bg-dark);border-top:1px solid var(--border-dark);padding:60px 0 30px;color:var(--text-muted);font-size:13px;}
+  .footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+  .footer-title{font-family:var(--mono);font-size:12px;color:var(--electric-blue);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px;font-weight:800;}
+  .footer-links{list-style:none;display:flex;flex-direction:column;gap:8px;}
+
+  /* WHATSAPP FLOAT */
+  .wa-float{
+    position:fixed;bottom:24px;right:24px;z-index:999;
+    background:var(--green-success);color:#fff;padding:14px 24px;border-radius:30px;
+    font-family:var(--mono);font-size:13px;font-weight:900;letter-spacing:0.5px;
+    box-shadow:0 10px 30px rgba(34,197,94,0.4);display:flex;align-items:center;gap:10px;
+    transition:transform .2s;
+  }
+  .wa-float:hover{transform:scale(1.05);}
+
+  @media(max-width:860px){
+    .nav-links{display:none;}
+    .grid-3, .grid-4, .grid-5{grid-template-columns:1fr;}
+    .footer-inner{grid-template-columns:1fr 1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- 1. DUYURU BANDI -->
+<div class="announcement">
+  🔥 TUNAHAN KESKİN PERFORMANCE — ONLINE KOÇLUK BAŞVURULARI AÇIK • TRABZON YÜZ YÜZE PT
+</div>
+
+<!-- 2. PREMİUM NAVBAR -->
+<nav>
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="brand-logo">TK</div>
+      <div>
+        <div class="brand-title">TK PERFORMANCE</div>
+        <div class="brand-sub">Sports Scientist | Performance Coach</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#hero">Ana Sayfa</a>
+      <a href="#hedef">Hedefler</a>
+      <a href="#online-kocluk">Online Koçluk</a>
+      <a href="#programlar">Programlar</a>
+      <a href="#egzersizler">Egzersizler</a>
+      <a href="#hakkimda">Hakkımda</a>
+    </div>
+    <a href="#online-kocluk" class="btn-cta">KOÇLUĞA BAŞVUR</a>
+  </div>
+</nav>
+
+<!-- 3. SİNEMATİK HERO -->
+<section id="hero" class="hero wrap">
+  <div style="display:grid;grid-template-columns:1.2fr 0.8fr;gap:40px;align-items:center;">
+    
+    <div>
+      <div class="hero-eyebrow">
+        <span>⚡ TUNAHAN KESKİN • SPORTS SCIENTIST | PERFORMANCE COACH</span>
+      </div>
+      <h1>
+        BİLİMSEL <span class="blue">ANTRENMAN.</span><br>
+        ÖLÇÜLEBİLİR <span class="amber">GELİŞİM.</span>
+      </h1>
+      
+      <div class="hero-sub-list">
+        <div class="hero-sub-item"><span style="color:var(--electric-blue);">➔</span> Hedefine uygun kişisel antrenman sistemi.</div>
+        <div class="hero-sub-item"><span style="color:var(--electric-blue);">➔</span> Bilimsel programlama &amp; biyomekanik analiz.</div>
+        <div class="hero-sub-item"><span style="color:var(--electric-blue);">➔</span> Profesyonel 7/24 takip ve sürdürülebilir gelişim.</div>
+      </div>
+
+      <div class="hero-btns">
+        <a href="#online-kocluk" class="btn-primary">🔥 Online Koçluğa Başvur</a>
+        <a href="#programlar" class="glass-btn">🏋️‍♂️ Programları İncele &rarr;</a>
+      </div>
+    </div>
+
+    <!-- SAĞ GÖRSEL ALANI -->
+    <div style="background:var(--card-bg);border:1px solid var(--border-dark);padding:12px;border-radius:24px;box-shadow:0 20px 40px rgba(0,0,0,0.9);position:relative;">
+      <div style="aspect-ratio:4/5;border-radius:16px;overflow:hidden;position:relative;background:#070B12;">
+        <img src="/images/hero/tunahan-hero.jpg" alt="Tunahan Keskin Performance Coach" style="width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(0.95) contrast(1.05);">
+        
+        <div style="position:absolute;inset:0;background:linear-gradient(0deg, #070B12 0%, transparent 60%);"></div>
+        
+        <div style="position:absolute;top:16px;left:16px;right:16px;z-index:10;display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;">
+          <span style="background:rgba(7,11,18,0.85);backdrop-filter:blur(8px);color:var(--electric-blue);padding:4px 10px;border-radius:12px;border:1px solid rgba(30,144,255,0.4);font-weight:bold;">SPORTS SCIENTIST</span>
+          <span style="background:rgba(34,197,94,0.2);backdrop-filter:blur(8px);color:var(--green-success);padding:4px 10px;border-radius:12px;border:1px solid rgba(34,197,94,0.4);font-weight:bold;">● ONLINE ACTIVE</span>
+        </div>
+
+        <div style="position:absolute;bottom:16px;left:16px;right:16px;z-index:10;background:rgba(7,11,18,0.85);backdrop-filter:blur(12px);padding:14px;border-radius:14px;border:1px solid rgba(255,255,255,0.1);">
+          <div style="font-family:var(--display);font-size:24px;color:#fff;letter-spacing:1px;">TUNAHAN KESKİN</div>
+          <div style="font-family:var(--mono);font-size:10px;color:var(--text-muted);display:flex;justify-content:space-between;">
+            <span>Trabzon PT &amp; Türkiye Online</span>
+            <span style="color:var(--electric-blue);font-weight:bold;">2. Kademe Antrenör</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 4. GÜVEN VE UZMANLIK ŞERİDİ -->
+<section class="wrap" style="background:var(--bg-navy);">
+  <div class="grid-4">
+    <div class="premium-card" style="text-align:center;">
+      <div style="color:var(--electric-blue);font-weight:bold;font-size:16px;font-family:var(--mono);">2. KADEME</div>
+      <div style="color:var(--text-muted);font-family:var(--mono);font-size:11px;text-transform:uppercase;">Fitness Antrenörü</div>
+    </div>
+    <div class="premium-card" style="text-align:center;">
+      <div style="color:var(--amber-glow);font-weight:bold;font-size:16px;font-family:var(--mono);">BİLİMSEL YAKLAŞIM</div>
+      <div style="color:var(--text-muted);font-family:var(--mono);font-size:11px;text-transform:uppercase;">Yüksek Lisans Öğrencisi</div>
+    </div>
+    <div class="premium-card" style="text-align:center;">
+      <div style="color:var(--green-success);font-weight:bold;font-size:16px;font-family:var(--mono);">TRABZON</div>
+      <div style="color:var(--text-muted);font-family:var(--mono);font-size:11px;text-transform:uppercase;">Yüz Yüze PT</div>
+    </div>
+    <div class="premium-card" style="text-align:center;">
+      <div style="color:var(--electric-blue);font-weight:bold;font-size:16px;font-family:var(--mono);">TÜRKİYE GENELİ</div>
+      <div style="color:var(--text-muted);font-family:var(--mono);font-size:11px;text-transform:uppercase;">Online Koçluk</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 5. KULLANICININ HEDEFLERİ -->
+<section id="hedef" class="wrap">
+  <div class="section-tag">SENİN HEDEFİN NE?</div>
+  <h2>HEDEFİNE UYGUN SİSTEM</h2>
+  <div class="grid-5">
+    <div class="premium-card">
+      <div style="font-size:32px;margin-bottom:12px;">💪</div>
+      <div class="card-title" style="font-size:22px;">Kas Kazanımı</div>
+      <div class="card-desc">Hipertrofi prensipleriyle maksimum kas kütlesi inşa et.</div>
+    </div>
+    <div class="premium-card">
+      <div style="font-size:32px;margin-bottom:12px;">🔥</div>
+      <div class="card-title" style="font-size:22px;">Yağ Oranını Azalt</div>
+      <div class="card-desc">Kas kütlesini korurken metabolik yağ yakımını hızlandır.</div>
+    </div>
+    <div class="premium-card">
+      <div style="font-size:32px;margin-bottom:12px;">🏋️‍♂️</div>
+      <div class="card-title" style="font-size:22px;">Gücünü Artır</div>
+      <div class="card-desc">1RM kaldırış kapasiteni ve tendon dayanıklılığını artır.</div>
+    </div>
+    <div class="premium-card">
+      <div style="font-size:32px;margin-bottom:12px;">🎯</div>
+      <div class="card-title" style="font-size:22px;">Hareket Kalitesi</div>
+      <div class="card-desc">Eklem hareket genliğini artır, omurga biyomekaniğini düzelt.</div>
+    </div>
+    <div class="premium-card">
+      <div style="font-size:32px;margin-bottom:12px;">⚡</div>
+      <div class="card-title" style="font-size:22px;">Performansını Yükselt</div>
+      <div class="card-desc">Saha ve spor branşına özel patlayıcı güç kazan.</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 6. ONLINE KOÇLUK SİSTEMİ & PAKETLER -->
+<section id="online-kocluk" class="wrap" style="background:var(--bg-navy);">
+  <div class="section-tag">AKADEMİK KOÇLUK SİSTEMİ</div>
+  <h2>7 ADIMDA BİLİMSEL İLERLEME</h2>
+  <div class="grid-3">
+    <div class="premium-card">
+      <div class="card-title">1 Aylık Başlangıç</div>
+      <div class="card-desc">Kişiye özel antrenman programı + Form kontrolü + Mesajlaşma takibi.</div>
+      <div class="card-price">1.950 TL</div>
+      <a href="https://wa.me/905445300481?text=Merhaba%20Tunahan%20Hocam,%201%20Aylık%20Başlangıç%20Paketi%20için%20başvurmak%20istiyorum." target="_blank" class="glass-btn" style="display:block;text-align:center;">WhatsApp'tan Başvur &rarr;</a>
+    </div>
+    <div class="premium-card" style="border-color:var(--border-bright);">
+      <div class="card-title">3 Aylık Dönüşüm (Önerilen)</div>
+      <div class="card-desc">Kişisel antrenman + Beslenme &amp; Makro rehberi + Haftalık ölçüm takibi.</div>
+      <div class="card-price">4.850 TL</div>
+      <a href="https://wa.me/905445300481?text=Merhaba%20Tunahan%20Hocam,%203%20Aylık%20Dönüşüm%20Paketi%20için%20başvurmak%20istiyorum." target="_blank" class="btn-primary" style="display:block;text-align:center;">WhatsApp'tan Başvur &rarr;</a>
+    </div>
+    <div class="premium-card">
+      <div class="card-title">6 Aylık Performans</div>
+      <div class="card-desc">Tüm özellikler + Detaylı video form analizi + Öncelikli iletişim takibi.</div>
+      <div class="card-price">8.950 TL</div>
+      <a href="https://wa.me/905445300481?text=Merhaba%20Tunahan%20Hocam,%206%20Aylık%20Performans%20Paketi%20için%20başvurmak%20istiyorum." target="_blank" class="glass-btn" style="display:block;text-align:center;">WhatsApp'tan Başvur &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 7. ÖNE ÇIKAN DİJİTAL PROGRAMLAR -->
+<section id="programlar" class="wrap">
+  <div class="section-tag">DİJİTAL MAĞAZA</div>
+  <h2>HAZIR PERFORMANS PROGRAMLARI</h2>
+  <div class="grid-3">
+    <div class="premium-card">
+      <div class="card-title">Başlangıç Fitness Programı</div>
+      <div class="card-desc">Spora yeni başlayanlar için anatomik adaptasyon ve doğru hareket tekniği rehberi.</div>
+      <div class="card-price">490 TL</div>
+      <a href="https://wa.me/905445300481?text=Merhaba%20Tunahan%20Hocam,%20Başlangıç%20Fitness%20Programı%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="glass-btn" style="display:block;text-align:center;">Hemen İncele &rarr;</a>
+    </div>
+    <div class="premium-card" style="border-color:var(--border-bright);">
+      <div class="card-title">8 Haftalık Kas Kazanımı</div>
+      <div class="card-desc">Progressive overload ilkesiyle kas hacmini ve lif yoğunluğunu artıran yükleme sistemi.</div>
+      <div class="card-price">890 TL</div>
+      <a href="https://wa.me/905445300481?text=Merhaba%20Tunahan%20Hocam,%208%20Haftalık%20Kas%20Kazanımı%20Programı%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="btn-primary" style="display:block;text-align:center;">Hemen İncele &rarr;</a>
+    </div>
+    <div class="premium-card">
+      <div class="card-title">Metabolik Yağ Yakımı</div>
+      <div class="card-desc">Kas kütlesini korurken vücut yağ oranını minimum seviyeye indiren definasyon rehberi.</div>
+      <div class="card-price">790 TL</div>
+      <a href="https://wa.me/905445300481?text=Merhaba%20Tunahan%20Hocam,%20Metabolik%20Yağ%20Yakımı%20Programı%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="glass-btn" style="display:block;text-align:center;">Hemen İncele &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 8. EGZERSİZ KÜTÜPHANESİ (NO YOUTUBE THUMBNAILS - CUSTOM INFOGRAPHIC COVERS) -->
+<section id="egzersizler" class="wrap" style="background:var(--bg-navy);">
+  <div class="section-tag">BİLİMSEL EGZERSİZ KÜTÜPHANESİ</div>
+  <h2>NİZAMİ HAREKET REHBERİ (YOUTUBE THUMBNAILSİZ ÖZEL KARTLAR)</h2>
+  <div class="grid-3">
+    
+    <!-- CARD 1: ABD MACHINE -->
+    <div class="premium-card">
+      <div style="display:flex;justify-content:space-between;margin-bottom:8px;font-family:var(--mono);font-size:11px;">
+        <span style="color:var(--electric-blue);font-weight:bold;">Bacak</span>
+        <span style="color:var(--text-muted);">Makine</span>
+      </div>
+      <div class="card-title" style="font-size:20px;">Machine Hip Abduction</div>
+      <div class="exercise-cover-box">
+        <img src="/images/exercise-covers/abd-machine.jpg" alt="Machine Hip Abduction">
+        <div class="play-badge">▶</div>
+      </div>
+      <a href="https://www.youtube.com/watch?v=G_8LdA3N6eU" target="_blank" class="btn-primary" style="display:block;text-align:center;padding:12px;font-size:11px;">▶ HAREKET VİDEOSUNU İZLE</a>
+    </div>
+
+    <!-- CARD 2: ADD MACHINE -->
+    <div class="premium-card">
+      <div style="display:flex;justify-content:space-between;margin-bottom:8px;font-family:var(--mono);font-size:11px;">
+        <span style="color:var(--electric-blue);font-weight:bold;">Bacak</span>
+        <span style="color:var(--text-muted);">Makine</span>
+      </div>
+      <div class="card-title" style="font-size:20px;">Machine Hip Adduction</div>
+      <div class="exercise-cover-box">
+        <img src="/images/exercise-covers/add-machine.jpg" alt="Machine Hip Adduction">
+        <div class="play-badge">▶</div>
+      </div>
+      <a href="https://www.youtube.com/watch?v=0h09WcT9g6M" target="_blank" class="btn-primary" style="display:block;text-align:center;padding:12px;font-size:11px;">▶ HAREKET VİDEOSUNU İZLE</a>
+    </div>
+
+    <!-- CARD 3: HIP THRUST -->
+    <div class="premium-card">
+      <div style="display:flex;justify-content:space-between;margin-bottom:8px;font-family:var(--mono);font-size:11px;">
+        <span style="color:var(--electric-blue);font-weight:bold;">Bacak</span>
+        <span style="color:var(--text-muted);">Serbest Ağırlık</span>
+      </div>
+      <div class="card-title" style="font-size:20px;">Hip Thrust</div>
+      <div class="exercise-cover-box">
+        <img src="/images/exercise-covers/hip-thrust.jpg" alt="Hip Thrust">
+        <div class="play-badge">▶</div>
+      </div>
+      <a href="https://www.youtube.com/watch?v=SEdqd1n0cvg" target="_blank" class="btn-primary" style="display:block;text-align:center;padding:12px;font-size:11px;">▶ HAREKET VİDEOSUNU İZLE</a>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 9. HAKKIMDA -->
+<section id="hakkimda" class="wrap">
+  <div class="section-tag">UZMANLIK VE HİKÂYE</div>
+  <h2>TUNAHAN KESKİN KİMDİR?</h2>
+  <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:32px;align-items:center;">
+    <div style="background:var(--card-bg);padding:10px;border-radius:20px;border:1px solid var(--border-dark);">
+      <div style="aspect-ratio:3/4;border-radius:14px;overflow:hidden;position:relative;">
+        <img src="/images/coach/tunahan-coach.jpg" alt="Tunahan Keskin Coach" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+    </div>
+    <div>
+      <p style="font-size:16px;color:var(--text-light);margin-bottom:16px;">
+        Beden Eğitimi ve Spor Öğretmeni unvanına sahip olan Tunahan Keskin, Spor Yöneticiliği alanında yüksek lisans eğitimine devam etmekte ve 2. Kademe Fitness Antrenörü olarak çalışmalarını sürdürmektedir.
+      </p>
+      <p style="font-size:14px;color:var(--text-muted);margin-bottom:20px;">
+        Trabzon'da yüz yüze birebir PT derslerinin yanı sıra Türkiye genelinde online koçluk sistemiyle danışanlarının fiziksel potansiyellerini en üst seviyeye taşımaktadır.
+      </p>
+      <div class="premium-card" style="font-family:var(--mono);font-size:12px;">
+        <div style="color:#fff;font-weight:bold;margin-bottom:12px;border-bottom:1px solid var(--border-dark);padding-bottom:8px;">AKADEMİK UNVANLAR</div>
+        <div style="margin-bottom:8px;color:var(--text-muted);">🎓 2. Kademe Fitness Antrenörü</div>
+        <div style="margin-bottom:8px;color:var(--text-muted);">🎓 Spor Yöneticiliği Yüksek Lisans</div>
+        <div style="color:var(--text-muted);">🎓 Formasyonlu Beden Eğitimi Öğretmeni</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>
+      <div style="font-family:var(--display);font-size:24px;color:#fff;margin-bottom:10px;">TUNAHAN KESKİN PERFORMANCE</div>
+      <p>Spor Bilimci ve Beden Eğitimi Öğretmeni Tunahan Keskin ile %100 bilimsel, ölçülebilir ve kişiselleştirilmiş online koçluk &amp; atletik performans platformu.</p>
+    </div>
+    <div>
+      <div class="footer-title">Hızlı Menü</div>
+      <ul class="footer-links">
+        <li><a href="#online-kocluk">Online Koçluk</a></li>
+        <li><a href="#programlar">Programlar</a></li>
+        <li><a href="#egzersizler">Egzersizler</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-title">İletişim</div>
+      <p>Trabzon / Türkiye</p>
+      <p>pt.tuna61@gmail.com</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/905445300481?text=Merhaba%20Tunahan%20Hocam,%20online%20ko%C3%A7luk%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="wa-float">
+  💬 WhatsApp İletişim
+</a>
+
+</body>
+</html>

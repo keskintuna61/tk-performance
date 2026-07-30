@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tunahan Keskin — Admin Kontrol Paneli</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-main: #0c1017;
+    --bg-alt: #141923;
+    --card-bg: #1c2331;
+    --text-main: #ffffff;
+    --text-muted: #94a3b8;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --red: #ff2a5f;
+    --red-hover: #e50914;
+    --mono: 'JetBrains Mono', monospace;
+    --display: 'Bebas Neue', sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg-main);color:var(--text-main);font-family:'Inter',sans-serif;padding:30px 20px;}
+  .container{max-width:900px;margin:0 auto;}
+  h1{font-family:var(--display);font-size:42px;letter-spacing:1px;color:var(--red);margin-bottom:20px;}
+  .login-card, .admin-card{
+    background:var(--card-bg);border:1px solid var(--border-color);
+    padding:36px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,0.5);
+  }
+  label{display:block;font-family:var(--mono);font-size:12px;color:var(--text-muted);margin:16px 0 6px;text-transform:uppercase;font-weight:700;}
+  input, textarea, select{
+    width:100%;background:var(--bg-alt);border:1px solid var(--border-color);
+    color:#fff;padding:12px 16px;border-radius:8px;font-size:14px;font-family:inherit;
+  }
+  input:focus, textarea:focus, select:focus{outline:none;border-color:var(--red);}
+  button{
+    background:var(--red);color:#fff;border:none;padding:14px 28px;
+    border-radius:8px;font-family:var(--mono);font-size:14px;font-weight:900;
+    cursor:pointer;margin-top:20px;transition:all .2s;width:100%;
+  }
+  button:hover{background:var(--red-hover);}
+  .msg{margin-top:14px;font-family:var(--mono);font-size:13px;font-weight:700;}
+  .success{color:#10b981;}
+  .error{color:var(--red);}
+  .section-title{font-family:var(--display);font-size:26px;color:var(--text-main);margin-top:30px;border-bottom:1px solid var(--border-color);padding-bottom:8px;}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>TUNAHAN KESKİN — ADMİN KONTROL PANELİ</h1>
+
+  <!-- LOGIN SECTION -->
+  <div id="loginSection" class="login-card">
+    <label>Yönetici Şifresi</label>
+    <input type="password" id="adminPassword" placeholder="Şifrenizi girin..." onkeydown="if(event.key==='Enter') login()">
+    <button onclick="login()">Giriş Yap &rarr;</button>
+    <div id="loginMsg" class="msg error"></div>
+  </div>
+
+  <!-- DASHBOARD SECTION -->
+  <div id="dashboardSection" class="admin-card" style="display:none;">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div style="font-family:var(--mono);color:var(--text-muted);font-size:13px;">Giriş Yapıldı: Admin</div>
+      <button onclick="logout()" style="width:auto;padding:8px 16px;background:none;border:1px solid var(--border-color);color:var(--text-muted);">Çıkış Yap</button>
+    </div>
+
+    <div class="section-title">🔥 Hero &amp; Kontenjan Ayarları</div>
+    <label>Ağustos Kontenjanı Uyarısı Metni</label>
+    <input type="text" id="remainingQuota">
+
+    <label>Hero Başlık Satırı 1</label>
+    <input type="text" id="heroLine1">
+    <label>Hero Başlık Satırı 2</label>
+    <input type="text" id="heroLine2">
+    <label>Hero Başlık Satırı 3</label>
+    <input type="text" id="heroLine3">
+
+    <label>Hero Alt Açıklama Metni</label>
+    <textarea id="heroTagline" rows="2"></textarea>
+
+    <div class="section-title">📊 Paket Fiyatları</div>
+    <label>Başlangıç Paketi Fiyatı</label>
+    <input type="text" id="pkg1Price">
+    <label>Gelişim Paketi Fiyatı</label>
+    <input type="text" id="pkg2Price">
+    <label>Premium Paketi Fiyatı</label>
+    <input type="text" id="pkg3Price">
+
+    <div class="section-title">🤖 Yapay Zeka (ChatGPT &amp; Gemini) API Ayarları</div>
+    <label>OpenAI API Key (ChatGPT GPT-4o-mini)</label>
+    <input type="password" id="openaiApiKey" placeholder="sk-...">
+    <label>Google Gemini API Key (Gemini 1.5 Flash)</label>
+    <input type="password" id="geminiApiKey" placeholder="AIzaSy...">
+
+    <div class="section-title">💳 Ödeme Altyapıları (iyzico &amp; PayTR)</div>
+    <label>iyzico API Key</label>
+    <input type="password" id="iyzicoApiKey">
+    <label>iyzico Secret Key</label>
+    <input type="password" id="iyzicoSecretKey">
+    <label>PayTR Merchant ID</label>
+    <input type="text" id="paytrMerchantId">
+    <label>PayTR Merchant Key</label>
+    <input type="password" id="paytrMerchantKey">
+    <label>PayTR Merchant Salt</label>
+    <input type="password" id="paytrMerchantSalt">
+
+    <button onclick="saveAllContent()">💾 TÜM DEĞİŞİKLİKLERİ KAYDET</button>
+    <div id="saveMsg" class="msg"></div>
+  </div>
+</div>
+
+<script>
+  let fullData = {};
+
+  async function checkAuth() {
+    try {
+      const res = await fetch('/api/auth-check');
+      const data = await res.json();
+      if (data.authenticated) {
+        document.getElementById('loginSection').style.display = 'none';
+        document.getElementById('dashboardSection').style.display = 'block';
+        loadAdminData();
+      }
+    } catch(e) {}
+  }
+
+  async function login() {
+    const password = document.getElementById('adminPassword').value;
+    const msg = document.getElementById('loginMsg');
+    msg.textContent = '';
+
+    try {
+      const res = await fetch('/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password })
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        document.getElementById('loginSection').style.display = 'none';
+        document.getElementById('dashboardSection').style.display = 'block';
+        loadAdminData();
+      } else {
+        msg.textContent = data.error || 'Hatalı şifre!';
+      }
+    } catch(e) {
+      msg.textContent = 'Giriş yapılamadı. Sunucu hatası.';
+    }
+  }
+
+  async function logout() {
+    await fetch('/api/logout', { method: 'POST' });
+    location.reload();
+  }
+
+  async function loadAdminData() {
+    try {
+      const res = await fetch('/api/content');
+      fullData = await res.json();
+      const d = fullData;
+
+      if (d.remainingQuota) document.getElementById('remainingQuota').value = d.remainingQuota;
+      if (d.heroLine1) document.getElementById('heroLine1').value = d.heroLine1;
+      if (d.heroLine2) document.getElementById('heroLine2').value = d.heroLine2;
+      if (d.heroLine3) document.getElementById('heroLine3').value = d.heroLine3;
+      if (d.heroTagline) document.getElementById('heroTagline').value = d.heroTagline;
+
+      if (d.pkg1Price) document.getElementById('pkg1Price').value = d.pkg1Price;
+      if (d.pkg2Price) document.getElementById('pkg2Price').value = d.pkg2Price;
+      if (d.pkg3Price) document.getElementById('pkg3Price').value = d.pkg3Price;
+
+      if (d.openaiApiKey) document.getElementById('openaiApiKey').value = d.openaiApiKey;
+      if (d.geminiApiKey) document.getElementById('geminiApiKey').value = d.geminiApiKey;
+
+      if (d.iyzicoApiKey) document.getElementById('iyzicoApiKey').value = d.iyzicoApiKey;
+      if (d.iyzicoSecretKey) document.getElementById('iyzicoSecretKey').value = d.iyzicoSecretKey;
+      if (d.paytrMerchantId) document.getElementById('paytrMerchantId').value = d.paytrMerchantId;
+      if (d.paytrMerchantKey) document.getElementById('paytrMerchantKey').value = d.paytrMerchantKey;
+      if (d.paytrMerchantSalt) document.getElementById('paytrMerchantSalt').value = d.paytrMerchantSalt;
+    } catch(e) {}
+  }
+
+  async function saveAllContent() {
+    const msg = document.getElementById('saveMsg');
+    msg.className = 'msg';
+    msg.textContent = 'Kaydediliyor...';
+
+    fullData.remainingQuota = document.getElementById('remainingQuota').value;
+    fullData.heroLine1 = document.getElementById('heroLine1').value;
+    fullData.heroLine2 = document.getElementById('heroLine2').value;
+    fullData.heroLine3 = document.getElementById('heroLine3').value;
+    fullData.heroTagline = document.getElementById('heroTagline').value;
+
+    fullData.pkg1Price = document.getElementById('pkg1Price').value;
+    fullData.pkg2Price = document.getElementById('pkg2Price').value;
+    fullData.pkg3Price = document.getElementById('pkg3Price').value;
+
+    fullData.openaiApiKey = document.getElementById('openaiApiKey').value;
+    fullData.geminiApiKey = document.getElementById('geminiApiKey').value;
+
+    fullData.iyzicoApiKey = document.getElementById('iyzicoApiKey').value;
+    fullData.iyzicoSecretKey = document.getElementById('iyzicoSecretKey').value;
+    fullData.paytrMerchantId = document.getElementById('paytrMerchantId').value;
+    fullData.paytrMerchantKey = document.getElementById('paytrMerchantKey').value;
+    fullData.paytrMerchantSalt = document.getElementById('paytrMerchantSalt').value;
+
+    try {
+      const res = await fetch('/api/content', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(fullData)
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        msg.className = 'msg success';
+        msg.textContent = '✅ Değişiklikler başarıyla kaydedildi!';
+      } else {
+        msg.className = 'msg error';
+        msg.textContent = data.error || 'Kaydedilemedi.';
+      }
+    } catch(e) {
+      msg.className = 'msg error';
+      msg.textContent = 'Sunucu hatası oluştu.';
+    }
+  }
+
+  checkAuth();
+</script>
+</body>
+</html>
